@@ -9,17 +9,16 @@ permalink:	/blog/:title
 title:		Conor Patrick
 tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
-url:		/
+url:		http://conorpp.com
 
 author:
   name:		'Conor Patrick'
   url:		https://google.com/+IanCamporezBrunelli
-  email:    conorpp \at vt \dot edu
 
 paginate:	5
 
 # Custom vars
-icon:		/assets/images/profile.jpg
+icon:		/assets/images/icon.png
 cover:		/assets/images/cover.jpg
 
 social:
@@ -40,21 +39,18 @@ social:
     desc:	Subscribe to my feed
 
   - icon:	key
-    url:	/assets/gpgkey.txt
-    desc:	GPG Key
- 
-  - icon:	portfolio
-    url:	http://devpost.com/conorpp94
-    desc:	Hackathon Projects
+    url:	/gpgfingerprint.xml
+    desc:	GPG Key Fingerprint
     
 menu:
   - title:	Home
     url:	/
     
-    #  - title:	About
-    #url:	/about.html
+  - title:	About
+    url:	/about
     
 copyright:
-  author:	Conor Patrik
-  url:		/
+  author:	Camporez
+  url:		http://camporez.com
+  type_title:	Some rights reserved
   type_url:	http://creativecommons.org/licenses/by-nc/2.5
