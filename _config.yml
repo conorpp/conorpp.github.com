@@ -12,7 +12,7 @@ description:	'Security, Privacy, and some hardware projects.'
 url:		/
 
 author:
-  name:		'Conor Patrick'
+  name:		''
   url:		https://google.com/+IanCamporezBrunelli
   email:    conorpp \at vt \dot edu
 
@@ -20,7 +20,7 @@ paginate:	5
 
 # Custom vars
 icon:		/assets/images/profile.jpg
-cover:		/assets/images/cover.jpg
+cover:		/assets/images/hammock.jpg
 
 social:
   - icon:	twitter
@@ -55,6 +55,6 @@ menu:
     #url:	/about.html
     
 copyright:
-  author:	Conor Patrik
+  author:	Conor Patrick
   url:		/
   type_url:	http://creativecommons.org/licenses/by-nc/2.5

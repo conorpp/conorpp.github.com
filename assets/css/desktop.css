@@ -5,6 +5,8 @@
 	left: 50%;
 	margin-left: -350px;
 	bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.68);
+    padding: .5em;
 }
 
 #post-info h1 {
