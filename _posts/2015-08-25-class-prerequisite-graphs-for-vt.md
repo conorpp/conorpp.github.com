@@ -8,7 +8,8 @@ image: "/assets/images/vtgraphs/ECE.jpg"
 ---
 {% include JB/setup %}
 
-Here are a list of class prerequisite graphs for all of the departments at Virginia Tech (Fall 2015).
+Here are the class prerequisite graphs for all of the departments at Virginia Tech (Fall 2015).
+Sorry for those that are bandwidth impaired.
 It was made by scraping this [page](https://banweb.banner.vt.edu/ssb/prod/HZSKVTSC.P_DispRequest)
 and passing the results to a graph function in Wolfram Language.  [Source code](https://github.com/conorpp/VT-Prereq-Tree-Generator/blob/master/source.m) (sorry it's messy).
 
