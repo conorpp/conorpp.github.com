@@ -73,6 +73,9 @@ You can then write an email like normal but be sure to save encrypted drafts oft
 for you like Gmail does, and as soon as the window loses focus, End-to-End closes and all of your unsaved progress
 will be gone. 
 
+*Edit*:  This can be avoided by opening the message in a popup window (clicking the popup icon on the top right).  This
+won't auto-close when the window loses focus.
+
 ![](/assets/images/end2end/message.png "The demo (John Barlow's A Declaration of the Independence of Cyberspace)")
 
 If you have any questions about End-to-End, check out the [FAQ](https://github.com/google/end-to-end/wiki/FAQ).
