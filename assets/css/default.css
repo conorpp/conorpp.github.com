@@ -435,6 +435,8 @@ background-color:rgba(0, 0, 0, 0);
 	text-transform: uppercase;
 	bottom: 10px;
 	position: absolute;
+    background-color: rgba(0,0,0,0.68);
+    color:white;
 }
 
 .copyright a {
