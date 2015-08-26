@@ -10,7 +10,9 @@ html, body {
 	height: 100%;
 	position: relative;
 }
-
+p img{
+    padding: 10px;
+}
 header {
 	width: 100%;
 	position: relative;
@@ -301,10 +303,12 @@ pre code {
 }
 
 .social-links {
+    background-color: rgba(0, 0, 0, 0.68);
+    padding: 5px;
 	width: auto;
 	top: 20px;
 	right: 20px;
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 }
 
@@ -326,20 +330,11 @@ pre code {
 }
 
 .menu {
-	display: block;
 	cursor: pointer;
-	background-color: rgba(119, 119, 119, 0.5);
-	width: 24px;
-	height: 24px;
-	top: 14px;
-	left: 14px;
-	padding-top: 8px;
-	padding-left: 8px;
-	border-radius: 3px;
-	z-index: 2;
-	transition-duration: .5s;
 }
-
+label.menu,label.menu *{
+background-color:rgba(0, 0, 0, 0);
+}
 .menu:hover, .menu:active  {
 	background-color: #777;
 }
@@ -372,7 +367,7 @@ pre code {
 
 .menu span {
 	color: #eee;
-	font-size: 16px;
+	font-size: 4em;
 	height: 20px;
 	width: 20px;
 	opacity: 1;
