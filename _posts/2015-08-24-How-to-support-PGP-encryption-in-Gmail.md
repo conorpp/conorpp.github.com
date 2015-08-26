@@ -14,7 +14,7 @@ I like to use PGP whenever I can.  Not everything I send is necessarily super se
 or private, but I'd prefer it to never show up in a leaked database.  Good thing
 Google has been working on a Chrome extension [End-to-End](https://github.com/google/end-to-end) to add PGP support to Gmail.
 
-Disclaimer:  As of the time of this posting, the extension is in the review stage of development.
+**Disclaimer**:  As of the time of this posting, the extension is in the *review* stage of development.
 No releases have been made.  But it's open for testing!  It's also included in Google's Bug Bounty Program.
 
 # Setting up
