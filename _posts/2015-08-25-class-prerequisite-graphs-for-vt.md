@@ -4,6 +4,7 @@ title: "Class Prerequisite Graphs for VT"
 description: ""
 category: Information
 tags: [information, data]
+image: "/assets/images/vtgraphs/ECE.jpg"
 ---
 {% include JB/setup %}
 
