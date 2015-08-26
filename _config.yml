@@ -2,6 +2,10 @@
 markdown:	redcarpet
 pygments:	true
 
+
+disqus:
+    username: conorpp
+
 # Permalinks
 permalink:	/blog/:title
 

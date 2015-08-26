@@ -306,8 +306,8 @@ pre code {
     background-color: rgba(0, 0, 0, 0.68);
     padding: 5px;
 	width: auto;
-	top: 20px;
-	right: 20px;
+	top: 0px;
+	right: 0px;
 	position: fixed;
 	z-index: 2;
 }
