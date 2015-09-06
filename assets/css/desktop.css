@@ -1,7 +1,7 @@
 @import url(default.css);
 
 #post-info {
-	width: 700px;
+	width: 800px;
 	left: 50%;
 	margin-left: -350px;
 	bottom: 100px;
@@ -16,12 +16,12 @@
 }
 
 #home-title {
-	width: 700px;
+	width: 800px;
 	margin-left: -350px;
 }
 
 #article {
-	width: 700px;
+	width: 800px;
 	padding: 50px 0px;
 	left: 50%;
 	margin-left: -350px;
@@ -48,7 +48,7 @@
 }
 
 .pagination, #post-list {
-	width: 700px;
+	width: 800px;
 	left: 50%;
 	margin-left: -350px;
 }

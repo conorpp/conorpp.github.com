@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Conor Patrick</title>
+ <link href="//atom.xml" rel="self"/>
+ <link href="//"/>
+ <updated>2015-09-05T19:33:41-04:00</updated>
+ <id>/</id>
+ <author>
+   <name></name>
+   <email>conorpp \at vt \dot edu</email>
+ </author>
+
+ 
+ <entry>
+   <title>Class Prerequisite Graphs for VT</title>
+   <link href="//blog/class-prerequisite-graphs-for-vt"/>
+   <updated>2015-08-25T00:00:00-04:00</updated>
+   <id>//blog/class-prerequisite-graphs-for-vt</id>
+   <content type="html">&lt;p&gt;Here are the class prerequisite graphs for all of the departments at Virginia Tech (Fall 2015).
+Sorry for those that are bandwidth impaired.
+It was made by scraping this &lt;a href=&quot;https://banweb.banner.vt.edu/ssb/prod/HZSKVTSC.P_DispRequest&quot;&gt;page&lt;/a&gt;
+and passing the results to a graph function in Wolfram Language.  &lt;a href=&quot;https://github.com/conorpp/VT-Prereq-Tree-Generator/blob/master/source.m&quot;&gt;Source code&lt;/a&gt; (sorry it&amp;#39;s messy).&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m missing ENGL, STAT, and ISE.&lt;/p&gt;
+
+&lt;h3&gt;AAEC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AAEC.jpg&quot; alt=&quot;AAEC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ACIS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ACIS.jpg&quot; alt=&quot;ACIS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;AFST&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AFST.jpg&quot; alt=&quot;AFST&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;AHRM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AHRM.jpg&quot; alt=&quot;AHRM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;AINS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AINS.jpg&quot; alt=&quot;AINS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ALCE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ALCE.jpg&quot; alt=&quot;ALCE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ALS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ALS.jpg&quot; alt=&quot;ALS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;AOE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AOE.jpg&quot; alt=&quot;AOE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;APSC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/APSC.jpg&quot; alt=&quot;APSC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;APS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/APS.jpg&quot; alt=&quot;APS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ARBC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ARBC.jpg&quot; alt=&quot;ARBC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ARCH&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ARCH.jpg&quot; alt=&quot;ARCH&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ART&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ART.jpg&quot; alt=&quot;ART&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;AS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AS.jpg&quot; alt=&quot;AS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ASPT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ASPT.jpg&quot; alt=&quot;ASPT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;AT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/AT.jpg&quot; alt=&quot;AT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BCHM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BCHM.jpg&quot; alt=&quot;BCHM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BC.jpg&quot; alt=&quot;BC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BIOL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BIOL.jpg&quot; alt=&quot;BIOL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BIT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BIT.jpg&quot; alt=&quot;BIT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BMES&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BMES.jpg&quot; alt=&quot;BMES&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BMSP&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BMSP.jpg&quot; alt=&quot;BMSP&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BMVS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BMVS.jpg&quot; alt=&quot;BMVS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BSE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BSE.jpg&quot; alt=&quot;BSE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BTDM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BTDM.jpg&quot; alt=&quot;BTDM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;BUS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/BUS.jpg&quot; alt=&quot;BUS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CEE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CEE.jpg&quot; alt=&quot;CEE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CHE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CHE.jpg&quot; alt=&quot;CHE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CHEM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CHEM.jpg&quot; alt=&quot;CHEM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CHN&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CHN.jpg&quot; alt=&quot;CHN&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CINE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CINE.jpg&quot; alt=&quot;CINE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CLA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CLA.jpg&quot; alt=&quot;CLA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CMDA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CMDA.jpg&quot; alt=&quot;CMDA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CNST&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CNST.jpg&quot; alt=&quot;CNST&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;COMM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/COMM.jpg&quot; alt=&quot;COMM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;COS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/COS.jpg&quot; alt=&quot;COS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CRIM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CRIM.jpg&quot; alt=&quot;CRIM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CSES&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CSES.jpg&quot; alt=&quot;CSES&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;CS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/CS.jpg&quot; alt=&quot;CS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;DASC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/DASC.jpg&quot; alt=&quot;DASC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ECE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ECE.jpg&quot; alt=&quot;ECE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ECON&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ECON.jpg&quot; alt=&quot;ECON&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDCI&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDCI.jpg&quot; alt=&quot;EDCI&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDCO&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDCO.jpg&quot; alt=&quot;EDCO&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDCT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDCT.jpg&quot; alt=&quot;EDCT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDEL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDEL.jpg&quot; alt=&quot;EDEL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDEP&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDEP.jpg&quot; alt=&quot;EDEP&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDHE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDHE.jpg&quot; alt=&quot;EDHE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDIT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDIT.jpg&quot; alt=&quot;EDIT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDP&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDP.jpg&quot; alt=&quot;EDP&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDRE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDRE.jpg&quot; alt=&quot;EDRE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;EDTE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/EDTE.jpg&quot; alt=&quot;EDTE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ENGE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ENGE.jpg&quot; alt=&quot;ENGE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ENGR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ENGR.jpg&quot; alt=&quot;ENGR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ENSC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ENSC.jpg&quot; alt=&quot;ENSC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ENT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ENT.jpg&quot; alt=&quot;ENT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ESM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ESM.jpg&quot; alt=&quot;ESM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FA.jpg&quot; alt=&quot;FA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FIN&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FIN.jpg&quot; alt=&quot;FIN&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FIW&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FIW.jpg&quot; alt=&quot;FIW&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FL.jpg&quot; alt=&quot;FL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FOR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FOR.jpg&quot; alt=&quot;FOR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FR.jpg&quot; alt=&quot;FR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;FST&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/FST.jpg&quot; alt=&quot;FST&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GBCB&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GBCB.jpg&quot; alt=&quot;GBCB&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GEOG&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GEOG.jpg&quot; alt=&quot;GEOG&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GEOS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GEOS.jpg&quot; alt=&quot;GEOS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GER&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GER.jpg&quot; alt=&quot;GER&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GIA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GIA.jpg&quot; alt=&quot;GIA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GRAD&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GRAD.jpg&quot; alt=&quot;GRAD&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;GR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/GR.jpg&quot; alt=&quot;GR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HD&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HD.jpg&quot; alt=&quot;HD&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HEB&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HEB.jpg&quot; alt=&quot;HEB&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HIST&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HIST.jpg&quot; alt=&quot;HIST&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HNFE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HNFE.jpg&quot; alt=&quot;HNFE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HORT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HORT.jpg&quot; alt=&quot;HORT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HTM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HTM.jpg&quot; alt=&quot;HTM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;HUM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/HUM.jpg&quot; alt=&quot;HUM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;IDS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/IDS.jpg&quot; alt=&quot;IDS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ISC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ISC.jpg&quot; alt=&quot;ISC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;IS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/IS.jpg&quot; alt=&quot;IS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ITAL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ITAL.jpg&quot; alt=&quot;ITAL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ITDS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ITDS.jpg&quot; alt=&quot;ITDS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;JPN&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/JPN.jpg&quot; alt=&quot;JPN&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;JUD&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/JUD.jpg&quot; alt=&quot;JUD&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;LAHS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/LAHS.jpg&quot; alt=&quot;LAHS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;LAR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/LAR.jpg&quot; alt=&quot;LAR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;LAT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/LAT.jpg&quot; alt=&quot;LAT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;LDRS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/LDRS.jpg&quot; alt=&quot;LDRS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MACR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MACR.jpg&quot; alt=&quot;MACR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MATH&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MATH.jpg&quot; alt=&quot;MATH&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;ME&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/ME.jpg&quot; alt=&quot;ME&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MGT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MGT.jpg&quot; alt=&quot;MGT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MINE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MINE.jpg&quot; alt=&quot;MINE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MKTG&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MKTG.jpg&quot; alt=&quot;MKTG&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MN&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MN.jpg&quot; alt=&quot;MN&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MSE&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MSE.jpg&quot; alt=&quot;MSE&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MS.jpg&quot; alt=&quot;MS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MTRG&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MTRG.jpg&quot; alt=&quot;MTRG&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;MUS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/MUS.jpg&quot; alt=&quot;MUS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;NANO&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/NANO.jpg&quot; alt=&quot;NANO&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;NEUR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/NEUR.jpg&quot; alt=&quot;NEUR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;NR&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/NR.jpg&quot; alt=&quot;NR&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;NSEG&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/NSEG.jpg&quot; alt=&quot;NSEG&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PAPA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PAPA.jpg&quot; alt=&quot;PAPA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PHIL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PHIL.jpg&quot; alt=&quot;PHIL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PHS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PHS.jpg&quot; alt=&quot;PHS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PHYS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PHYS.jpg&quot; alt=&quot;PHYS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PORT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PORT.jpg&quot; alt=&quot;PORT&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PPWS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PPWS.jpg&quot; alt=&quot;PPWS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PSVP&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PSVP.jpg&quot; alt=&quot;PSVP&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;PSYC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/PSYC.jpg&quot; alt=&quot;PSYC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;REAL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/REAL.jpg&quot; alt=&quot;REAL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;RLCL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/RLCL.jpg&quot; alt=&quot;RLCL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;RTM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/RTM.jpg&quot; alt=&quot;RTM&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;RUS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/RUS.jpg&quot; alt=&quot;RUS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;SBIO&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/SBIO.jpg&quot; alt=&quot;SBIO&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;SOC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/SOC.jpg&quot; alt=&quot;SOC&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;SPAN&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/SPAN.jpg&quot; alt=&quot;SPAN&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;SPIA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/SPIA.jpg&quot; alt=&quot;SPIA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;STL&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/STL.jpg&quot; alt=&quot;STL&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;STS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/STS.jpg&quot; alt=&quot;STS&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;SYSB&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/SYSB.jpg&quot; alt=&quot;SYSB&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;TA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/TA.jpg&quot; alt=&quot;TA&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;TBMH&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/TBMH.jpg&quot; alt=&quot;TBMH&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;UAP&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/UAP.jpg&quot; alt=&quot;UAP&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;UH&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/UH.jpg&quot; alt=&quot;UH&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;UNIV&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/UNIV.jpg&quot; alt=&quot;UNIV&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;VM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vtgraphs/VM.jpg&quot; alt=&quot;VM&quot;&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to support PGP encryption in Gmail</title>
+   <link href="//blog/How-to-support-PGP-encryption-in-Gmail"/>
+   <updated>2015-08-24T00:00:00-04:00</updated>
+   <id>//blog/How-to-support-PGP-encryption-in-Gmail</id>
+   <content type="html">&lt;h1&gt;How to support PGP encryption in Gmail&lt;/h1&gt;
+
+&lt;p&gt;I like to use PGP whenever I can.  Not everything I send is necessarily super sensitive
+or private, but I&amp;#39;d prefer it to never show up in a leaked database.  Good thing
+Google has been working on a Chrome extension &lt;a href=&quot;https://github.com/google/end-to-end&quot;&gt;End-to-End&lt;/a&gt; to add PGP support to Gmail.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;:  As of the time of this posting, the extension is in the &lt;em&gt;review&lt;/em&gt; stage of development.
+No releases have been made.  But it&amp;#39;s open for testing!  It&amp;#39;s also included in Google&amp;#39;s Bug Bounty Program.&lt;/p&gt;
+
+&lt;h1&gt;Setting up&lt;/h1&gt;
+
+&lt;p&gt;I&amp;#39;m running Ubuntu 15.04 and I had to install Ant and Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+sudo apt-get install ant openjdk-8-jdk
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now to get the source and built it.&lt;/p&gt;
+
+&lt;p&gt;``` bash
+git clone https://github.com/google/end-to-end
+cd end-to-end/&lt;/p&gt;
+
+&lt;h1&gt;Downloads the source for closure-compiler and builds it.&lt;/h1&gt;
+
+&lt;p&gt;./do.sh install_deps&lt;/p&gt;
+
+&lt;p&gt;./do.sh build_extension
+```&lt;/p&gt;
+
+&lt;p&gt;Now we can load the extension into Chrome.  Turn on developer mode and click the &amp;quot;Load unpacked extension&amp;quot; button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/devmode.png&quot; alt=&quot;Developer mode and unpacked extension&quot; title=&quot;Developer mode and unpacked extension&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Make sure to use &amp;lt;path-to-end-to-end&amp;gt;/build/extension as the unpacked extension.  Upon installing it
+you should see a &amp;quot;Welcome to End-to-End&amp;quot; page open.  The icon should be on the top right of the window as well.&lt;/p&gt;
+
+&lt;p&gt;If you aren&amp;#39;t familiar with PGP, I recommend you start with reading the &lt;a href=&quot;https://www.gnupg.org/gph/en/manual.html&quot;&gt;GPG Privacy Handbook&lt;/a&gt;
+so you don&amp;#39;t mess it up.  Key management is important and PGP relies on a web of trust model.  Most PGP users don&amp;#39;t want unintelligible people
+in their web of trust.&lt;/p&gt;
+
+&lt;h1&gt;Usage&lt;/h1&gt;
+
+&lt;p&gt;Open a new tab and click the End-to-End icon.  Then click &amp;quot;options&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/end2end/options.png&quot; alt=&quot;The dropdown for a new tab&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;This will bring you to a new page where you can do key management.
+You can import your public key ring or any private keys you have.  &lt;/p&gt;
+
+&lt;p&gt;If you import a private key with a password on it, End-to-End will decrypt the
+key.  It stores all private/public keys unencypted unless you protect them with a passphrase.
+It also has a backup recovery code for recovering the keyring if you forget your passphrase.  I&amp;#39;m
+not sure how that works.&lt;/p&gt;
+
+&lt;p&gt;It doesn&amp;#39;t encrypt the keys in memory but they are &amp;quot;safe&amp;quot; inside Chome&amp;#39;s sandbox mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/end2end/keymng.png&quot; alt=&quot;The dropdown for a new tab&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Now for writing an email.  Just go to Gmail and click on the extension icon again and a email form will show up.
+You can then write an email like normal but be sure to save encrypted drafts often!  End-to-End will not do it
+for you like Gmail does, and as soon as the window loses focus, End-to-End closes and all of your unsaved progress
+will be gone. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Edit&lt;/em&gt;:  This can be avoided by opening the message in a popup window (clicking the popup icon on the top right).  This
+won&amp;#39;t auto-close when the window loses focus.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/end2end/message.png&quot; alt=&quot;&quot; title=&quot;The demo (John Barlow&amp;#39;s A Declaration of the Independence of Cyberspace)&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions about End-to-End, check out the &lt;a href=&quot;https://github.com/google/end-to-end/wiki/FAQ&quot;&gt;FAQ&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

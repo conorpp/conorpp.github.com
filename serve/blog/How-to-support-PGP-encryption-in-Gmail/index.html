@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="canonical" href="//blog/How-to-support-PGP-encryption-in-Gmail" />
+	<meta name="description" content="{% include JB/setup %} # How to support PGP encryption in Gmail I like to use PGP whenever I can...." />
+	<meta property="og:description" content="{% include JB/setup %} # How to support PGP encryption in Gmail I like to use PGP whenever I can...." />
+	<meta itemprop="image" content="//assets/images/default.jpg" />
+	<meta property="og:image" content="//assets/images/default.jpg" />
+	<meta property="og:title" content="How to support PGP encryption in Gmail" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="//blog/How-to-support-PGP-encryption-in-Gmail" />
+	<meta property="og:site_name" content="Conor Patrick" />
+	<title>How to support PGP encryption in Gmail &middot; Conor Patrick</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1001px)" href="/assets/css/desktop.css" />
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1000px)" href="/assets/css/mobile.css" />
+	<link href="/assets/css/genericons.css" type="text/css" rel="stylesheet" />
+	<link href="/assets/css/syntax.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="/assets/css/fonts.css">
+	<link rel="apple-touch-icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="//atom.xml">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43448699-5', 'auto');
+    ga('send', 'pageview');
+</script> 
+</head>
+
+<body>
+	<header class="clean" style="background-image: url(/assets/images/default.jpg);height: 100%;">
+	
+	    <a href="/" style="position:fixed; z-index:1;">
+        <span class="genericon genericon-standard" style="font-size:3em; background-color:rgba(0,0,0,0.68); width:1em; height:1em; "></span>
+    </a>
+<div class="social-links">
+	
+	<a href="https://twitter.com/_conorpp" target="_blank" title="Follow me on twitter"><span class="genericon genericon-twitter"></span></a>
+	
+	<a href="https://github.com/conorpp" target="_blank" title="Fork me on github"><span class="genericon genericon-github"></span></a>
+	
+	<a href="https://plus.google.com/+ConorPatrickpp/" target="_blank" title="Add me on google+"><span class="genericon genericon-googleplus-alt"></span></a>
+	
+	<a href="/atom.xml" target="_blank" title="Subscribe to my feed"><span class="genericon genericon-feed"></span></a>
+	
+	<a href="/assets/gpgkey.txt" target="_blank" title="GPG Key"><span class="genericon genericon-key"></span></a>
+	
+	<a href="http://devpost.com/conorpp94" target="_blank" title="Hackathon Projects"><span class="genericon genericon-portfolio"></span></a>
+	
+</div>
+
+	<div id="post-info">
+		<h1>How to support PGP encryption in Gmail</h1>
+		
+		<a class="site-title" href="/"><img src="/assets/images/profile.jpg" class="site-icon-small">Conor Patrick</a>, in 24 August 2015
+	</div>
+	<div id="nav-icon" style="bottom: 60px;">
+		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-expand"></span></a>
+	</div>
+</header>
+<div id="article">
+	<h1>How to support PGP encryption in Gmail</h1>
+
+<p>I like to use PGP whenever I can.  Not everything I send is necessarily super sensitive
+or private, but I&#39;d prefer it to never show up in a leaked database.  Good thing
+Google has been working on a Chrome extension <a href="https://github.com/google/end-to-end">End-to-End</a> to add PGP support to Gmail.</p>
+
+<p><strong>Disclaimer</strong>:  As of the time of this posting, the extension is in the <em>review</em> stage of development.
+No releases have been made.  But it&#39;s open for testing!  It&#39;s also included in Google&#39;s Bug Bounty Program.</p>
+
+<h1>Setting up</h1>
+
+<p>I&#39;m running Ubuntu 15.04 and I had to install Ant and Java.</p>
+
+<p><code>
+sudo apt-get install ant openjdk-8-jdk
+</code></p>
+
+<p>Now to get the source and built it.</p>
+
+<p>``` bash
+git clone https://github.com/google/end-to-end
+cd end-to-end/</p>
+
+<h1>Downloads the source for closure-compiler and builds it.</h1>
+
+<p>./do.sh install_deps</p>
+
+<p>./do.sh build_extension
+```</p>
+
+<p>Now we can load the extension into Chrome.  Turn on developer mode and click the &quot;Load unpacked extension&quot; button.</p>
+
+<p><img src="/assets/images/devmode.png" alt="Developer mode and unpacked extension" title="Developer mode and unpacked extension"></p>
+
+<p>Make sure to use &lt;path-to-end-to-end&gt;/build/extension as the unpacked extension.  Upon installing it
+you should see a &quot;Welcome to End-to-End&quot; page open.  The icon should be on the top right of the window as well.</p>
+
+<p>If you aren&#39;t familiar with PGP, I recommend you start with reading the <a href="https://www.gnupg.org/gph/en/manual.html">GPG Privacy Handbook</a>
+so you don&#39;t mess it up.  Key management is important and PGP relies on a web of trust model.  Most PGP users don&#39;t want unintelligible people
+in their web of trust.</p>
+
+<h1>Usage</h1>
+
+<p>Open a new tab and click the End-to-End icon.  Then click &quot;options&quot;.</p>
+
+<p><img src="/assets/images/end2end/options.png" alt="The dropdown for a new tab"></p>
+
+<p>This will bring you to a new page where you can do key management.
+You can import your public key ring or any private keys you have.  </p>
+
+<p>If you import a private key with a password on it, End-to-End will decrypt the
+key.  It stores all private/public keys unencypted unless you protect them with a passphrase.
+It also has a backup recovery code for recovering the keyring if you forget your passphrase.  I&#39;m
+not sure how that works.</p>
+
+<p>It doesn&#39;t encrypt the keys in memory but they are &quot;safe&quot; inside Chome&#39;s sandbox mode.</p>
+
+<p><img src="/assets/images/end2end/keymng.png" alt="The dropdown for a new tab"></p>
+
+<p>Now for writing an email.  Just go to Gmail and click on the extension icon again and a email form will show up.
+You can then write an email like normal but be sure to save encrypted drafts often!  End-to-End will not do it
+for you like Gmail does, and as soon as the window loses focus, End-to-End closes and all of your unsaved progress
+will be gone. </p>
+
+<p><em>Edit</em>:  This can be avoided by opening the message in a popup window (clicking the popup icon on the top right).  This
+won&#39;t auto-close when the window loses focus.</p>
+
+<p><img src="/assets/images/end2end/message.png" alt="" title="The demo (John Barlow&#39;s A Declaration of the Independence of Cyberspace)"></p>
+
+<p>If you have any questions about End-to-End, check out the <a href="https://github.com/google/end-to-end/wiki/FAQ">FAQ</a>.</p>
+
+</div>
+<div>
+    By the way, I'm now on <a href="https://twitter.com/_conorpp">Twitter</a> too if you'd like to follow my interests.
+</div>
+
+<footer class="clean" style="background-image: url(/assets/images/vtgraphs/ECE.jpg);height: 75%; min-height: 500px;">
+	<div id="nav-icon" style="top: 25px;">
+		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-collapse"></span></a>
+	</div>
+	<div id="post-info">
+		<h3>Next up</h3>
+		<a href="/blog/class-prerequisite-graphs-for-vt">
+			<h1>Class Prerequisite Graphs for VT</h1>
+			
+		</a>
+	</div>
+	<p class="copyright">&copy;2015, <a href="/" target="_blank">Conor Patrick</a>. <a href="http://creativecommons.org/licenses/by-nc/2.5" target="_blank"></a>.</p>
+</footer>
+
+
+
+<script src="/assets/js/smooth-scroll.js"></script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES * * */
+var disqus_shortname = 'conorpp';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</body>
+</html>

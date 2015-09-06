@@ -2,7 +2,7 @@
 layout: post
 title: "Class Prerequisite Graphs for VT"
 description: ""
-category: Information
+category: Data
 tags: [information, data]
 image: "/assets/images/vtgraphs/ECE.jpg"
 ---
@@ -273,3 +273,6 @@ I'm missing ENGL, STAT, and ISE.
 ![UNIV](/assets/images/vtgraphs/UNIV.jpg)
 ###VM
 ![VM](/assets/images/vtgraphs/VM.jpg)
+
+
+{% include JB/mytwitter %}

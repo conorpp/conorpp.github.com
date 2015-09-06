@@ -1,5 +1,7 @@
 # Dependencies
 markdown:	redcarpet
+redcarpet:
+      extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 pygments:	true
 
 
@@ -62,3 +64,8 @@ copyright:
   author:	Conor Patrick
   url:		/
   type_url:	http://creativecommons.org/licenses/by-nc/2.5
+
+
+#twitterLink: 'https://twitter.com/_conorpp'
+#mytwitter:  'By the way, I\'m now on [Twitter]({{site.twitterLink}}) too if you\'d like to follow my interests.'
+

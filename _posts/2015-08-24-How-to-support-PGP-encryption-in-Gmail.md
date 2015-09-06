@@ -2,7 +2,7 @@
 layout: post
 title: "How to support PGP encryption in Gmail"
 description: ""
-category: Security
+category: Tools
 tags: [Security,PGP,Encryption,Communication,How-to]
 image: /assets/images/default.jpg
 ---
@@ -79,3 +79,5 @@ won't auto-close when the window loses focus.
 ![](/assets/images/end2end/message.png "The demo (John Barlow's A Declaration of the Independence of Cyberspace)")
 
 If you have any questions about End-to-End, check out the [FAQ](https://github.com/google/end-to-end/wiki/FAQ).
+
+{% include JB/mytwitter %}
