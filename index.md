@@ -10,9 +10,11 @@ and as a security researcher for the FTC.  I like going to hackathons and doing 
 
 If you'd like to chat, tweet at me or send me an PGP encrypted message at {{site.author.email}}
 
+
+
 ||||
 |:--------|----|---|-|{% for post in site.posts %}
-| {{ post.date | date_to_string }}                | {{post.category}} | fwefowefweofwefew[{{ post.title }}]({{ BASE_PATH }}{{ post.url }}) |{% endfor %}
+| <span class="nowrap">{{ post.date | date: "%b '%y" }}</span> | {{post.category}} | [{{ post.title }}]({{ BASE_PATH }}{{ post.url }}) |{% endfor %}
 
 
 
