@@ -26,7 +26,32 @@ article: true
 <div id="article">
 	{{ content }}
 </div>
-{% for post in site.related_posts limit:1 %}
+
+{% for post in site.posts %}
+    {% if post.url == page.url %}
+        {% assign post_index0 = forloop.index0 %}
+        {% assign post_index1 = forloop.index %}
+    {% endif %}
+{% endfor %}
+{% for post in site.related_posts %}
+    {% if post_index1 == forloop.index %}
+        {% assign next_post = post %}
+    {% endif %}
+    {% if post_index0 == forloop.index0 %}
+        {% assign prev_post = post %}
+    {% endif %}
+{% endfor %}
+
+
+{% if next_post %}
+    {% assign post = next_post %}
+{% elsif prev_post %}
+    {% assign post = prev_post %}
+{% else %}
+    {% assign post = site.posts.first %}
+{% endif %}
+
+{% if post %}
 <footer class="{% if post.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if post.image %}{{ post.image }}{% else %}{{ site.cover }}{% endif %});{% if post.background_position %} background-position: {{ post.background_position }};{% endif %}height: 75%; min-height: 500px;">
 	<div id="nav-icon" style="top: 25px;">
 		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-collapse"></span></a>
@@ -42,7 +67,7 @@ article: true
 	</div>
 	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
 </footer>
-{% endfor %}
+{% endif %}
 
 {% if site.disqus %}
 <script src="/assets/js/smooth-scroll.js"></script>
