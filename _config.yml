@@ -15,11 +15,11 @@ permalink:	/blog/:title
 title:		Conor Patrick
 tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
-url:		/
+url:		http://conorpp.com
 
 author:
   name:		''
-  url:		https://google.com/+IanCamporezBrunelli
+  url:		http://conorpp.com
   email:    conorpp \at vt \dot edu
 
 paginate:	5
