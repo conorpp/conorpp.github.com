@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+aspectcrop -a 4:3 -g east $1 $1.fb.jpg

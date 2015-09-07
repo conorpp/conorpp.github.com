@@ -3,8 +3,8 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">{% if page.article %}
 	<meta name="description" content="{% if page.quote %}{{ page.quote }}{% else %}{{ page.content | markdownify | strip_html | truncatewords: 20 }}{% endif %}" />
 	<meta property="og:description" content="{% if page.quote %}{{ page.quote }}{% else %}{{ page.content | markdownify | strip_html | truncatewords: 20 }}{% endif %}" />
-	<meta itemprop="image" content="{% if page.image %}{{site.url}}{{ page.image }}{% else %}{{site.url}}{{ site.icon }}{% endif %}" />
-	<meta property="og:image" content="{% if page.image %}{{site.url}}{{ page.image }}{% else %}{{site.url}}{{ site.icon }}{% endif %}" />
+	<meta itemprop="image" content="{% if page.image %}{{site.url}}{{ page.image }}.fb.jpg{% else %}{{site.url}}{{ site.icon }}{% endif %}" />
+	<meta property="og:image" content="{% if page.image %}{{site.url}}{{ page.image }}.fb.jpg{% else %}{{site.url}}{{ site.icon }}{% endif %}" />
 	<meta property="og:title" content="{{ page.title }}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="{{ site.title }}" />{% endif %}
