@@ -188,7 +188,7 @@ I've intended this tool to be used for analysis, and can be used for getting sec
 So far I've used it to pull apps, firmware updates, certificates/credentials, and change identifiers.
 
 It's not ideal for an actual attack, unless there was some clever way for forcing already paired devices to unpair and then
-hope they reconnect to the proxy.  Forcing unpairing has been done using an `Ubertooth` but it's not something that I have 
+hope they reconnect to the proxy.  [Forcing unpairing has been done using an](https://blog.lacklustre.net/posts/Blackbox_Reversing_an_Electric_Skateboard_Wireless_Protocol/) `Ubertooth` but it's not something that I have 
 looked into yet.
 
 
