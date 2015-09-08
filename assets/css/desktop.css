@@ -1,10 +1,17 @@
 @import url(default.css);
 
+
+.post-info-top{
+	top: 100px;
+}
+.post-info-bottom{
+	bottom: 100px;
+}
+
 #post-info {
 	width: 800px;
 	left: 50%;
 	margin-left: -350px;
-	bottom: 100px;
     background-color: rgba(0, 0, 0, 0.68);
     padding: .5em;
 }

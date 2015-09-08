@@ -494,3 +494,10 @@ label.menu,label.menu *{
 #mytwitter{
     padding-top: 2em;
 }
+
+#post-info{
+    background-color: rgba(0, 0, 0, 0.68);
+    padding: .5em;
+}
+
+
