@@ -11,10 +11,10 @@ image: /assets/images/bitflip/cover22.png
 ## The Challenge
 
 I recently competed in [CSAW](https://ctf.isis.poly.edu/) with a few friends.  For those that don't know,
-[CSAW](https://ctf.isis.poly.edu/) (Cyber Security Awareness Week) is an online `wargame` where a group at NYU Poly puts up challenges related to 
+[CSAW](https://ctf.isis.poly.edu/) (Cyber Security Awareness Week) is an online `CTF` where a group at NYU Poly puts up challenges related to 
 computer security.
 
-One of our favorite challenges was called "sharpturn" and hinted about hard drive failure.  
+One of our favorite challenges was called "sharpturn" and hinted about SATA controller failure.  
 It contained a link to a git repo. 
 
 It contained no source files but it still had the git objects tree (typically located in .git/objects/).
@@ -83,7 +83,7 @@ All of which are pretty simple:
 5. 29, 271, 1103, 31151
 
 Except the 5th question is clearly wrong.  There are 4 prime factors to 270031727027,
-not 2.  So this is where challenge starts to become clear: Hard drive failure is hinted at,
+not 2.  So this is where challenge starts to become clear: SATA controller failure is hinted at,
 one of the files is corrupt, and it asks a mathematically impossible question.  There must
 have been bit flips in the file.
 
