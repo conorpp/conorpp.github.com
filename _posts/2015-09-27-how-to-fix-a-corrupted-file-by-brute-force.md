@@ -40,8 +40,8 @@ error: f8d0839dd728cb9a723e32058dcc386070d5e3b5: object corrupt or missing
 ## What we did
 
 For those that don't know, a git object is just a `zlib` compressed version
-of a file that is being tracked.  It could be any file.  So we uncompressed
-all of the corrupted git objects to find that they are 3 different revisions
+of a file that is being tracked.  It could inflate to be any file.  So we uncompressed
+all of the corrupted git objects to find that they were 3 different revisions
 of a C++ source file. The `f8/*` file looked like the latest revision so we looked at that.
 
 
