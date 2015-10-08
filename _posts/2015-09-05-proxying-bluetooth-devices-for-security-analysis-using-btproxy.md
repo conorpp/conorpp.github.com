@@ -2,7 +2,7 @@
 layout: post
 title: "Proxying Bluetooth devices for security analysis using btproxy"
 description: ""
-category: Tools
+category: Bluetooth
 tags: []
 image: /assets/images/btproxy/cover.jpg
 ---

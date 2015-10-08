@@ -2,7 +2,7 @@
 layout: post
 title: "How to support PGP encryption in Gmail"
 description: ""
-category: Tools
+category: Crypto
 tags: [Security,PGP,Encryption,Communication,How-to]
 image: /assets/images/default.jpg
 ---

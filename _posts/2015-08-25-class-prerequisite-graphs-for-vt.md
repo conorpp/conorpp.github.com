@@ -2,7 +2,7 @@
 layout: post
 title: "Class Prerequisite Graphs for VT"
 description: ""
-category: Data
+category: Data Visualization
 tags: [information, data]
 image: "/assets/images/vtgraphs/ECE.jpg"
 ---
