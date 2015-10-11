@@ -77,7 +77,7 @@ I wanted to see what the program communicated with the server so I put it in a d
 After it initially connected with the server, these messages were sent:
 
 ```bash
-# Bot
+# Bot  (5.9.118.150 is wileful.com)
 USER GNU 104.131.107.238 5.9.118.150 :GN
 PASS swedenrocks
 # Server
