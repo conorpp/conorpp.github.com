@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Fix a Corrupted File by Brute Force"
+title: "How to fix a corrupted file by brute force"
 description: ""
 category: CTF Writeup
 tags: [CTF, CSAW, HowTo, Bitflip, bitflipper, writeup, forensics]
