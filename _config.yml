@@ -4,6 +4,9 @@ redcarpet:
       extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 pygments:	true
 
+sass:
+    sass_dir: assets/sass/_sass
+    style: compressed
 
 disqus:
     username: conorpp
