@@ -46,11 +46,13 @@ This after leaving the server running for a couple months, that is exactly what 
 
 # Analysis
 
-To summarize the Perl script, it's about 500 lines, connects to a server, `wileful.com`, and listens for commands.  Some of the commands it looks for
+To summarize the Perl script, it's about 500 lines, connects to a server, `wileful.com`, and listens for commands.
+[Some of the commands](https://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L298) it looks for
 include `tcpflood`, `eval`, and `shell`.  This looks like functionality for a botnet bot.  
 
 It also implements some stealth.  Upon running the program,
-it immediately forks a `/usr/sbin/httpd` process, overwrites it with the Perl process using `exec`, and detaches from the parent process so it
+it immediately [forks](ihttps://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L39) a `/usr/sbin/httpd` process, 
+overwrites it with the Perl process using `exec`, and detaches from the parent process so it
 can run independently in the background.
 
 So you won't be able to see a new perl process running.  Instead, a new `/usr/sbin/httpd` process will be running.
@@ -65,7 +67,8 @@ root        33  0.0  0.0   8860   644 ?        S+   16:30   0:00 grep --color=au
 ```
 
 If you check the CPU usage of processes, however, `/usr/sbin/httpd` sticks out like a sore thumb because it
-polls the server socket with no timeout after it connects.  This spins the CPU (oops).
+[polls the server socket with no timeout](https://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L83)
+after it connects.  This spins the CPU (oops).
 
 ```
 # Output from top
@@ -121,7 +124,7 @@ Looks like bots are actively leaving and joining.  I suspect that the operaters 
 or were continually exploiting shellshock vulnerable machines like my honey pot.
 
 I wanted to see if I could send commands to the botnet since I had access to the channels, but after
-a couple hours of unfurling the perl script, I discovered that it authenticates commands based on the 
+a couple hours of unfurling the perl script, I discovered that it [authenticates](https://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L127) commands based on the 
 [servername and nickname in the IRC message](https://tools.ietf.org/html/rfc2812#section-2.3.1).  I
 could not spoof this since it was something only an operator on the IRC network could do.
 
