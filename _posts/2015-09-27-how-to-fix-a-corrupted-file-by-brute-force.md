@@ -2,8 +2,7 @@
 layout: post
 title: "How to fix a corrupted file by brute force"
 description: ""
-category: CTF Writeup
-tags: [CTF, CSAW, HowTo, Bitflip, bitflipper, writeup, forensics]
+tags: [CTF]
 image: /assets/images/bitflip/cover22.png
 ---
 {% include JB/setup %}

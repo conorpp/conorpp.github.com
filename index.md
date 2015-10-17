@@ -16,7 +16,7 @@ If you'd like to chat, [tweet](https://twitter.com/_conorpp) at me or send me an
 
 ||||
 |:--------|----|---|-|{% for post in site.posts %}
-| <span class="nowrap">{{ post.date | date: "%b '%y" }}</span> | {{post.category}} | [{{ post.title }}]({{ BASE_PATH }}{{ post.url }}) |{% endfor %}
+| <span class="nowrap">{{ post.date | date: "%b '%y" }}</span> | [{{post.tags[0]}}]({{BASE_PATH}}/tags.html#{{post.tags[0]}}) | [{{ post.title }}]({{ BASE_PATH }}{{ post.url }}) |{% endfor %}
 
 
 

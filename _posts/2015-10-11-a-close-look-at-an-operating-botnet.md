@@ -2,8 +2,7 @@
 layout: post
 title: "A close look at an operating botnet"
 description: ""
-category: Botnet
-tags: []
+tags: [Malware, Data]
 image: /assets/images/botnet/cover.png
 ---
 {% include JB/setup %}

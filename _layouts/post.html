@@ -2,7 +2,6 @@
 layout: default
 article: true
 ---
-
 <header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image %}{{ page.image }}{% else %}{{ site.cover }}{% endif %});{% if page.background_position %} background-position: {{ page.background_position }};{% endif %}height: 100%;">
 	{% if page.video %}
 		<video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
@@ -22,6 +21,12 @@ article: true
 	<div id="nav-icon" style="bottom: 60px;">
 		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-expand"></span></a>
 	</div>
+    <div class="category tags" name="category" style="display:none;">
+
+        {% for t in page.tags %}
+            <p>{{ t }}</p>
+        {% endfor %}
+    </div>
 </header>
 <div id="article">
 	{{ content }}
