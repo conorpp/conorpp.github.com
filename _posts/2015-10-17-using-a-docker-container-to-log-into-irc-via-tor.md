@@ -57,6 +57,7 @@ docker run -it cpp1/weechat_tor
 # from laptop/desktop:
 ssh username@myserver.xyz -t tmux a -t irc
 ```
+P.S. [Students can get $50 credit on Digital Ocean though Github](https://education.github.com/pack).
 
 Tor
 ===
