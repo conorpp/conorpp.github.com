@@ -65,6 +65,7 @@ Tor
 But why need to be anonymous?  I don't have much reason to other then to show off for this post.  However,
 it was great for [checking out a botnet](http://conorpp.com/blog/a-close-look-at-an-operating-botnet/).
 
+*edit*:
 If you seriously want to be anonymous though, [it's not that easy](https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29#Weaknesses).
 Check out the [Tor website](https://www.torproject.org/about/overview) and other tools like [whonix](https://www.whonix.org/) and [torsocks](https://github.com/dgoulet/torsocks/).
 
