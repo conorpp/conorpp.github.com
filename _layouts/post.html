@@ -66,7 +66,7 @@ article: true
 {% endif %}
 
 {% if post %}
-<footer class="{% if post.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if post.image %}{{ post.image }}{% else %}{{ site.cover }}{% endif %});{% if post.background_position %} background-position: {{ post.background_position }};{% endif %}height: 75%; min-height: 500px;">
+<footer class="{% if post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ post.image }})">
 	<div id="nav-icon" style="top: 25px;">
 		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-collapse"></span></a>
 	</div>
