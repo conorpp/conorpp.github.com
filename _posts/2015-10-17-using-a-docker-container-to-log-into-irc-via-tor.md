@@ -65,6 +65,9 @@ Tor
 But why need to be anonymous?  I don't have much reason to other then to show off for this post.  However,
 it was great for [checking out a botnet](http://conorpp.com/blog/a-close-look-at-an-operating-botnet/).
 
+If you seriously want to be anonymous though, [it's not that easy](https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29#Weaknesses).
+Check out the [Tor website](https://www.torproject.org/about/overview) and other tools like [whonix](https://www.whonix.org/) and [torsocks](https://github.com/dgoulet/torsocks/).
+
 Resources
 ===============
 You can check out my Dockerfile [here](https://github.com/conorpp/Dockerfiles/tree/master/Weechat_Tor) if you want to make changes.
