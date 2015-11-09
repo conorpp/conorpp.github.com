@@ -58,11 +58,13 @@ If you want Linx to be public, you should tell it to bind to `0.0.0.0`.  It's
 also very important to let Linx know the `siteurl` - not only so Linx can
 correctly generate links, but also to prevent hotlinking by checking the origin or referer.  
 
-Hotlinking is a sometimes a serious
-problem that small services face, because as we can see from The Oatmeal,
+Hotlinking is sometimes a serious
+problem that small services face.  As we can see from The Oatmeal,
 it can seriously increase server bills.
 
 ![seriously increase server bills](/assets/images/linx/hot.jpg)
+
+Wouldn't have been a problem if the image was hosted with Linx!
 
 
 ## More features of Linx:
