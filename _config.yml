@@ -19,11 +19,11 @@ permalink:	/blog/:title
 title:		Conor Patrick
 tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
-url:		http://conorpp.com/
+url:		https://conorpp.com/
 
 author:
   name:		'Conor Patrick'
-  url:		http://conorpp.com
+  url:		https://conorpp.com
   email:    conorpp \at vt \dot edu
 
 paginate:	5
