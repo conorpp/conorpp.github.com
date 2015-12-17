@@ -9,8 +9,8 @@ sass:
     sass_dir: assets/sass/_sass
     style: compressed
 
-disqus:
-    username: conorpp
+#disqus:
+#    username: conorpp
 
 # Permalinks
 permalink:	/blog/:title
