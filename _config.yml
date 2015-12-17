@@ -41,9 +41,9 @@ social:
     url:	https://github.com/conorpp
     desc:	Fork me on github
 
-  - icon:	googleplus-alt
-    url:	https://plus.google.com/+ConorPatrickpp/
-    desc:	Add me on google+
+    #  - icon:	googleplus-alt
+    #url:	https://plus.google.com/+ConorPatrickpp/
+    #desc:	Add me on google+
 
   - icon:	feed
     url:	/atom.xml
@@ -53,9 +53,9 @@ social:
     url:	/assets/gpgkey.txt
     desc:	GPG Key
  
-  - icon:	portfolio
-    url:	http://devpost.com/conorpp94
-    desc:	Hackathon Projects
+    #- icon:	portfolio
+    #url:	http://devpost.com/conorpp94
+    #desc:	Hackathon Projects
     
 menu:
   - title:	Home
