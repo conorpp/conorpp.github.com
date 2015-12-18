@@ -226,4 +226,6 @@ be acceptable to stop at any of the iterations above for many projects.
 
 This was a fun project and improving the performance of a program is a satisfying experience.  If you got any ideas for how to make it even faster be sure to let me know.
 
+Thanks to Dr. Schaumont for an awesome class and project.  [Check out the results and details of the project, as well as past years](http://rijndael.ece.vt.edu/challenge/).
+
 {% include JB/mytwitter %}
