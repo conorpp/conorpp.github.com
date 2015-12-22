@@ -34,12 +34,10 @@ footer
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
 header a
-  transition-duration: .25s
   text-decoration: none
 
 footer
   a
-    transition-duration: .25s
     text-decoration: none
   width: 100%
   margin-top: 10px
@@ -55,15 +53,19 @@ a
 
 h1
   margin-top: 30px
-  font-size: 36px
+  font-size: 26px
 
 h2
   margin-top: 25px
-  font-size: 30px
+  font-size: 24px
 
 h3
   margin-top: 20px
-  font-size: 24px
+  font-size: 20px
+
+h1.title, h1#title
+  font-size: 36px
+  margin-top: 1px
 
 img
   border-radius: 3px
@@ -113,7 +115,6 @@ img
     width: 150px
     height: 150px
     border-radius: 50%
-    transition-duration: .25s
     opacity: .9
     &:hover
       margin-top: -80px
@@ -151,22 +152,30 @@ img
       text-align: center
       display: block
 
-#article
+#article, #headertop
   font-family: "PT Serif", Georgia, "Times New Roman", serif
   font-weight: 400
   letter-spacing: 0px
   font-size: 20px
-  color: #313131
+  color: $grey
   line-height: 1.5
   position: relative
   a
     border-bottom: 2px solid #fff
-    -webkit-transition: 0.5s ease
-    transition: 0.5s ease
     &:hover
       border-bottom: 2px solid #2a7ead
-      -webkit-transition: 0.5s ease
-      transition: 0.5s ease
+
+#headertop
+  color: $lightgrey
+  font-size: 99%
+
+#headertop a
+  border-bottom: none
+  color: $white
+  font-weight: bold
+  &:hover
+    border-bottom: 2px solid $white
+
 
 a.site-title:hover, .copyright a:hover
   text-decoration: underline
@@ -400,7 +409,6 @@ label.menu
   a
     color: #555
     text-decoration: none
-    transition-duration: .5s
     &:hover
       color: #2a7ead
       text-decoration: none
@@ -434,3 +442,41 @@ label.menu
 .next-up
   min-height: 280px
 
+.center
+  text-align: center
+
+.fillw
+  width: 100%
+
+.faint
+  font-size: 13px
+  color: $grey
+
+.bgblack
+  background: $black
+
+.padv
+  padding: 25px 0px 25px 0px  /* top right bottom left */
+
+.box1
+  max-width: 64%
+  left: 18%
+  position: relative
+
+.noborder, .noborder *
+  border: none
+
+.nounderline, #headertop a.nounderline, .nounderline:hover
+  text-decoration: none
+  border-bottom: none
+  &:hover
+    text-decoration: none
+    border-bottom: none
+
+#topheader
+
+#portrait
+  width: 10em
+
+.circle
+  border-radius: 50%
