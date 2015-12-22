@@ -1,6 +1,6 @@
 
 @import default
- 
+@import vars
 
 h1
   margin-top: 30px
@@ -11,7 +11,7 @@ h2
   font-size: 28px
 
 #post-info
-  width: 90%
+  width: $mobile-content-width
   left: 5%
   margin-left: 0px
   bottom: 100px
@@ -25,10 +25,7 @@ h2
   margin-left: -50%
 
 #article
-  width: 90%
-  padding: 50px 5%
-  left: 0px
-  margin-left: 0px
+  width: $mobile-content-width
 
 #bg-video, #bg-video-pattern
   display: none
@@ -41,7 +38,7 @@ h2
   position: absolute
 
 .pagination, #post-list
-  width: 90%
+  width: $mobile-content-width
   padding: 0px 5%
   left: 0px
   margin-left: 0px
@@ -67,3 +64,20 @@ h2
   width: 100%
   text-align: center
   float: left
+
+.content-width
+  width: $mobile-content-width
+
+.content-width3
+  width: $mobile-content-width/2
+.content-width5
+  width: $mobile-content-width/3
+.content-width6
+  width: $mobile-content-width/4
+
+.content-center
+  left: 50%
+  margin-left: -($mobile-content-width/2)
+
+.isdesktop
+  display: none
