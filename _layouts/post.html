@@ -93,7 +93,7 @@ var disqus_shortname = '{{site.disqus.username}}';
 {% endif %}
 <span id="ismobile" class="ismobile"></span>
 <script>
-document.body.onload = function(){
+(function(){
     setTimeout(function(){
     // check if hidden
     if (document.getElementById("ismobile").offsetParent !== null && window.scrollY == 0)
@@ -103,5 +103,5 @@ document.body.onload = function(){
         console.log("scrolled?", objDiv.scrollHeight);
     }
     },0);
-};
+})();
 </script>
