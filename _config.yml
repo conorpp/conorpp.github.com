@@ -9,6 +9,10 @@ sass:
     sass_dir: assets/sass/_sass
     style: compressed
 
+# compress html but not really worth it
+#gems:
+#  - octopress-minify-html
+
 #disqus:
 #    username: conorpp
 
