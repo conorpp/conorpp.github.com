@@ -154,7 +154,7 @@ img
       display: block
 
 #article, #headertop
-  font-family: "PT Serif", Georgia, "Times New Roman", serif
+  font-family: $default-font
   font-weight: 400
   letter-spacing: 0px
   font-size: 18px
@@ -168,7 +168,6 @@ img
 #headertop a
   border-bottom: none
   color: $white
-  font-weight: bold
   &:hover
     border-bottom: 2px solid $white
 
@@ -180,12 +179,14 @@ table
   border: 0px
   border-collapse: collapse
   display: block
+  font-family: $formal-font
 
 td
   padding: .9rem .5rem
   min-width: 5em
   border: 1px solid #e5e5e5
   font-size: 16px
+  text-align: justify
 
 th
   padding: .25rem .5rem
@@ -416,7 +417,7 @@ label.menu
 .post-description
   color: #777
   font-size: 15pt
-  font-family: "PT Serif", Georgia, "Times New Roman", serif
+  font-family: $default-font
 
 .post-date
   font-size: 12pt
@@ -482,6 +483,11 @@ label.menu
 .circle
   border-radius: 50%
 
+.limit150
+  width: 150px
+  height: 150px
+
+
 .rel 
   position: relative
 .abs
@@ -499,5 +505,16 @@ label.menu
 .black
   color: $black
 
+.formal
+  font-family: $formal-font
+
+.regular
+  font-family: $default-font
+
+.fs-reg
+  font-size: 16px
+
+.fs-large
+  font-size: 20px
 
 
