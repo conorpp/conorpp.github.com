@@ -25,6 +25,9 @@ tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
 url:		https://conorpp.com/
 
+braintree: https://braintree.conorpp.com
+# braintree: http://localhost:5000
+
 author:
   name:		'Conor Patrick'
   url:		https://conorpp.com
