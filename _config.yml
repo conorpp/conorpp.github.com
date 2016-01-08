@@ -13,8 +13,8 @@ sass:
 #gems:
 #  - octopress-minify-html
 
-#disqus:
-#    username: conorpp
+disqus:
+    username: conorpp
 
 # Permalinks
 permalink:	/blog/:title
