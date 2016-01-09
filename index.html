@@ -11,7 +11,7 @@ title: Home
 		</a>
 	</div>
 </header>
-<div id="post-list">
+<div id="post-list" class="formal">
 	{% for post in paginator.posts %}
 		<div>
 			<span class="post-date">{{ post.date | date_to_long_string }}</span>

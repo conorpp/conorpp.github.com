@@ -3,8 +3,12 @@ layout: default
 ---
 
 	{% include top.html %}
+
+    {% unless page.nocover %}
+
 <header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
 </header>
+    {% endunless %}
 
     {% if page.title %}
     <!-- <h1>{{ page.title }}</h1> -->

@@ -13,8 +13,8 @@ sass:
 #gems:
 #  - octopress-minify-html
 
-#disqus:
-#    username: conorpp
+disqus:
+    username: conorpp
 
 # Permalinks
 permalink:	/blog/:title
@@ -24,6 +24,8 @@ title:		Conor Patrick
 tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
 url:		https://conorpp.com/
+
+braintree: https://braintree.conorpp.com
 
 author:
   name:		'Conor Patrick'
