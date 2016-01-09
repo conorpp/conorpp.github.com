@@ -11,22 +11,27 @@ image: /assets/images/braintree/cover.png
 
 # My set up with Braintree
 
-After starting an LLC, I decided I would try setting up [Braintree](https://www.braintreepayments.com/).  Braintree is a payment gateway API service (like Stripe) owned by Paypal.
-Braintree allows businesses to easily collect money from customers for a variety of payment options (credit, debit, bitcoin, etc) and be
+After starting an LLC, I decided I would try setting up [Braintree](https://www.braintreepayments.com/).  It's a payment service (like Stripe) owned by Paypal.
+Braintree allows businesses to easily collect money from customers for a variety of payment options (Visa, Mastercard, Discover, etc) and be
 [PCI compliant](https://articles.braintreepayments.com/reference/security/pci-compliance). Since Braintree
-handles this and provides a simple interface to transfer all collected customer money to a business bank account, they are considered
+handles this and provides an interface to transfer collected money to a business account, they are considered
 to be a [payment gateway](https://en.wikipedia.org/wiki/Payment_gateway).
 
-Providing a payment gateway service is not easy from a security perspective.  PCI is partly designed to make sure that gateway services
-prevent user error, where the user is the business.  A gateway service should assume that users are oblivious.  They should assume that 
+Providing a payment gateway service is not easy from a security perspective.
+The creators of the PCI standard (large credit card brands) want to minimize credit fraud and won't accept
+transactions from non-compliant services.
+The PCI standard is partly designed to make sure that gateway services
+prevent errors from the user, where a user is a business.
+
+So a gateway service should assume that users are oblivious.  They should assume that 
 once users get a hold on some sensitive information, say some credit cards or bank account numbers, they will store it insecurely and
-it will be compromised.
+it will be compromised.  
 
 In this post I will go over Braintree's security design and the infrastructure I decided to use to integrate it with my website.
 
 # Braintree work flow
 
-General work flow is as follows:
+General work flow for a business is as follows:
 
 * Generate a unique, signed identifier to represent a customer, called a client token.
 * The customer will enter payment information into the Braintree origin.
@@ -89,27 +94,35 @@ result = braintree.Transaction.sale({
 })
 ```
 
+
 # Setting up a payment system securely
+
+I'd say Braintree is pretty user proof.  But let's not get greedy and not set up a week infrastructure!
 
 Let's assume our infrastructure just needs to support two services: a web application and a payment server.
 
 If I were at a hackathon, I would probably just run the payment service and web app both on the same machine as root.  But that's a disaster waiting to happen.
 
-You should assume that at some point, some application will get compromised. It could be because of an admin mistake or a newly discovery application vulnerability.  But it happens.
-So it's important that all applications remain as separate from each other as possible.  I want my web app to be able to use my payment system
-to get paid, but at the same time I don't want my payment system and accounts to get exploited the moment my web app inevitably gets owned.  I would like
+You should assume that at some point, some application will get compromised. It could be because of an admin mistake or a new vulnerability discovery.  It happens.
+It's important that all applications remain as separate from each other as possible.  I want my web app to be able to use my payment system
+to get paid, but at the same time I don't want my payment system and account to get exploited the moment my web app inevitably gets owned.  I would like
 there to be some additional difficulty.  This is the basis of [privilege separation](https://en.wikipedia.org/wiki/Privilege_separation).
 
 It really doesn't matter that one of the services is a payment service: this decision processs should happen for every service that is distinct
-and can run independently.
+and independent.
 
 A basic improvement could be to just run the services as different users on a typical Linux or *Bsd system.  Then an attacker would have to gain priviledge
-escalation after compromising the web app to get at the payment system.  But that's still a little close.  Since the payment system isn't tied to
+escalation after compromising the web app to exploit the payment system.  But that's still a little close.  Since the payment system isn't tied to
 the performance of the web application, why not just run it on a different machine?
 
-Here is the solution I took.  I have one preexisting digital ocean instance for my blog (web app) and I added another one to run the Braintree system.
+Here is the solution I took.
+
+![](/assets/images/braintree/braintreesetup.svg)
+
+I have one preexisting digital ocean instance for my blog (web app) and I added another one to run the Braintree system.
 I set up another [Let's Encrypt]({% post_url 2015-11-04-trying-out-lets-encrypt %}) cert on my Braintree instance so the web app can securely proxy to the payment service via TLS.
 For good measure, I set up the HTTP server on the braintree instance to be restricted with a password so only the webapp instance can access it directly.
+
 
 # The result
 
