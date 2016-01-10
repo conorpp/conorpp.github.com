@@ -2,8 +2,15 @@
 layout: default
 article: true
 ---
-{% include top.html %}
 
+<div class="aboutmetop">{% include top.html %}</div>
+<div class="category tags" name="category" style="display:none;">
+
+    {% for t in page.tags %}
+    <p>{{ t }}</p>
+    {% endfor %}
+</div>
+{% unless page.nocover %}
 <div class="rel fillv">
     <header class="clean post-header" style="background-image: url({% if page.image %}{{ page.image }}{% else %}{{ site.cover }}{% endif %});{% if page.background_position %} background-position: {{ page.background_position }};{% endif %}">
         {% if page.video %}
@@ -13,14 +20,9 @@ article: true
             {% if page.video_mp4 %}<source src="{{ page.video_mp4 }}" type="video/mp4">{% endif %}
         </video>
         {% endif %}
-        <div class="category tags" name="category" style="display:none;">
-
-            {% for t in page.tags %}
-            <p>{{ t }}</p>
-            {% endfor %}
-        </div>
     </header>
 </div>
+{% endunless %}
 
 <div id="article" class="content-center content-width padv just">
     <div class="center">
@@ -93,15 +95,16 @@ var disqus_shortname = '{{site.disqus.username}}';
 {% endif %}
 <span id="ismobile" class="ismobile"></span>
 <script>
+
 (function(){
     setTimeout(function(){
-    // check if hidden
-    if (document.getElementById("ismobile").offsetParent !== null && window.scrollY == 0)
-    {
-        var objDiv = document.getElementById("headertop");
-        window.scrollBy(0,objDiv.scrollHeight);
-        console.log("scrolled?", objDiv.scrollHeight);
-    }
-    },0);
+        if (window.scrollY < 10)
+        {
+            var objDiv = document.getElementById("headertop");
+            window.scrollBy(0,objDiv.scrollHeight - window.scrollY - 4);
+            console.log("scrolled?", objDiv.scrollHeight);
+        }
+    },6);
 })();
+
 </script>

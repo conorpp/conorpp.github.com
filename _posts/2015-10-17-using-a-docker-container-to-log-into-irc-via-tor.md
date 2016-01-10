@@ -4,6 +4,7 @@ title: "Using a Docker container to log into IRC via Tor"
 description: ""
 tags: [Tools]
 image: /assets/images/default.jpg
+nocover: true
 ---
 {% include JB/setup %}
 

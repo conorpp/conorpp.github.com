@@ -4,6 +4,7 @@ title: "How to support PGP encryption in Gmail"
 description: ""
 tags: [Tools, Crypto]
 image: /assets/images/default.jpg
+nocover: true
 ---
 {% include JB/setup %}
 
