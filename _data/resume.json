@@ -58,7 +58,7 @@
 
         { "name": "Co-curricular and honors",
             "items": [
-                {"type":"plain", "timeperiod":"", "content":"<a href=\"https://www.pebble.com/legal/white_hat/hall_of_fame\">Found and reported security vulnerability</a> in Pebble watch that qualified in Pebble's <a href=\"https://www.pebble.com/legal/white_hat\">bug bounty program.</a>"},
+                {"type":"plain", "timeperiod":"", "hide":"true", "content":"<a href=\"https://www.pebble.com/legal/white_hat/hall_of_fame\">Found and reported security vulnerability</a> in Pebble watch that qualified in Pebble's <a href=\"https://www.pebble.com/legal/white_hat\">bug bounty program.</a>"},
                 {"type": "list", "name":"Active member in Virginia Tech Cyber Security Club", "timeperiod":"2014 - present",
                     "content": [
                         {"content":"Planning collegiate jeopardy style CTF competition for 2016 with hardware challenges"},

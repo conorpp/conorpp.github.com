@@ -23,9 +23,13 @@ Current residence: {{site.data.resume.location}}
 
 {% for b in site.data.resume.subjects %}
 
+
 {{ b.name }}
 ===========
+
+
     {% for i in b.items %}
+        {% unless i.hide %}
 
         {% if i.type == "plain" %}
 
@@ -48,8 +52,10 @@ Current residence: {{site.data.resume.location}}
 <h1 style="color:red;">invalid format type: {{i.type}}<h1>
 
         {% endif %}
+        {% endunless %}
 
     {% endfor %}
+
 
 {% endfor %}
 
