@@ -2,13 +2,13 @@
 @import vars
 
 .post-info-top
-  top: 100px
+  top: 30px
 
 .post-info-bottom
   bottom: 100px
 
 #post-info
-  width: 800px
+  width: $desktop-content-width
   left: 50%
   margin-left: -350px
   background-color: $title-bg-color
@@ -19,14 +19,11 @@
     line-height: 44px
 
 #home-title
-  width: 800px
+  width: $desktop-content-width
   margin-left: -350px
 
 #article
-  width: 800px
-  padding: 50px 0px
-  left: 50%
-  margin-left: -350px
+  width: $desktop-content-width
 
 #bg-video
   position: absolute
@@ -44,9 +41,24 @@
   position: device-fixed
 
 .pagination, #post-list
-  width: 800px
+  width: $desktop-content-width
   left: 50%
   margin-left: -350px
 
 .copyright
   right: 20px
+  
+.content-width
+  width: $desktop-content-width
+
+.content-width3
+  width: $desktop-content-width/3
+.content-width5
+  width: $desktop-content-width/5
+
+.content-center
+  left: 50%
+  margin-left: -($desktop-content-width/2)
+
+.ismobile
+  display: none

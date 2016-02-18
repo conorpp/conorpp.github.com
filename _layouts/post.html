@@ -2,34 +2,32 @@
 layout: default
 article: true
 ---
-<header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image %}{{ page.image }}{% else %}{{ site.cover }}{% endif %});{% if page.background_position %} background-position: {{ page.background_position }};{% endif %}height: 100%;">
-	{% if page.video %}
-		<video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-			{% if page.video_webm %}<source src="{{ page.video_webm }}" type="video/webm">{% endif %}
-			{% if page.video_ogv %}<source src="{{ page.video_ogv }}" type="video/ogg ogv">{% endif %}
-			{% if page.video_mp4 %}<source src="{{ page.video_mp4 }}" type="video/mp4">{% endif %}
-		</video>
-	{% endif %}
-	{% include top.html %}
-	<div id="post-info" class="post-info-bottom">
-		<h1>{{ page.title }}</h1>
-		{% if page.quote %}
-			<h2>{{ page.quote }}</h2>
-		{% endif %}
-        By {{site.author.name}}, {{ page.date | date_to_long_string }}.
-	</div>
-	<div id="nav-icon" style="bottom: 60px;">
-		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-expand"></span></a>
-	</div>
-    <div class="category tags" name="category" style="display:none;">
+{% include top.html %}
 
-        {% for t in page.tags %}
+<div class="rel fillv">
+    <header class="clean post-header" style="background-image: url({% if page.image %}{{ page.image }}{% else %}{{ site.cover }}{% endif %});{% if page.background_position %} background-position: {{ page.background_position }};{% endif %}">
+        {% if page.video %}
+        <video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            {% if page.video_webm %}<source src="{{ page.video_webm }}" type="video/webm">{% endif %}
+            {% if page.video_ogv %}<source src="{{ page.video_ogv }}" type="video/ogg ogv">{% endif %}
+            {% if page.video_mp4 %}<source src="{{ page.video_mp4 }}" type="video/mp4">{% endif %}
+        </video>
+        {% endif %}
+        <div class="category tags" name="category" style="display:none;">
+
+            {% for t in page.tags %}
             <p>{{ t }}</p>
-        {% endfor %}
+            {% endfor %}
+        </div>
+    </header>
+</div>
+
+<div id="article" class="content-center content-width padv just">
+    <div class="center">
+        <h1 id="title">{{ page.title }}</h1>
+        <span class="faint">{{ page.date | date_to_long_string }}</span>
     </div>
-</header>
-<div id="article">
-	{{ content }}
+        {{ content }}
 
 	<p class="copyright">
         &copy;{{ site.time | date: "%Y" }}, 
@@ -68,11 +66,7 @@ article: true
 
 {% if post %}
 <footer class="{% if post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ post.image }})">
-	<div id="nav-icon" style="top: 25px;">
-		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-collapse"></span></a>
-	</div>
 	<div id="post-info" class="post-info-top">
-		<h3>Next up</h3>
 		<a href="{{ post.url }}">
 			<h1>{{ post.title }}</h1>
 			{% if post.quote %}
@@ -87,10 +81,8 @@ article: true
 <script src="/assets/js/smooth-scroll.js"></script>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-/* * * CONFIGURATION VARIABLES * * */
 var disqus_shortname = '{{site.disqus.username}}';
 
-/* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -99,3 +91,17 @@ var disqus_shortname = '{{site.disqus.username}}';
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
+<span id="ismobile" class="ismobile"></span>
+<script>
+(function(){
+    setTimeout(function(){
+    // check if hidden
+    if (document.getElementById("ismobile").offsetParent !== null && window.scrollY == 0)
+    {
+        var objDiv = document.getElementById("headertop");
+        window.scrollBy(0,objDiv.scrollHeight);
+        console.log("scrolled?", objDiv.scrollHeight);
+    }
+    },0);
+})();
+</script>

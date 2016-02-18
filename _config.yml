@@ -9,6 +9,10 @@ sass:
     sass_dir: assets/sass/_sass
     style: compressed
 
+# compress html but not really worth it
+#gems:
+#  - octopress-minify-html
+
 disqus:
     username: conorpp
 
@@ -19,11 +23,13 @@ permalink:	/blog/:title
 title:		Conor Patrick
 tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
-url:		http://conorpp.com/
+url:		https://conorpp.com/
+
+braintree: https://braintree.conorpp.com
 
 author:
   name:		'Conor Patrick'
-  url:		http://conorpp.com
+  url:		https://conorpp.com
   email:    conorpp \at vt \dot edu
 
 paginate:	5
@@ -41,9 +47,9 @@ social:
     url:	https://github.com/conorpp
     desc:	Fork me on github
 
-  - icon:	googleplus-alt
-    url:	https://plus.google.com/+ConorPatrickpp/
-    desc:	Add me on google+
+    #  - icon:	googleplus-alt
+    #url:	https://plus.google.com/+ConorPatrickpp/
+    #desc:	Add me on google+
 
   - icon:	feed
     url:	/atom.xml
@@ -53,9 +59,9 @@ social:
     url:	/assets/gpgkey.txt
     desc:	GPG Key
  
-  - icon:	portfolio
-    url:	http://devpost.com/conorpp94
-    desc:	Hackathon Projects
+    #- icon:	portfolio
+    #url:	http://devpost.com/conorpp94
+    #desc:	Hackathon Projects
     
 menu:
   - title:	Home

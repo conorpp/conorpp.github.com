@@ -2,7 +2,7 @@
 layout: post
 title: "Proxying Bluetooth devices for security analysis using btproxy"
 description: ""
-tags: [Bluetooth, MiTM, Tools]
+tags: [Design, Tools]
 image: /assets/images/btproxy/cover.jpg
 ---
 {% include JB/setup %}

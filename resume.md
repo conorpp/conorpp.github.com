@@ -4,10 +4,59 @@ title: Conor Patrick
 tagline: Resume
 ---
 
-Check out my [Github]({{site.social[1].url}}) for some of my active and old projects.
+Check out my [Github profile]({{site.social[1].url}}) for some of my active and old projects.  
 
-My [Devpost]({{site.social[5].url}}) has all of my hackathon projects.
+Check out links below for press and videos.
 
-Here is a formal [PDF](https://drive.google.com/file/d/0B3wp7Z0HbcWfbXREaGx0dmpYZGc/view?usp=sharing) detailing my employed and academic experience.
+Résumé
+======
+###### (Last updated {{ site.data.resume.updated | date: '%B, %Y' }})
+
+**{{site.data.resume.name}}**
+
+**{{site.data.resume.contact}}**    (pgp key: {{site.data.resume.fingerprint}})
+
+Current residence: {{site.data.resume.location}}
+
+[Website]({{site.data.resume.website}}), [Twitter](https://twitter.com/{{site.data.resume.twitter}})
+
+
+{% for b in site.data.resume.subjects %}
+
+
+{{ b.name }}
+===========
+
+
+    {% for i in b.items %}
+        {% unless i.hide %}
+
+        {% if i.type == "plain" %}
+
+* {{i.content}}
+
+        {% elsif i.type == "label" %}
+
+* **{{i.name}}**: {{i.content}}
+
+        {% elsif i.type == "list" %}
+
+* {{i.name}}
+
+            {% for li in i.content %}
+  * {{li.content}}
+            {% endfor %}
+
+        {% else %}
+    
+<h1 style="color:red;">invalid format type: {{i.type}}<h1>
+
+        {% endif %}
+        {% endunless %}
+
+    {% endfor %}
+
+
+{% endfor %}
 
 {% include JB/setup %}

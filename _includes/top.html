@@ -1,8 +1,31 @@
-    <a href="/" style="position:fixed; z-index:1;">
-        <span class="genericon genericon-standard" style="font-size:3em; background-color:rgba(0,0,0,0.68); width:1em; height:1em; "></span>
-    </a>
-<div class="social-links">
-	{% for social in site.social %}
-	<a href="{{ social.url }}" target="_blank" title="{{ social.desc }}"><span class="genericon genericon-{{ social.icon }}"></span></a>
-	{% endfor %}
+
+<div class="rel">
+    <div id="headertop" class="center bgblack fillw abs lightgrey">
+
+        <a href="/" class=" ismobile nounderline"><img src="/assets/images/portrait.jpg" class="circle limit150 mart" ></a>
+
+        <div class="content-width content-center rel">
+
+            <table class="noborder regular">
+                <tbody>
+                    <tr>
+                        <td  class=" isdesktop limit150">
+                            <a href="/" class="nounderline"><img src="/assets/images/portrait.jpg" class="simg circle" ></a>
+                        </td>
+                        <td class="fs-med">
+                            I'm Conor Patrick.  I wrote a <a target="_blank" href="{% post_url 2015-09-05-proxying-bluetooth-devices-for-security-analysis-using-btproxy %}">
+                                proxy for analyzing Bluetooth devices</a>.  
+                            I enjoy <a target="_blank" href="{% post_url 2015-10-11-a-close-look-at-an-operating-botnet %}">researching computer security </a> in my space time.
+                            Former FTC tech intern.  I'm currently working on my thesis for graduate school at 
+                            <a target="_blank" href="{% post_url 2015-08-25-class-prerequisite-graphs-for-vt %}">VT</a> in 
+                            <a target="_blank" href="{% post_url 2015-12-16-how-to-accelerate-a--program-with-hardware %}">hardware/software</a> security.
+                            <a href="http://photosby.conorpp.com" target="_blank">I'm into photography</a>.
+                            You can follow me on <a target="_blank" href="https://twitter.com/_conorpp">Twitter</a>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
 </div>

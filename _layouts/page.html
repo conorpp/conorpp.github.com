@@ -2,13 +2,19 @@
 layout: default
 ---
 
-<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
 	{% include top.html %}
-	<div id="post-info" style="bottom: 30px; text-align: center; line-height: 45px;">
-		<h1>{{ page.title }}</h1>
-	</div>
+
+    {% unless page.nocover %}
+
+<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
 </header>
-<div id="article">
+    {% endunless %}
+
+    {% if page.title %}
+    <!-- <h1>{{ page.title }}</h1> -->
+    {% endif %}
+
+<div id="article" class="content-width content-center padv just">
 	{{ content }}
 </div>
 <footer class="" style="background-position: bottom; height: 60px;">

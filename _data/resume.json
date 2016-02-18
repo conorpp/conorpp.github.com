@@ -1,0 +1,76 @@
+{
+"updated":"2016-01-06",
+"name":"Conor Patrick",
+"contact":"conorpp (at) vt (dot) edu",
+"fingerprint":"51A28169",
+"website":"https://conorpp.com/",
+"location":"Blacksburg, VA",
+"twitter":"_conorpp",
+"subjects":
+    [
+        { "name": "Education",
+            "items": [ 
+                {"type":"label", "name":"GPA", "content":"3.6/4.0"},
+                {"type":"plain", "name":"", "content":"B.S., Computer Engineering, expected graduation May 2016"},
+                {"type":"plain", "name":"", "content":"Enrolled M.S., Computer Engineering, expected graduation May 2017"},
+                {"type":"plain", "name":"", "content":"Virginia Tech, Blacksburg, VA"},
+                {"type":"plain", "name":"", "content":"Cyber Corps Scholarship for Service (SFS) recipient"}
+            ] },
+
+        { "name": "Computer skills",
+            "items": [
+                {"type": "label", "name":"Computer languages", "content": "C, C++, Python, JavaScript, Verilog"},
+                {"type":"label", "name":"Developer tools and environments", "content":"Make, vim, linux, git, Android Studio, Altera Tool Suite, Windows, Visual Studio"}
+            ] },
+
+        { "name": "Work Experience",
+            "items": [
+                {"type":"list", "name":"Worked as a security research intern in the Bureau of Consumer Protection for the FTC. Summer 2015",
+                    "timeperiod":"Summer 2015", "content":[
+                        {"content":"Analyzed mobile apps and consumer technologies for security and privacy issues"},
+                        {"content":"Helped find and verify existing security and privacy vulnerabilities in apps and consumer technology"},
+                        {"content":"Helped develop lab architecture for conducting technical investigations which includes database setup, web interface, VPN and WiFi access points for doing analysis over the wire, and scripts to analyze network traffic"}
+                    ]},
+                {"type":"list", "name":"Worked as an Undergraduate Software Developer for Rockwell Collins",
+                    "timeperiod":"Summer 2014", "content":[
+                        {"content":"Upgraded simulation project with 100,000 line code base to support a new video capture card"},
+                        {"content":"Replaced a proprietary imaging library with OpenCV and reduced the expense of the project by a few thousand dollars"},
+                        {"content":"Wrote a software based video capture option that could be used instead of a four thousand dollar video capture card for the simulator project"},
+                        {"content":"Wrote software for an IO board to communicate using the XLINK networking protocol"},
+                        {"content":"Wrote a video streaming server and client for streaming H264 encoded video in C++, used OpenH264 library"}
+                    ]},
+                {"type":"list", "name":"Author and maintainer of <a href=\"https://github.com/conorpp/btproxy\">btproxy</a> which is the first open source and affordable method for proxying Bluetooth connections for security analysis", "content":[
+                        {"content":"About 500-1000 installs from Github."}
+                    ]},
+                {"type":"list", "name":"Worked on a five person team to build a <a href=\"http://hackaday.com/2015/03/02/building-a-transcutaneous-electrical-nerve-stimulation-device-in-a-weekend/\">TENS machine controlled by Android</a>", "timeperiod":"Spring 2015", "content":[
+                        {"content":"We designed and built PCB for the device at competition.  Also designed and programmed Android app."},
+                        {"content":"Won 2nd place at HackDFW and was slotted to compete in the Global Hackathon in Seoul, South Korea"}
+                    ]},
+                {"type":"list", "name":"Employed by Wolfram Alpha as a Hackathon mentor and evangelist", "timeperiod":"2015", "content":[
+                        {"content":"Aid hackathon teams to be more competitive in Hackathons"},
+                        {"content":"Represent Wolfram Alpha and encourage using Wolfram Language through mentorship"}
+                    ]},
+                {"type":"list", "name":"<a href=\"https://sites.google.com/a/vt.edu/amp_lab/People/conor_patrick\">AMP Lab mentor</a>", "timeperiod":"2013-2015", "content":[
+                        {"content":"Mentor undergraduate students at Virginia Tech to build their own technical projects."}
+                    ]}
+
+            ] },
+
+        { "name": "Co-curricular and honors",
+            "items": [
+                {"type":"plain", "timeperiod":"", "hide":"true", "content":"<a href=\"https://www.pebble.com/legal/white_hat/hall_of_fame\">Found and reported security vulnerability</a> in Pebble watch that qualified in Pebble's <a href=\"https://www.pebble.com/legal/white_hat\">bug bounty program.</a>"},
+                {"type": "list", "name":"Active member in Virginia Tech Cyber Security Club", "timeperiod":"2014 - present",
+                    "content": [
+                        {"content":"Planning collegiate jeopardy style CTF competition for 2016 with hardware challenges"},
+                        {"content":"Team got 26th place out of 300 eligible teams in CSAW 2015 qualifiers"}
+                    ]},
+                {"type": "list", "name":"Top 7 for Fall Michigan Hackathon and 3rd Place for Spring Michigan Hackathon.", "timeperiod":"Fall 2014, Spring 2015",
+                    "content": [
+                        {"content":"<a href=\"https://youtu.be/3B8whZDE3jc\">Created a semi-autonomous turret using a Microsoft Kinect, microcontroller, and stepper motors</a>"},
+                        {"content":"Created an <a href=\"https://youtu.be/pGyPKJ1yt_Y\">interactive version of Super Smash Bros using skeletal tracking and emulation.</a>"}
+                    ]}
+
+            ] }
+
+    ]
+}

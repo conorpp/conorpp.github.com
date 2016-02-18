@@ -89,6 +89,12 @@ A picture of a deer I took once:
 
 * https://0x123.xyz/3naturedeer.jpg
 
+All files can be uploaded simply by doing:
+
+```bash
+curl -kT <filename> https://0x123.xyz/upload
+```
+
 You're free to [upload](https://0x123.xyz/) anything to my server under that is under 5 MiB.
 
 # Conclusion

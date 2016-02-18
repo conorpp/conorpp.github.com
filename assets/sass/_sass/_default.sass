@@ -9,8 +9,9 @@ html, body, div, span, applet, object, iframe, caption, p
 
 html, body
   width: 100%
-  height: 100%
-  position: relative
+  margin: 0px
+  padding: 0px
+  overflow-x: hidden
 
 p img
   padding: 10px
@@ -34,17 +35,15 @@ footer
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
 header a
-  transition-duration: .25s
   text-decoration: none
 
 footer
   a
-    transition-duration: .25s
     text-decoration: none
   width: 100%
   margin-top: 10px
 
-p
+p,li,ul,ol
   margin-top: 10px
   margin-bottom: 10px
   color: #515151
@@ -55,19 +54,26 @@ a
 
 h1
   margin-top: 30px
-  font-size: 36px
+  font-size: 26px
 
 h2
   margin-top: 25px
-  font-size: 30px
+  font-size: 24px
 
 h3
   margin-top: 20px
-  font-size: 24px
+  font-size: 20px
+
+h1.title, h1#title
+  font-size: 36px
+  margin-top: 1px
 
 img
   border-radius: 3px
   max-width: 100%
+
+.simg
+  max-width: 9em
 
 .fixed 
   position: fixed
@@ -113,7 +119,6 @@ img
     width: 150px
     height: 150px
     border-radius: 50%
-    transition-duration: .25s
     opacity: .9
     &:hover
       margin-top: -80px
@@ -151,22 +156,24 @@ img
       text-align: center
       display: block
 
-#article
-  font-family: "PT Serif", Georgia, "Times New Roman", serif
+#article, #headertop
+  font-family: $default-font
   font-weight: 400
   letter-spacing: 0px
-  font-size: 20px
-  color: #313131
+  font-size: 18px
   line-height: 1.5
   position: relative
   a
     border-bottom: 2px solid #fff
-    -webkit-transition: 0.5s ease
-    transition: 0.5s ease
     &:hover
       border-bottom: 2px solid #2a7ead
-      -webkit-transition: 0.5s ease
-      transition: 0.5s ease
+
+#headertop a
+  border-bottom: none
+  color: $white
+  &:hover
+    border-bottom: 2px solid $white
+
 
 a.site-title:hover, .copyright a:hover
   text-decoration: underline
@@ -175,12 +182,14 @@ table
   border: 0px
   border-collapse: collapse
   display: block
+  font-family: $formal-font
 
 td
   padding: .9rem .5rem
   min-width: 5em
   border: 1px solid #e5e5e5
   font-size: 16px
+  text-align: justify
 
 th
   padding: .25rem .5rem
@@ -400,7 +409,6 @@ label.menu
   a
     color: #555
     text-decoration: none
-    transition-duration: .5s
     &:hover
       color: #2a7ead
       text-decoration: none
@@ -412,7 +420,7 @@ label.menu
 .post-description
   color: #777
   font-size: 15pt
-  font-family: "PT Serif", Georgia, "Times New Roman", serif
+  font-family: $default-font
 
 .post-date
   font-size: 12pt
@@ -428,6 +436,93 @@ label.menu
   background-color: $title-bg-color
   padding: .5em
 
+.post-header
+  height: 24em
+
 .next-up
   min-height: 280px
+
+.center
+  text-align: center
+
+.fillw
+  width: 100%
+
+.fillv
+  height: 100%
+
+.faint
+  font-size: 13px
+  color: $grey
+
+.bgblack
+  background: $black
+
+.padv
+  padding: 25px 0px 50px 0px  /* top right bottom left */
+
+.mart
+  margin: 25px 0px 0px 0px  /* top right bottom left */
+
+.box1
+  left: 18%
+  position: relative
+
+.noborder, .noborder *
+  border: none
+
+.nounderline, #headertop a.nounderline, .nounderline:hover
+  text-decoration: none
+  border-bottom: none
+  &:hover
+    text-decoration: none
+    border-bottom: none
+
+#topheader
+
+#portrait
+  width: 10em
+
+.circle
+  border-radius: 50%
+
+.limit150
+  width: 150px
+  height: 150px
+
+
+.rel 
+  position: relative
+.abs
+  position: absolute
+
+.grey
+  color: $grey
+
+.lightgrey
+  color: $lightgrey
+
+.white
+  color: $white
+
+.black
+  color: $black
+
+.formal
+  font-family: $formal-font
+
+.regular
+  font-family: $default-font
+
+.fs-med
+  font-size: 18px
+
+.fs-reg
+  font-size: 16px
+
+.fs-large
+  font-size: 20px
+
+.just
+  text-align: justify
 
