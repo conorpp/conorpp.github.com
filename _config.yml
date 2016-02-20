@@ -32,7 +32,7 @@ author:
   url:		https://conorpp.com
   email:    conorpp \at vt \dot edu
 
-paginate:	5
+# paginate:	5
 
 # Custom vars
 icon:		/assets/images/profile.jpg
