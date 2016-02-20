@@ -4,7 +4,7 @@ title: "Keyak: a candidate for the authenticated encryption standard"
 description: ""
 category: 
 tags: [Crypto]
-image: /assets/images/keyak/kayak.png
+image: /assets/images/keyak/kayak.jpg
 ---
 {% include JB/setup %}
 
