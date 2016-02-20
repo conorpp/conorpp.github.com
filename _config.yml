@@ -7,6 +7,8 @@ sass:
     sass_dir: assets/sass/_sass
     style: compressed
 
+permalink: pretty
+
 # compress html but not really worth it
 #gems:
 #  - octopress-minify-html
@@ -14,8 +16,6 @@ sass:
 disqus:
     username: conorpp
 
-# Permalinks
-permalink:	/blog/:title
 
 # Setup
 title:		Conor Patrick
