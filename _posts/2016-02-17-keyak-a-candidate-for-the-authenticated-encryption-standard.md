@@ -4,7 +4,7 @@ title: "Keyak: a candidate for the authenticated encryption standard"
 description: ""
 category: 
 tags: [Crypto]
-image: /assets/images/default.jpg
+image: /assets/images/keyak/kayak.png
 ---
 {% include JB/setup %}
 
@@ -18,8 +18,8 @@ The sponge primitive is a neat construction.  By itself, it is a secure hashing 
 but can easily be extended to provide encryption, pseudo random number generation, 
 and authentication primitives.
 
-In this post, I will explain how Keyak works by explaining how one can build upon sponge primitive.
-Then I will share how my research group is planning to optimize it on GPU's.
+In this post, I will explain how Keyak works by explaining how one can build upon the sponge primitive.
+Then I will share how my research group is planning to optimize it for performance.
 
 # So what is an authenticated cipher again?
 
@@ -29,14 +29,20 @@ provides confidentiality; it protects from  eavesdropping but provides no mechan
 
 # Why not just keep using HMAC's?
 
-An HMAC (Hash-based message authentication code) will provide authentication but that relies on hash algorithms
-separate from the cipher being used.  Many different ciphers and different hashes can be used and combined to provide
+An HMAC (hash-based message authentication code) will provide authentication but relies on hash algorithms
+separate from the cipher being used.  Many different ciphers and hashes can be combined to provide
 authenticated ciphers, each with different trade-offs.
 
-Not only is using two algorithms combined relatively inefficient, but because of
-the lack for a standard, unnecessary complications may arise.  TLS, for example, is quite complicated and has had a
+However, using two algorithms combined is relatively inefficient.  Also because of
+the lack for a standard, unnecessary complications may arise.  TLS, for example, has had a
 [fair share of attacks](https://en.wikipedia.org/wiki/Transport_Layer_Security#Security), many of which can be attributed
-to TLS's complicated nature and wide cipher suite support.
+to the complicated nature and diverse cipher support of TLS.
+
+And when security relies on a complicated protocol, it becomes difficult to program.  Remember 
+[Heartbleed](https://en.wikipedia.org/wiki/Heartbleed)?
+[Goto fail](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-1266)?
+[BERserk](http://www.intelsecurity.com/advanced-threat-research/berserk.html)?
+
 
 # How Keccak comes into play
 
@@ -44,26 +50,26 @@ To start, let's make our own cipher that is based on Keccak and develop it until
 
 The Keccak sponge construction is illustrated below.  All you need to understand is that it 
 absorbs up to 1600 bits at a time and outputs a 1600 bit permutation.  Any additional input
-can be XOR'd into the output block and fed back into the permutation round.  Rinse and repeat. 
+can be XOR'd into the output block of a permutation round `ƒ` and applied to another `ƒ`.  Rinse and repeat. 
 
 ![](/assets/images/keyak/duplex.png)
 
-The permutation is repeated 4 times in the "absorbing" for the input and 2 times in the "squeezing" state
-in the figure.  (a 6400 bit message, M, is input and a 4800 bit hash, Z, is output).
+Above, the permutation `ƒ` is repeated 4 times in the "absorbing" stage for the input and 2 times in the "squeezing" stage
+for the output. I.e. a 6400 bit message M is input and a 4800 bit hash Z is output.
 
 
-Keccak specifically parameterizes how many rounds it should go through in each `f` and then how much
+Keccak specifically parameterizes how many rounds it should go through in each `ƒ` and then how much
 output should be pulled at the end for the final hash.  But for our purposes, it isn't necessary
 to think about parameters.  Let's implement our cipher.
 
-Instead of feeding input to `f`, we can first input a *secret key* 
+Instead of feeding input to `ƒ`, we can first input a *secret key* 
 (and [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce)).  I.e. we
-initialize the sponge state with our secret key.  This will ensure all of our following applications of `f`
+initialize the sponge state with our secret key.  This will ensure all of our following applications of `ƒ`
 are unique and full of entropy.
 
-Now think that for each `f` of the sponge we apply, we will get a new "hashed" version of our secret key in a way.
-We get 1600 bits of new "hash" each time and we can do this as much as we want.  It is these 1600 blocks
-of "hash" that we can XOR our message with.  It's like a pseudo one time pad.
+Now think that for each `ƒ` of the sponge we apply, we will get a new "hashed" version of our secret key in a way.
+We get 1600 bits of new "hash" each time and we can do this as much as we want.  It is these "hash-like" blocks
+that we can XOR our message with.  It's like a pseudo one time pad.
 
 Our recipient, who has the same secret key (and nonce), can compute the same "hash-like" blocks.  Upon receiving
 the ciphertext, he can XOR it with his computed "hash-like" blocks to get the clear text message.  
@@ -76,34 +82,38 @@ take some comfort in.
 We're still missing the big picture: *authentication*.  Our cipher currently
 only yields confidentiality.  Let's add a couple more steps.
 
-So instead of just reapplying `f` to the secret key to get a bunch of "hash-like" blocks,
-we will include the message XOR'd in each block before reapply the sponge permutation to get another block.
+So instead of just reapplying `ƒ` to the secret key to get a bunch of "hash-like" blocks,
+we will include the message XOR'd in each input before reapplying `ƒ` to get the next block.
 That way each new block is based on the initial secret key *and* the message being enciphered.  After the whole
-message has been encrypted, we can run the sponge permutation one more time to get a block that we will simply
+message has been encrypted, we can run `f` one more time to get a block that we will simply
 use as our *authentication tag*.
+
+Since this authentication tag relies on the sponge state that is a byproduct of the secret key and the enciphered 
+message, only recipients with the exact secret key and unaltered ciphertext can recompute it.
 
 ![](/assets/images/keyak/fullduplex.png)
 
-In the figure, K is our secret key and α0 is the nonce and padding.  Cipher blocks (Z0 XOR α1), (Z1 XOR α2), ... are
-output as ciphertext for all input α.
+In the figure, K is our secret key and α0 is the nonce and padding.  Let's say that M is our clear text message.
+For each block of M, the sender will XOR it with a "hash-like" block Z to make a block of cipher text, α.  As long as there are blocks of
+M left, the most recent α will be input to `ƒ` to create a new Z.  After all message blocks are enciphered, the last α will
+be input to `ƒ` again to create the authentication tag.
 
-Our recipient, upon receiving the cipher text and authentication tag, still uses the secret key to compute the initial 
-"hash-like" block and XOR's it with the first ciphertext block and gets the first block of plaintext.
-That initial clear text XOR'd with the "hash-like" block is input to `f` to get the next block for decryption.
-This is repeated until all ciphertext is decrypted.  Now for the exciting part.
+The receiver pretty much does the same thing except starts with the blocks of ciphertext (α) first rather then the plaintext.
+The message is revealed by simply calculating Z XOR α one block at a time.
 
-The receiver can then apply `f` one more time to get a final "hash-like" block which should be a recomputed
-authentication tag.  If the recomputed
-authentication tag is the same as the received authentication tag, then the message is authentic!  
+Now for the exciting part.
 
-This is the basis for Keyak.  I find it to be quite clever and superior to current authenticate crypto systems.  Not only
+The receiver can then apply `ƒ` one more time after decryption to recompute the authentication tag.
+If it's equal to the received authentication tag, then the message is authentic!
+
+This is the basis for Keyak.  I find it to be quite clever and superior to current authenticated crypto systems.  Not only
 is it based on Keccak, but it combines encryption and authentication into one innate process.  This sure beats the canonical
-method of encrypting and then afterwards calculating an HMAC over it.
+method of encrypting and then calculating an HMAC over it.
 
 # Get prepared for creativity
 
-There is certainly more to Keyak then the simple process I described.  It supports accepting *meta-data*
-which can be sent as cleartext but will be included in the sponge permutation input so that it is
+There is certainly more to Keyak then the simple process I described.  It supports *meta-data*
+which can be sent as cleartext but will be included in `ƒ`'s input so that it is
 still authenticated.  It can be parameterized to set the block size, Keccak permutation used,
 and number of encryption processes to run in *parallel*.  Yup, Keyak supports parallelism as well.
 
@@ -113,16 +123,16 @@ My impression is that Keyak is modeled after a motor boat.  It has the following
 
 * **Motorist layer**: responsible for handling the parameters.
 The motorist starts an "engine" which can be fed input (either ciphertext or plaintext) to be wrapped, where
-wrapping is either encrypting or decrypting.  If decrypting, an authentication tag will also be input and 
-verified.  If the verification is successful, the engine will return the plaintext or it will fail.  If encrypting,
-an authentication tag and ciphertext will be output.
+wrapping can be encrypting or decrypting.  If decrypting, an authentication tag will also be input and 
+verified.  Only if the verification is successful, the engine will return the plaintext.  If encrypting,
+ciphertext with a corresponding authentication tag will be output.
 
 * **Engine layer**: responsible for distributing blocks of input to it's various pistons and piecing
 together the piston output.  
 
 * **Piston Layer**: where the work actually gets done.
-Each piston can be initialized with a secret key and nonce and
-they apply `f` to a particular input to update the sponge state with a new "hash-like" block.
+Each piston can be initialized with a secret key and nonce. Each piston
+applies `ƒ` to a particular input to update the sponge state with a new "hash-like" block (Z).
 They do the wrapping of the input with the "hash-like" blocks to get the ciphertext or plaintext
 as in our simple algorithm above.
 
@@ -131,9 +141,9 @@ for performance.
 
 # Optimizing Keyak for performance
 
-For a naïve optimization, a Keyak could be parallelized using thread level parallelism by simply assigning
+For a naïve optimization, Keyak could be parallelized using thread level parallelism by simply assigning
 a thread for each piston.  It's a little overkill since each thread would be reduntantly executing the same
-instructions, just on different data.  
+instructions, just on different data.
 
 Let's consider Flynn's Taxonomy which contains 4 classifications for
 computer architectures.
@@ -141,7 +151,7 @@ computer architectures.
 ![](/assets/images/keyak/flynn.jpg)
 
 * **SISD** (single instruction single data) where 1 instruction is computed at a time, each
-on a different data.  Your regular CPU cores do this.
+on different data.  Your regular CPU cores each do this.
 
 * **MISD** has multiple instructions executing in parallel for the same piece of data.  This
 is not common but could be useful for fault tolerance.
@@ -152,23 +162,23 @@ processing and is abundant in GPUs.
 * **MIMD** is multiple instructions executing in parallel for different pieces of data.  Modern CPUs do
 this by having multiple cores.
 
-So pistons in Keyak are each running the same instructions, but each on different data.  Any idea out which 
-architecture would be best for optimizing Keyak?
+So pistons in Keyak are each running the same instructions, but each on different data.  Any idea which
+architecture would be most efficient for optimizing Keyak?
 
 If you think it's SIMD (single instruction multiple data), then you are right!
 
-My research group will be looking into using SIMD (Single Instruction Multiple Data) to optimize Keyak.
-SIMD consists of running the same set of instructions on different data paths which is pretty useful
-and commonplace in graphics so we will be implementating Keyak optimizations on a GPU.
+My research group will be looking into using SIMD to optimize Keyak.
+Since SIMD is commonplace in graphics we will be implementating Keyak optimizations on a GPU.
 
 # Wrapping it up (pun intended)
 
-Keyak is a great study because not only is it a good read for it's overarching Engine metaphor, but
+Keyak is a great study. Not only is it a good read for it's overarching Engine metaphor, but
 it's a completely different way to do encryption from an algorithmic standpoint.  It's totally different from the typical 
-substitution-permutation networks that many current ciphers are based on, including AES.  It's kind of weird, 
-really; but that's likely a good thing for a contender in the CAESAR competition.  
+[substitution-permutation networks](https://en.wikipedia.org/wiki/Substitution-permutation_network)
+that many current ciphers are based on, including AES.  It's kind of weird,
+really; but that's likely a good thing for a contender in the CAESAR competition.
 
-This is a high level post; to learn more of the details, check the [Keyak website](http://keyak.noekeon.org/)
+This is a high level post; to learn more check out the [Keyak website](http://keyak.noekeon.org/)
 and the paper below.
 
 
