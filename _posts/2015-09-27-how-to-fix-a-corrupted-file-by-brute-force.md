@@ -50,7 +50,7 @@ zlib-flate -uncompress < objects/f8/d0839dd728cb9a723e32058dcc386070d5e3b5 > sou
 
 Looking at source.cpp, we can see that it asks the user 5 questions:
 
-```c++
+```cpp
 std::string part1;
 cout << "Part1: Enter flag:" << endl;
 cin >> part1;
@@ -88,7 +88,7 @@ have been bit flips in the file.
 
 We think this even more when we try to compile the file and run into an error:
 
-```c++
+```cpp
 std::string flag = calculate_flag(part1, part2, part4, factor1, factor2);
 cout << "flag{";
 cout << &lag;
@@ -113,7 +113,7 @@ we had to try it on versions of the file where we fixed the bit flips we already
 So we changed the `&lag` error from before and also changed one question to ask for "31337" because
 that's leetspeak for "eleet".
 
-```c++
+```cpp
 cout << "Part2: Input 31337:" << endl;
 ```
 
