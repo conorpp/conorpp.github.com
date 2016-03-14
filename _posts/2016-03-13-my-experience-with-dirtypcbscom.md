@@ -18,7 +18,7 @@ probably your cheapest option.  This used to just be a service that was internal
 to [Dangerous Prototypes](http://dangerousprototypes.com/) to make cheap boards
 for their own projects.  Now it's public and they make dirty cheap boards for anyone.
 
-To get an idea, you can buy ~10 boards that are 5x5 cm for $14 each (free shipping).
+To get an idea, you can buy ~10 boards that are 5x5 cm for $14 (free shipping).
 You can get more boards, larger sizes, and more layers as well for relatively cheap prices.
 
 Here I'll share my experience with Dirty PCB's and photos of a [U2F 2FA token](https://fidoalliance.org/about/overview/) I've been working on.  I ordered
