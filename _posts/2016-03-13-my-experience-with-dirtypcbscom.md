@@ -96,5 +96,15 @@ charge less for other options like color and stencils and will be quicker out of
 
 If you PCB design isn't crazy on tolerances you can't go wrong with either one.
 
+# ** Update
+
+Based on replies I've gotten, here are some other places to check out for maxing out cheapness and quality:
+
+* [Hackvana](http://www.hackvana.com/store/)
+* [Elecrow](http://www.elecrow.com/services-pcb-prototyping-c-73_116.html)
+    * 10 PCBs for $9.9, 4 to 5 days production, $18 stencil
+
+Check out [PCBshopper.com](http://pcbshopper.com/) to query the price of most fabs for a given board.
+
 
 {% include JB/mytwitter %}
