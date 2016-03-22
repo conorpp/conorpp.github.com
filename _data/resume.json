@@ -1,9 +1,10 @@
 {
 "updated":"2016-01-06",
 "name":"Conor Patrick",
-"contact":"conorpp (at) vt (dot) edu",
+"contact":"conorpp@vt.edu",
 "fingerprint":"51A28169",
 "website":"https://conorpp.com/",
+"github":"https://github.com/conorpp",
 "location":"Blacksburg, VA",
 "twitter":"_conorpp",
 "subjects":
@@ -12,7 +13,7 @@
             "items": [ 
                 {"type":"label", "name":"GPA", "content":"3.6/4.0"},
                 {"type":"plain", "name":"", "content":"B.S., Computer Engineering, expected graduation May 2016"},
-                {"type":"plain", "name":"", "content":"Enrolled M.S., Computer Engineering, expected graduation May 2017"},
+                {"type":"plain", "name":"", "content":"M.S., Computer Engineering, expected graduation May 2017"},
                 {"type":"plain", "name":"", "content":"Virginia Tech, Blacksburg, VA"},
                 {"type":"plain", "name":"", "content":"Cyber Corps Scholarship for Service (SFS) recipient"}
             ] },
@@ -58,7 +59,7 @@
 
         { "name": "Co-curricular and honors",
             "items": [
-                {"type":"plain", "timeperiod":"", "hide":"true", "content":"<a href=\"https://www.pebble.com/legal/white_hat/hall_of_fame\">Found and reported security vulnerability</a> in Pebble watch that qualified in Pebble's <a href=\"https://www.pebble.com/legal/white_hat\">bug bounty program.</a>"},
+                {"type":"plain", "timeperiod":"", "content":"Found and reported security vulnerability in Pebble watch that qualified in Pebble's <a href=\"https://www.pebble.com/legal/white_hat\">bug bounty program.</a>", "timeperiod":"Winter 2016"},
                 {"type": "list", "name":"Active member in Virginia Tech Cyber Security Club", "timeperiod":"2014 - present",
                     "content": [
                         {"content":"Planning collegiate jeopardy style CTF competition for 2016 with hardware challenges"},
@@ -70,7 +71,16 @@
                         {"content":"Created an <a href=\"https://youtu.be/pGyPKJ1yt_Y\">interactive version of Super Smash Bros using skeletal tracking and emulation.</a>"}
                     ]}
 
+            ] },
+
+            { "name": "Press and web links",
+            "items": [
+                {"type":"link", "name":"Btproxy repo", "content":"https://github.com/conorpp/btproxy"},
+                {"type":"link", "name":"TENS Machine prototype", "content":"http://hackaday.com/2015/03/02/building-a-transcutaneous-electrical-nerve-stimulation-device-in-a-weekend/"},
+                {"type":"link", "name":"Major League Hackathon project video", "content":"https://youtu.be/3B8whZDE3jc"}
+
             ] }
+
 
     ]
 }

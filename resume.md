@@ -10,6 +10,7 @@ Check out links below for press and videos.
 
 Résumé
 ======
+
 ###### (Last updated {{ site.data.resume.updated | date: '%B, %Y' }})
 
 **{{site.data.resume.name}}**
@@ -38,6 +39,10 @@ Current residence: {{site.data.resume.location}}
         {% elsif i.type == "label" %}
 
 * **{{i.name}}**: {{i.content}}
+        
+        {% elsif i.type == "link" %}
+
+* **[{{ i.name }}]({{ i.content }})**
 
         {% elsif i.type == "list" %}
 
