@@ -6,7 +6,7 @@ tagline: Security, Privacy
 
 {% include JB/setup %}
 
-You can see my resume [here](/resume.html).
+You can see my resume [here](/resume).
                             
 I'm currently [looking for work in the government](/work).
 
