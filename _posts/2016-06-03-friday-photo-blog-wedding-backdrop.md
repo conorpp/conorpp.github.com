@@ -11,7 +11,7 @@ image: /assets/images/fpb/bg.jpg
 # Friday squid blogging
 
 Inspired by [Bruce Schneiers Squid blogging](https://www.schneier.com/cgi-bin/mt/mt-search.cgi?search=squid&__mode=tag&IncludeBlogs=2&limit=10&page=1),
-I decided to start friday photo blogging.  In my spare time I like to take photos.  So every Friday I will post a photo of mine.  
+I decided to start friday photo blogging.  In my spare time I like to take photos.  So every Friday I will post about photo of mine.
 
 I think photography is a balance between art and technical documentation.  In my posts I will explain
 my technical and artful motivations.  I also hope to get feedback.
