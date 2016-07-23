@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Looking for work in government
+nocover: true
 ---
 
 I'm currently looking for work in the U.S. government.

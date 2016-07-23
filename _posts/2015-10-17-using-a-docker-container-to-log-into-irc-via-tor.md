@@ -5,6 +5,7 @@ description: ""
 tags: [Tools]
 image: /assets/images/default.jpg
 nocover: true
+archive: true
 ---
 {% include JB/setup %}
 

@@ -2,6 +2,7 @@
 layout: page
 title: Conor Patrick
 tagline: Resume
+nocover: true
 ---
 
 Check out my [Github profile]({{site.social[1].url}}) for some of my active and old projects.  

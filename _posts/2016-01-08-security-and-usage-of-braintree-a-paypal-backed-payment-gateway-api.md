@@ -5,6 +5,7 @@ description: ""
 category: 
 tags: [Design]
 image: /assets/images/braintree/cover.png
+archive: true
 ---
 
 {% include JB/setup %}

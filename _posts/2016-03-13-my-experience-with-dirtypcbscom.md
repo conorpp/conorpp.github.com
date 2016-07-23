@@ -11,7 +11,6 @@ image: /assets/images/pcbs/box-2.jpg
 
 # Dirty Cheap Dirty Boards
 
-*(warning ~30 MB of photos)*.
 
 If you want to order custom made PCB's for a small price, [Dirty PCB's]() is
 probably your cheapest option.  This used to just be a service that was internal
@@ -32,20 +31,24 @@ The next revision is a better layout.
 ## Revision 1 from Dirty PCB's
 
 
-![R1 Dirty PCB's front](/assets/images/pcbs/r1-front-dirty.jpg)
+![R1 Dirty PCB's front](/assets/images/pcbs/r1-front-dirty.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r1-front-dirty.jpg">high resolution</a></center>
 
 
-![R1 Dirty PCB's back](/assets/images/pcbs/r1-back-dirty.jpg)
+![R1 Dirty PCB's back](/assets/images/pcbs/r1-back-dirty.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r1-back-dirty.jpg">high resolution</a></center>
 
 
 ## Revision 1 from Seeed Studio
 
 
 
-![R1 Dirty PCB's front](/assets/images/pcbs/r1-front-seeed.jpg)
+![R1 Dirty PCB's front](/assets/images/pcbs/r1-front-seeed.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r1-front-seeed.jpg">high resolution</a></center>
 
 
-![R1 Dirty PCB's back](/assets/images/pcbs/r1-back-seeed.jpg)
+![R1 Dirty PCB's back](/assets/images/pcbs/r1-back-seeed.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r1-back-seeed.jpg">high resolution</a></center>
 
 
 You can see that the layout is pretty poor.  None of the traces really make 45 degree angles
@@ -72,10 +75,12 @@ After revising my layout design, I made two more orders from Dirty PCB's.
 ## Revision 2 Dirty PCB's
 
 
-![R2 back](/assets/images/pcbs/r2-front.jpg)
+![R2 back](/assets/images/pcbs/r2-front.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r2-front.jpg">high resolution</a></center>
 
 
-![R2 back](/assets/images/pcbs/r2-back.jpg)
+![R2 back](/assets/images/pcbs/r2-back.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r2-back.jpg">high resolution</a></center>
 
 I'm not sure what happened to the silkscreen on this one.  It seems any traces or ground plane overlapped 
 the silkscreen.  I suspect it was an issue at the board house since the next revision, (which is really the same layout, just a different color) did not suffer
@@ -85,9 +90,11 @@ this problem.
 ## Revision 3 Dirty PCB's
 
 
-![R3 back](/assets/images/pcbs/r3-font.jpg)
+![R3 back](/assets/images/pcbs/r3-font.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r3-font.jpg">high resolution</a></center>
 
-![R3 back](/assets/images/pcbs/r3-back.jpg)
+![R3 back](/assets/images/pcbs/r3-back.jpg.small.jpg)
+<center class="caption"><a href="/assets/images/pcbs/r3-back.jpg">high resolution</a></center>
 
 # Where to get PCB's
 
