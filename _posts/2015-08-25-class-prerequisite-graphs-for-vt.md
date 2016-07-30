@@ -8,270 +8,425 @@ image: "/assets/images/vtgraphs/ECE.jpg"
 {% include JB/setup %}
 
 Here are the class prerequisite graphs for all of the departments at Virginia Tech (Fall 2015).
+
 Sorry for those that are bandwidth impaired.
 It was made by scraping this [page](https://banweb.banner.vt.edu/ssb/prod/HZSKVTSC.P_DispRequest)
+
 and passing the results to a graph function in Wolfram Language.  [Source code](https://github.com/conorpp/VT-Prereq-Tree-Generator/blob/master/source.m) (sorry it's messy).
+
 
 I'm missing ENGL, STAT, and ISE.
 
-###AAEC
+### AAEC
 ![AAEC](/assets/images/vtgraphs/AAEC.jpg)
-###ACIS
+
+
+### ACIS
 ![ACIS](/assets/images/vtgraphs/ACIS.jpg)
-###AFST
+
+
+### AFST
 ![AFST](/assets/images/vtgraphs/AFST.jpg)
-###AHRM
+
+
+### AHRM
 ![AHRM](/assets/images/vtgraphs/AHRM.jpg)
-###AINS
+
+
+### AINS
 ![AINS](/assets/images/vtgraphs/AINS.jpg)
-###ALCE
+
+
+### ALCE
 ![ALCE](/assets/images/vtgraphs/ALCE.jpg)
-###ALS
+
+
+### ALS
 ![ALS](/assets/images/vtgraphs/ALS.jpg)
-###AOE
+
+
+### AOE
 ![AOE](/assets/images/vtgraphs/AOE.jpg)
-###APSC
+
+
+### APSC
 ![APSC](/assets/images/vtgraphs/APSC.jpg)
-###APS
+
+
+### APS
 ![APS](/assets/images/vtgraphs/APS.jpg)
-###ARBC
+
+
+### ARBC
 ![ARBC](/assets/images/vtgraphs/ARBC.jpg)
-###ARCH
+
+
+### ARCH
 ![ARCH](/assets/images/vtgraphs/ARCH.jpg)
-###ART
+
+
+### ART
 ![ART](/assets/images/vtgraphs/ART.jpg)
-###AS
+
+
+### AS
 ![AS](/assets/images/vtgraphs/AS.jpg)
-###ASPT
+
+
+### ASPT
 ![ASPT](/assets/images/vtgraphs/ASPT.jpg)
-###AT
+
+
+### AT
 ![AT](/assets/images/vtgraphs/AT.jpg)
-###BCHM
+
+
+### BCHM
 ![BCHM](/assets/images/vtgraphs/BCHM.jpg)
-###BC
+
+
+### BC
 ![BC](/assets/images/vtgraphs/BC.jpg)
-###BIOL
+
+
+### BIOL
 ![BIOL](/assets/images/vtgraphs/BIOL.jpg)
-###BIT
+
+
+### BIT
 ![BIT](/assets/images/vtgraphs/BIT.jpg)
-###BMES
+
+
+### BMES
 ![BMES](/assets/images/vtgraphs/BMES.jpg)
-###BMSP
+
+
+### BMSP
 ![BMSP](/assets/images/vtgraphs/BMSP.jpg)
-###BMVS
+
+
+### BMVS
 ![BMVS](/assets/images/vtgraphs/BMVS.jpg)
-###BSE
+
+
+### BSE
 ![BSE](/assets/images/vtgraphs/BSE.jpg)
-###BTDM
+
+
+### BTDM
 ![BTDM](/assets/images/vtgraphs/BTDM.jpg)
-###BUS
+
+
+### BUS
 ![BUS](/assets/images/vtgraphs/BUS.jpg)
-###CEE
+
+
+### CEE
 ![CEE](/assets/images/vtgraphs/CEE.jpg)
-###CHE
+
+### CHE
 ![CHE](/assets/images/vtgraphs/CHE.jpg)
-###CHEM
+
+### CHEM
 ![CHEM](/assets/images/vtgraphs/CHEM.jpg)
-###CHN
+
+### CHN
 ![CHN](/assets/images/vtgraphs/CHN.jpg)
-###CINE
+
+### CINE
 ![CINE](/assets/images/vtgraphs/CINE.jpg)
-###CLA
+
+### CLA
 ![CLA](/assets/images/vtgraphs/CLA.jpg)
-###CMDA
+
+### CMDA
 ![CMDA](/assets/images/vtgraphs/CMDA.jpg)
-###CNST
+
+### CNST
 ![CNST](/assets/images/vtgraphs/CNST.jpg)
-###COMM
+
+### COMM
 ![COMM](/assets/images/vtgraphs/COMM.jpg)
-###COS
+
+### COS
 ![COS](/assets/images/vtgraphs/COS.jpg)
-###CRIM
+
+### CRIM
 ![CRIM](/assets/images/vtgraphs/CRIM.jpg)
-###CSES
+
+### CSES
 ![CSES](/assets/images/vtgraphs/CSES.jpg)
-###CS
+
+### CS
 ![CS](/assets/images/vtgraphs/CS.jpg)
-###DASC
+
+### DASC
 ![DASC](/assets/images/vtgraphs/DASC.jpg)
-###ECE
+
+### ECE
 ![ECE](/assets/images/vtgraphs/ECE.jpg)
-###ECON
+
+### ECON
 ![ECON](/assets/images/vtgraphs/ECON.jpg)
-###EDCI
+
+### EDCI
 ![EDCI](/assets/images/vtgraphs/EDCI.jpg)
-###EDCO
+
+### EDCO
 ![EDCO](/assets/images/vtgraphs/EDCO.jpg)
-###EDCT
+
+### EDCT
 ![EDCT](/assets/images/vtgraphs/EDCT.jpg)
-###EDEL
+
+### EDEL
 ![EDEL](/assets/images/vtgraphs/EDEL.jpg)
-###EDEP
+
+### EDEP
 ![EDEP](/assets/images/vtgraphs/EDEP.jpg)
-###EDHE
+
+### EDHE
 ![EDHE](/assets/images/vtgraphs/EDHE.jpg)
-###EDIT
+
+### EDIT
 ![EDIT](/assets/images/vtgraphs/EDIT.jpg)
-###EDP
+
+### EDP
 ![EDP](/assets/images/vtgraphs/EDP.jpg)
-###EDRE
+
+### EDRE
 ![EDRE](/assets/images/vtgraphs/EDRE.jpg)
-###EDTE
+
+### EDTE
 ![EDTE](/assets/images/vtgraphs/EDTE.jpg)
-###ENGE
+
+### ENGE
 ![ENGE](/assets/images/vtgraphs/ENGE.jpg)
-###ENGR
+
+### ENGR
 ![ENGR](/assets/images/vtgraphs/ENGR.jpg)
-###ENSC
+
+### ENSC
 ![ENSC](/assets/images/vtgraphs/ENSC.jpg)
-###ENT
+
+### ENT
 ![ENT](/assets/images/vtgraphs/ENT.jpg)
-###ESM
+### ESM
 ![ESM](/assets/images/vtgraphs/ESM.jpg)
-###FA
+### FA
 ![FA](/assets/images/vtgraphs/FA.jpg)
-###FIN
+### FIN
 ![FIN](/assets/images/vtgraphs/FIN.jpg)
-###FIW
+
+### FIW
 ![FIW](/assets/images/vtgraphs/FIW.jpg)
-###FL
+
+### FL
 ![FL](/assets/images/vtgraphs/FL.jpg)
-###FOR
+
+### FOR
 ![FOR](/assets/images/vtgraphs/FOR.jpg)
-###FR
+
+### FR
 ![FR](/assets/images/vtgraphs/FR.jpg)
-###FST
+
+### FST
 ![FST](/assets/images/vtgraphs/FST.jpg)
-###GBCB
+
+### GBCB
 ![GBCB](/assets/images/vtgraphs/GBCB.jpg)
-###GEOG
+
+### GEOG
 ![GEOG](/assets/images/vtgraphs/GEOG.jpg)
-###GEOS
+
+### GEOS
 ![GEOS](/assets/images/vtgraphs/GEOS.jpg)
-###GER
+
+### GER
 ![GER](/assets/images/vtgraphs/GER.jpg)
-###GIA
+
+### GIA
 ![GIA](/assets/images/vtgraphs/GIA.jpg)
-###GRAD
+
+### GRAD
 ![GRAD](/assets/images/vtgraphs/GRAD.jpg)
-###GR
+
+### GR
 ![GR](/assets/images/vtgraphs/GR.jpg)
-###HD
+
+### HD
 ![HD](/assets/images/vtgraphs/HD.jpg)
-###HEB
+
+### HEB
 ![HEB](/assets/images/vtgraphs/HEB.jpg)
-###HIST
+
+### HIST
 ![HIST](/assets/images/vtgraphs/HIST.jpg)
-###HNFE
+
+### HNFE
 ![HNFE](/assets/images/vtgraphs/HNFE.jpg)
-###HORT
+
+### HORT
 ![HORT](/assets/images/vtgraphs/HORT.jpg)
-###HTM
+
+### HTM
 ![HTM](/assets/images/vtgraphs/HTM.jpg)
-###HUM
+
+### HUM
 ![HUM](/assets/images/vtgraphs/HUM.jpg)
-###IDS
+
+### IDS
 ![IDS](/assets/images/vtgraphs/IDS.jpg)
-###ISC
+
+### ISC
 ![ISC](/assets/images/vtgraphs/ISC.jpg)
-###IS
+
+### IS
 ![IS](/assets/images/vtgraphs/IS.jpg)
-###ITAL
+
+### ITAL
 ![ITAL](/assets/images/vtgraphs/ITAL.jpg)
-###ITDS
+
+### ITDS
 ![ITDS](/assets/images/vtgraphs/ITDS.jpg)
-###JPN
+
+### JPN
 ![JPN](/assets/images/vtgraphs/JPN.jpg)
-###JUD
+
+### JUD
 ![JUD](/assets/images/vtgraphs/JUD.jpg)
-###LAHS
+
+### LAHS
 ![LAHS](/assets/images/vtgraphs/LAHS.jpg)
-###LAR
+
+### LAR
 ![LAR](/assets/images/vtgraphs/LAR.jpg)
-###LAT
+
+### LAT
 ![LAT](/assets/images/vtgraphs/LAT.jpg)
-###LDRS
+
+### LDRS
 ![LDRS](/assets/images/vtgraphs/LDRS.jpg)
-###MACR
+
+### MACR
 ![MACR](/assets/images/vtgraphs/MACR.jpg)
-###MATH
+
+### MATH
 ![MATH](/assets/images/vtgraphs/MATH.jpg)
-###ME
+
+### ME
 ![ME](/assets/images/vtgraphs/ME.jpg)
-###MGT
+
+### MGT
 ![MGT](/assets/images/vtgraphs/MGT.jpg)
-###MINE
+
+### MINE
 ![MINE](/assets/images/vtgraphs/MINE.jpg)
-###MKTG
+
+### MKTG
 ![MKTG](/assets/images/vtgraphs/MKTG.jpg)
-###MN
+
+### MN
 ![MN](/assets/images/vtgraphs/MN.jpg)
-###MSE
+
+### MSE
 ![MSE](/assets/images/vtgraphs/MSE.jpg)
-###MS
+
+### MS
 ![MS](/assets/images/vtgraphs/MS.jpg)
-###MTRG
+
+### MTRG
 ![MTRG](/assets/images/vtgraphs/MTRG.jpg)
-###MUS
+
+### MUS
 ![MUS](/assets/images/vtgraphs/MUS.jpg)
-###NANO
+
+### NANO
 ![NANO](/assets/images/vtgraphs/NANO.jpg)
-###NEUR
+
+### NEUR
 ![NEUR](/assets/images/vtgraphs/NEUR.jpg)
-###NR
+
+### NR
 ![NR](/assets/images/vtgraphs/NR.jpg)
-###NSEG
+
+### NSEG
 ![NSEG](/assets/images/vtgraphs/NSEG.jpg)
-###PAPA
+
+### PAPA
 ![PAPA](/assets/images/vtgraphs/PAPA.jpg)
-###PHIL
+
+### PHIL
 ![PHIL](/assets/images/vtgraphs/PHIL.jpg)
-###PHS
+
+### PHS
 ![PHS](/assets/images/vtgraphs/PHS.jpg)
-###PHYS
+
+### PHYS
 ![PHYS](/assets/images/vtgraphs/PHYS.jpg)
-###PORT
+
+### PORT
 ![PORT](/assets/images/vtgraphs/PORT.jpg)
-###PPWS
+
+### PPWS
 ![PPWS](/assets/images/vtgraphs/PPWS.jpg)
-###PSVP
+
+### PSVP
 ![PSVP](/assets/images/vtgraphs/PSVP.jpg)
-###PSYC
+
+### PSYC
 ![PSYC](/assets/images/vtgraphs/PSYC.jpg)
-###REAL
+
+### REAL
 ![REAL](/assets/images/vtgraphs/REAL.jpg)
-###RLCL
+
+### RLCL
 ![RLCL](/assets/images/vtgraphs/RLCL.jpg)
-###RTM
+
+### RTM
 ![RTM](/assets/images/vtgraphs/RTM.jpg)
-###RUS
+
+### RUS
 ![RUS](/assets/images/vtgraphs/RUS.jpg)
-###SBIO
+
+### SBIO
 ![SBIO](/assets/images/vtgraphs/SBIO.jpg)
-###SOC
+
+### SOC
 ![SOC](/assets/images/vtgraphs/SOC.jpg)
-###SPAN
+
+### SPAN
 ![SPAN](/assets/images/vtgraphs/SPAN.jpg)
-###SPIA
+
+### SPIA
 ![SPIA](/assets/images/vtgraphs/SPIA.jpg)
-###STL
+
+### STL
 ![STL](/assets/images/vtgraphs/STL.jpg)
-###STS
+
+### STS
 ![STS](/assets/images/vtgraphs/STS.jpg)
-###SYSB
+
+### SYSB
 ![SYSB](/assets/images/vtgraphs/SYSB.jpg)
-###TA
+
+### TA
 ![TA](/assets/images/vtgraphs/TA.jpg)
-###TBMH
+
+### TBMH
 ![TBMH](/assets/images/vtgraphs/TBMH.jpg)
-###UAP
+
+### UAP
 ![UAP](/assets/images/vtgraphs/UAP.jpg)
-###UH
+
+### UH
 ![UH](/assets/images/vtgraphs/UH.jpg)
-###UNIV
+
+### UNIV
 ![UNIV](/assets/images/vtgraphs/UNIV.jpg)
-###VM
+
+### VM
 ![VM](/assets/images/vtgraphs/VM.jpg)
+
 
 
 {% include JB/mytwitter %}
