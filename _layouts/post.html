@@ -43,19 +43,36 @@ article: true
 
 </div>
 
+
+{% assign indexed = false %}
+{% assign next_post = false %}
+
 {% for post in site.posts %}
-    {% if post.url == page.url %}
-        {% assign post_index0 = forloop.index0 %}
-        {% assign post_index1 = forloop.index %}
-    {% endif %}
-{% endfor %}
-{% for post in site.related_posts %}
-    {% if post_index1 == forloop.index %}
-        {% assign next_post = post %}
-    {% endif %}
-    {% if post_index0 == forloop.index0 %}
-        {% assign prev_post = post %}
-    {% endif %}
+    {% unless post.archive %}
+            
+        {% if post.url == page.url %}
+        
+            {% assign indexed = true %}
+        
+        {% else %}
+    
+            {% if indexed == false %}
+
+                {% assign prev_post = post %}
+
+            {% else %}
+            
+                {% if next_post == false %}
+
+                    {% assign next_post = post %}
+
+                {% endif %}
+
+            {% endif %}
+
+        {% endif %}
+
+    {% endunless %}
 {% endfor %}
 
 
