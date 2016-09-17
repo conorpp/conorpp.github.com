@@ -4,7 +4,7 @@ title: "My experience going to Defcon and SAC"
 description: ""
 category: 
 tags: [Travel]
-image: /assets/images/default.jpg
+image: /assets/images/defconsac/cover.jpg
 ---
 {% include JB/setup %}
 
