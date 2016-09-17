@@ -12,18 +12,18 @@ I just attended Defcon 24 in Las Vegas and went to SAC (Selected Areas in Crypto
 
 # Defcon
 
-Defcon is a great conference that hosts around 15k people every year.  People come to share their
-research in infosec and exploits that have developed over the past year.  Some people come to partake
-in the various competitions or solve the badge puzzle.  And of course there are the parties that various
+Defcon is a great conference that hosts around 15k people every year.  People come to share their new
+research in infosec and exploits that they have developed over the past year.  Some people come to partake
+in the various competitions like the [badge puzzle](http://co9.io/post/148716614744/defcon-24-badge-challenge).  And of course there are the parties that various
 vendors and groups throw.
 
-I got to LV a day early so I could attend the unoffical Defcon Shoot.  It's where a bunch of people
+I got to LV a day early so I could attend the [unoffical Defcon Shoot](http://deviating.net/firearms/defcon_shoot/).  It's where a bunch of people
 bring guns to go shoot in the desert.  I didn't have anything to bring but most people are nice and let
 you shoot their weapons for the cost of ammo.  I got to put 100 rounds through an M60:
 
 ![](/assets/images/defconsac/machine_gun_shoot.gif)
 
-## The Villages
+### The Villages
 
 In addition to the official talk tracks put on
 by Defcon, there are the villages.  The villages are separate groups that focus on more specific parts
@@ -35,7 +35,7 @@ To list the different Villages from this year:
 * Crypto and Privacy
 * Hardware Hacking
 * IoT
-* Lockpick
+* Lockpicking
 * Packet Hacking
 * Social Engineering
 * Tamper Evident
@@ -73,27 +73,28 @@ to watch computer programs run (really fast) despite all of the animations.
 
 ![](/assets/images/defconsac/cyber.jpg)
 
-Each night there are a lot of parties.  Each is hosted by companies or other groups that are popular at Defcon.
-A lot of them I think are bad because it's either really long lines or just a bunch of fellow nerds trying to dance.
+Then each night there are a lot of parties.  Each is hosted by companies or other groups that are popular at Defcon.
+Some of the parties are awesome; but a lot of them I think are bad because it's either really long lines or just a bunch of fellow nerds trying to dance.
 
 The lines really put me off.  If there's a long wait then don't bother waiting.  There's this norm where the hosts will
 keep the lines long even when there's plenty of room inside.  I guess it helps make the party seem better than what it really is.
+
 I get that there isn't enough room for everyone, but some groups I think do it better.  For example, the [Telephreak](https://www.telephreak.org/) group held an invite only event
 for well known hackers and left open challenges that skillful people at the conference could solve.  If you could solve it, then you could get an invite.
 Unfortunately I flew out of LV before the Telephreak party otherwise I would have tried to solve one of their challenges.
 
-There's so much going on at Defcon that you can't hit all of it and you will miss a lot.  But it's great and I'll be going next year.
+There's so much going on at Defcon that you can't possibly participate in everything.  But it's great and I'll be going next year.
 
 # Selected Areas in Cryptography (SAC)
 
 This was purely an academic conference that focuses on, well, selected areas in cryptography.  The research group I work in at Virginia Tech
-did a lot of work in fault attacks and countermeasures.  SAC had a special
+did a lot of work in fault attacks and countermeasures.  [SAC](http://www.engr.mun.ca/~sac2016/) had a special
 focus this year on fault attacks and side channel analysis.  So we submitted a [paper](https://eprint.iacr.org/2016/850.pdf) and I traveled
 to present it.
 
-If you're interested, check out my advisor's [post](http://www.faculty.ece.vt.edu/schaum//blog/instruction-redundancy/) for an overview of the work.
+If you're interested, check out my advisor's [post](http://www.faculty.ece.vt.edu/schaum//blog/instruction-redundancy/) for an overview of our work.
 
-This was my first time at an academic conference and my first time presenting at a conference.  It was pretty laid back.  There was around 100 attendees
+This was my first time at an academic conference and my first time presenting at any conference.  It was pretty laid back.  There was around 100 attendees
 of people from around the world and about 30 speakers.  I suppose that's what to expect from small conferences.
 
 It was an awesome experience for me to get to meet other researchers in the field and see people that are on papers I've previously studied.
@@ -110,13 +111,23 @@ SAC was held in St. Johns in Newfoundland, Canada.  Fortunately the weather was 
 
 I hiked Signal Hill, which was the first place to receive a transcontinental wireless signal.
 
-![Signal Hill]()
+![Signal Hill](/assets/images/defconsac/hill.jpg)
 
 The conference also hosted a Puffin and Whale watching tour.  I never thought myself to be much of a whale watcher
 but this was actually really cool (even though we saw no whales).  Turns out there's this island of the coast that
-the entirety (most) of the Puffin race relies on to lay their eggs for various ecological reasons.  And they were all
+most of the Puffin race relies on to lay their eggs for various ecological reasons.  And they were all
 there because it was the egg laying time of the year.  It was surprising to see thousands of puffins all flying around you
 at once.  We were told to not look up with our mouths open.  Unfortunately my camera was dead and I couldn't get a picture.
+
+On the last day, me and a couple friends I met went to a small town called Quidi Vidi to try out the brewery there.  They make
+a lager called [Iceberg Beer](http://www.quidividibrewery.ca/award-winning-beers/iceberg/) from the water of melted icebergs.  It was pretty good!
+
+
+At the brewery, I think me and the other grad students stuck out -- None of us were from Canada and most of the crowd was older.  One lady even tried calling me out
+for not being old enough to drink (in good fun).  All of the local were very nice.  One local sat down with us and exchanged stories.  He even offered
+  to take us fishing!
+
+![](/assets/images/defconsac/vidi.jpg)
 
 There's this tradition in Newfoundland for newcomers to drink a shot of Newfoundland Screech Rum and then kiss a cod.
 Some of the bars will let you honor this tradition but I forgot to ask.  I did get a chance to drink the rum (which was good).  Next time I go
