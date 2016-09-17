@@ -21,7 +21,7 @@ I got to LV a day early so I could attend the unoffical Defcon Shoot.  It's wher
 bring guns to go shoot in the desert.  I didn't have anything to bring but most people are nice and let
 you shoot their weapons for the cost of ammo.  I got to put 100 rounds through an M60:
 
-![](/assets/defconsac/machine_gun_shoot.gif)
+![](/assets/images/defconsac/machine_gun_shoot.gif)
 
 ## The Villages
 
@@ -48,7 +48,7 @@ envelopes and tape at the Tamper Evident Village which was fun.
 One of my friends went to the Bio Hacking Village and got an NFC chip inserted
 into his hand:
 
-![](/assets/defconsac/hand.jpeg)
+![](/assets/images/defconsac/hand.png)
 
 It's supposed to last for life (or until you remove it surgically).  We of
 course first programmed it with this [link](https://youtu.be/dQw4w9WgXcQ) to
@@ -58,11 +58,69 @@ But my favorite part about Defcon is getting to meet new people and catch up wit
 
 I met the
 folks behind [AND!XOR](https://twitter.com/ANDnXOR) and learned about their creation
-of the Bender Badge:
+of the [Bender Badge](https://hackaday.io/project/9064-andxor-defcon-24-badge):
 
-![Bender]()
+![Bender](/assets/images/defconsac/bender.jpg)
 
 
+I only went to like one or two of the talks.  I think at a conference like this, most of the fun and memorable
+things will happen outside of the talks.
+
+There was a Cyber Grand Challenge sponsored by DARPA.  The challenge was to make the best automated computer system
+that would find and patch bugs in software.  They had teams from different universities competing for millions of dollars.
+The competition was narrated and animated to give it an eSport feel.  It was really cool, but ultimately it gets boring
+to watch computer programs run (really fast) despite all of the animations.
+
+![](/assets/images/defconsac/cyber.jpg)
+
+Each night there are a lot of parties.  Each is hosted by companies or other groups that are popular at Defcon.
+A lot of them I think are bad because it's either really long lines or just a bunch of fellow nerds trying to dance.
+
+The lines really put me off.  If there's a long wait then don't bother waiting.  There's this norm where the hosts will
+keep the lines long even when there's plenty of room inside.  I guess it helps make the party seem better than what it really is.
+I get that there isn't enough room for everyone, but some groups I think do it better.  For example, the [Telephreak](https://www.telephreak.org/) group held an invite only event
+for well known hackers and left open challenges that skillful people at the conference could solve.  If you could solve it, then you could get an invite.
+Unfortunately I flew out of LV before the Telephreak party otherwise I would have tried to solve one of their challenges.
+
+There's so much going on at Defcon that you can't hit all of it and you will miss a lot.  But it's great and I'll be going next year.
+
+# Selected Areas in Cryptography (SAC)
+
+This was purely an academic conference that focuses on, well, selected areas in cryptography.  The research group I work in at Virginia Tech
+did a lot of work in fault attacks and countermeasures.  SAC had a special
+focus this year on fault attacks and side channel analysis.  So we submitted a [paper](https://eprint.iacr.org/2016/850.pdf) and I traveled
+to present it.
+
+If you're interested, check out my advisor's [post](http://www.faculty.ece.vt.edu/schaum//blog/instruction-redundancy/) for an overview of the work.
+
+This was my first time at an academic conference and my first time presenting at a conference.  It was pretty laid back.  There was around 100 attendees
+of people from around the world and about 30 speakers.  I suppose that's what to expect from small conferences.
+
+It was an awesome experience for me to get to meet other researchers in the field and see people that are on papers I've previously studied.
+I got to meet other graduate students that know a lot about crypto.
+
+It's pretty motivating to come back from a conference so related to your research and meet like minded people.  I feel like I think of a lot more
+ideas of things to work on coming back to the lab.  As [Francesco Regazzoni](http://people.alari.ch/regaz/)
+put, (paraphrasing), "For the students here, there's one thing
+you should get from a conference like this, and that's a big idea.  By the end of this, you should feel like there's a big problem you want be working on."
+
+### Newfoundland
+
+SAC was held in St. Johns in Newfoundland, Canada.  Fortunately the weather was still good and the area was really nice.
+
+I hiked Signal Hill, which was the first place to receive a transcontinental wireless signal.
+
+![Signal Hill]()
+
+The conference also hosted a Puffin and Whale watching tour.  I never thought myself to be much of a whale watcher
+but this was actually really cool (even though we saw no whales).  Turns out there's this island of the coast that
+the entirety (most) of the Puffin race relies on to lay their eggs for various ecological reasons.  And they were all
+there because it was the egg laying time of the year.  It was surprising to see thousands of puffins all flying around you
+at once.  We were told to not look up with our mouths open.  Unfortunately my camera was dead and I couldn't get a picture.
+
+There's this tradition in Newfoundland for newcomers to drink a shot of Newfoundland Screech Rum and then kiss a cod.
+Some of the bars will let you honor this tradition but I forgot to ask.  I did get a chance to drink the rum (which was good).  Next time I go
+down I will try to kiss the cod.
 
 
 
