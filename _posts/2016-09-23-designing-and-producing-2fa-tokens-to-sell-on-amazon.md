@@ -22,26 +22,26 @@ U2F uses challenge response for authentication and is based on the P256 NIST Ell
 FIDO additionally provides U2F standards for transports like USB, Bluetooth, and NFC which
 makes a project like this ideal.
 
-I choose to use the following components to implement the design (in order of importance):
+I chose to use the following components to implement the design (in order of importance):
 
-* [ATECC508A](http://www.digikey.com/product-detail/en/atmel/ATECC508A-SSHDA-B/ATECC508A-SSHDA-B-ND/5213053) - Atmel chip that implements P256 signatures and key generation securely.
+* [ATECC508A](http://www.digikey.com/product-detail/en/atmel/ATECC508A-SSHDA-B/ATECC508A-SSHDA-B-ND/5213053) - Atmel chip that securely implements P256 signatures and key generation.
 * [EFM8UB1](http://www.digikey.com/product-detail/en/silicon-labs/EFM8UB11F16G-C-QSOP24/336-3411-5-ND/5592439)   - Cheapest microcontroller with a USB.
-* [RGB LED](http://www.digikey.com/product-detail/en/LTST-C19HE1WT/160-2162-1-ND/4866310)   - Give a better user experience.
+* [RGB LED](http://www.digikey.com/product-detail/en/LTST-C19HE1WT/160-2162-1-ND/4866310)   - Better user experience.
 * Other discrete components - Button, bypass capacitors, ESD protection, current limiting resistor.
 
 ![](/assets/images/u2f/u2fzero.jpg)
 
 I decided that for a U2F token to be secure it would need to meet 3 requirements:
 
-1. Needs a good source of randomness to generate keys.
-2. Strong computation for the crypto.  Only using an 8 bit processor would be too time consuming.
-3. Tamper resistance.  I.e. it should be hard to duplicate.
+1. A good source of randomness to generate keys.
+2. Strong computation for the crypt (using an 8 bit processor would be too time consuming).
+3. Tamper resistance.  Hard to duplicate.
 
 The ATECC508A chip fulfills all these tasks because it has a hardware RNG, write only keys, and hardware
 acceleration for elliptic curve operations \*.
 
 You can see the full source of the design [here](https://github.com/conorpp/u2f-zero).  It would be much better
-if it has a tamper resistant case or coating, but the initial capital to get that going is out of my reach currently.
+with a tamper resistant case or coating, but the initial capital to get that going is currently out of my reach.
 
 # Producing it
 
@@ -82,7 +82,7 @@ be communicated with in parallel with other tokens.
 
 ![](/assets/images/u2f/leds.jpg)
 
-This process would take about 10 seconds.  Because I had three set ups, I could
+This process takes about 10 seconds per token.  Because I had three set ups, I could
 get up to three working at the same time.  It would have been quicker with 4 or 5, but
 eventually I wouldn't be able to plug them in fast enough to get more then 5 programming
 at the same time.
@@ -102,8 +102,8 @@ since PCBCart made a couple extra).
 My goal was to have this listed in stock for at least a year.  I really don't
 know what to expect on selling so it's a bit of a shot in the dark.  I know I don't
 want to be bothered handling payments and shipping so going with a distributer is
-needed.  I decided to go with Amazon because they make it easiest for most people
-to order things online (and free shipping).  I'm not sure about comparing fees with other
+needed.  I decided to go with Amazon because they make it so easy for most people
+to order things online (with free shipping).  I'm not sure about comparing fees with other
 options like [Tindie](https://www.tindie.com/).
 
 Typically to list a product on Amazon, it is very easy if it's already listed.  You just
@@ -119,28 +119,28 @@ But if you're adding a new product, you have to consider a couple options:
   will allow you to list the product.
 
 Because I was the owner of the brand (I called it U2F Zero), I attempted option (1).
-However, despite any of their documentation, Amazon requires that the brand be
+However, unmentioned in their documentation, Amazon requires that the brand be
 printed directly on the packaging to protect the brand.  Stickers or label do
 not count.  All I had and had planned to use was polybags and labels.
 
 ![](/assets/images/u2f/polybag.jpg)
 
-I didn't want to take a backwards step and get everything repackaged with my
+I didn't want to back up and get everything repackaged with my
 "brand" printed on it.  I decided that the owner of the U2F Zero
-"business" would be my LLC, ConorCo.  
+"business" would be my LLC -- ConorCo.
 
-I decided to write a letter to ConorCo LLC and ask for permission to sell their
-product, U2F Zero, on Amazon.  The main shareholder of ConorCo LLC, Conor
-Patrick, promptly signed off to give permission.  I then submitted this to
-amazon, applying for option (2).  Amazon promptly accepted the application, allowing
-let me list U2F Zero.
+I wrote a letter to ConorCo LLC and asked for permission to sell their
+product, U2F Zero, on Amazon.  The majority shareholder of ConorCo LLC, Conor
+Patrick, promptly signed off to give me permission to do that.  I then submitted this to
+Amazon, in compliance with option (2).  Amazon promptly accepted the application and
+listed U2F Zero.
 
 After a polybag and labeler packaging party with help from my roommates,
 U2F Zero is [available on Amazon](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6).
 
 ![](/assets/images/u2f/amazon.png)
 
-Fortunately I had "U2F Zero" printed on the PCB.  Amazon may not have accepted
+Fortunately I had "U2F Zero" printed on the PCB before I even knew that I needed to.  Amazon may not have accepted
 it otherwise.  The domain [u2fzero.com](https://u2fzero.com) points to a launch
 page required for the Amazon application.  
 
@@ -151,16 +151,16 @@ site](http://conorco.tech/) during this project.
 # Wrap up
 
 I'm by no means an entrepreneur but I think I'd like to keep trying to be one.
-This project has been a long term experiment and good for me to get some
-experience.  I am not concerned with financial success or growth.  The nice
+This project has been a long term experiment and the
+experience has been great for me.  I am not actually concerned with financial success or growth.  The nice
 thing about this project is I can just let it sit and I don't need to maintain
-anything -- just what I need to move on to the next project.
+anything -- leaving me time to move on to the next project.
 
 Feel free to [make your own U2F
 Zero](https://github.com/conorpp/u2f-zero/wiki/Building-a-U2F-Token) or [mass
 produce
-it](https://github.com/conorpp/u2f-zero/wiki/DIY-Production-Programming).  You
-could probably get away with producing them cheap than what I could.
+it](https://github.com/conorpp/u2f-zero/wiki/DIY-Production-Programming).  Maybe
+you can figure out how to produce them cheaper than what I could.
 
 
 
