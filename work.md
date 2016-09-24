@@ -8,7 +8,7 @@ I'm currently looking for work in the U.S. government.
 
 I'm a [Cybercorps](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504991) student,
 meaning I'm on a scholarship that obligates me
-to work for the goverment in security for at least 3 years after I finish school.  Alternatively
+to work for the government in security for at least 3 years after I finish school.  Alternatively
 I could work for any company that can handle paying off my potential school debt.
 
 I could work for public universities, national labs, state offices, 3 letter agencies, military, etc.
