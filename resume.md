@@ -9,7 +9,7 @@ Check out my [Github profile]({{site.social[1].url}}) for some of my active and 
 
 Check out links below for press and videos.
 
-Résumé
+Resume
 ======
 
 ###### (Last updated {{ site.data.resume.updated | date: '%B, %Y' }})
