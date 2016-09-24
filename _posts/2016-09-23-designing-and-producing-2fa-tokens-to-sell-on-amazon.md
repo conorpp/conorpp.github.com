@@ -3,19 +3,19 @@ layout: post
 title: "Designing and Producing 2FA tokens to Sell on Amazon"
 description: ""
 category:
-tags: []
-image: /assets/images/default.jpg
+tags: [Startup]
+image: /assets/images/u2f/u2fzero.jpg
 ---
 {% include JB/setup %}
 
 I made a two factor authentication token and have made it [available on Amazon](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6/).
-In this post I'll talk about the design, how I affordably produced it, and some
+In this post I'll talk about the design, how I produced it affordably, and some
 metrics about selling on [Amazon](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6/).  If you're interested in doing something similar,
 you can copy everything as it's all open source.
 
 ![](/assets/images/u2f/crab_bowl.jpg)
 
-# The Design
+# The design
 
 It uses the U2F protocol, which is a standard developed by the FIDO Alliance and Google.
 U2F uses challenge response for authentication and is based on the P256 NIST Elliptic Curve.
@@ -24,9 +24,9 @@ makes a project like this ideal.
 
 I choose to use the following components to implement the design (in order of importance):
 
-* [ATECC508A](http://www.digikey.com/product-detail/en/atmel/ATECC508A-SSHDA-B/ATECC508A-SSHDA-B-ND/5213053) - Atmel I2C peripheral that implements P256 signatures and full key life cycle securely.
-* [EFM8UB1](http://www.digikey.com/product-detail/en/silicon-labs/EFM8UB11F16G-C-QSOP24/336-3411-5-ND/5592439)   - Cheapest microcontroller with a USB slave peripheral and enough memory to implement U2F.
-* [RGB LED](http://www.digikey.com/product-detail/en/LTST-C19HE1WT/160-2162-1-ND/4866310)   - Give user indication of state.
+* [ATECC508A](http://www.digikey.com/product-detail/en/atmel/ATECC508A-SSHDA-B/ATECC508A-SSHDA-B-ND/5213053) - Atmel chip that implements P256 signatures and key generation securely.
+* [EFM8UB1](http://www.digikey.com/product-detail/en/silicon-labs/EFM8UB11F16G-C-QSOP24/336-3411-5-ND/5592439)   - Cheapest microcontroller with a USB.
+* [RGB LED](http://www.digikey.com/product-detail/en/LTST-C19HE1WT/160-2162-1-ND/4866310)   - Give a better user experience.
 * Other discrete components - Button, bypass capacitors, ESD protection, current limiting resistor.
 
 ![](/assets/images/u2f/u2fzero.jpg)
@@ -37,19 +37,11 @@ I decided that for a U2F token to be secure it would need to meet 3 requirements
 2. Strong computation for the crypto.  Only using an 8 bit processor would be too time consuming.
 3. Tamper resistance.  I.e. it should be hard to duplicate.
 
-The ATECC508A chip fulfills all these tasks becasuse it has a hardware RNG, write only keys, and hardware
-acceleration for elliptic curve operations.
+The ATECC508A chip fulfills all these tasks because it has a hardware RNG, write only keys, and hardware
+acceleration for elliptic curve operations \*.
 
-You can see the full source of the design [here](https://github.com/conorpp/u2f-zero).
-
-One note on finding a secure chip: 
-
-Finding a chip that has secure public key crypto (P256) implementations is non-trivial.  I got
-lucky when I found Atmel's chip which was easy to purchase and get documentation for.  Other manufacturers
-that offered potential secure chips were NXP, ST Electronics, and Infineon.  But none of them sell their secure
-chipsets on normal distributers and seem to require customers to go through NDAs, licensing, and large minimum order
-requirements.  Starting out, all of that is over my head.  I hope the market for public key hardware becomes more transparent.
-
+You can see the full source of the design [here](https://github.com/conorpp/u2f-zero).  It would be much better
+if it has a tamper resistant case or coating, but the initial capital to get that going is out of my reach currently.
 
 # Producing it
 
@@ -58,15 +50,15 @@ solder everything in one night.  But that proved to be too time consuming, messy
 I got it fab'd and assembled at [PCBCart](http://www.pcbcart.com/).  But the real challenge here was programming
 the tokens.
 
-Programming was a challenge because it had to be integrated with my own scripts to handle the initial configuration
-of the ATECC508A chip and generation and signing of an attestation certification per the U2F spec.  In other words,
+Programming was a challenge because it's dependent on my scripts to handle the initial configuration
+of the ATECC508A chip and creation of a unique attestation certification per the U2F spec.  In other words,
 one binary blob firmware did not cut it.  Each token needed to be programmed once to be "customized" and then programmed
-again with a signed* build.  It took me about 1-2 minutes to program a U2F token while prototyping.
+again with a signed build \*\*.  It took me about 1-2 minutes to program a U2F token while prototyping.
 
 Manufacturers like PCBCart typically offer mass programming services but my process was too complicated and would
 have ended being untrustworthy and expensive.
 
-So I decided to program everything on my own while promising to my future self that I would make a pipelined process to
+I decided to program everything on my own while promising to my future self that I would make a pipelined process to
 get everything done cheaply in a reasonable amount of time.
 
 Fast forward a couple months, I have tons of U2F tokens from PCBCart:
@@ -74,7 +66,7 @@ Fast forward a couple months, I have tons of U2F tokens from PCBCart:
 ![](/assets/images/u2f/box.jpg)
 
 I automated and optimized my programming setup.  I acquired 3 programmers, 3 USB extension cables, and made 3
-connecters using protoboard and machine pins.
+connectors using protoboard and machine pins.
 
 ![](/assets/images/u2f/mounted.jpg)
 
@@ -98,13 +90,12 @@ at the same time.
 ![](/assets/images/u2f/programming_long.gif)
 
 It took me about 4-6 hours total to get through everything.  I watched two
-movies (props if you can figure out which ones from the gif).  Occasionally my
+movies (props if you can figure out which ones).  Occasionally my
 pipeline would stall on some edge cases and I would have to restart but it was
 mostly smooth.  I only had 1 token from PCBCart that didn't work (which is okay
-since PCBCart had a couple extra).
+since PCBCart made a couple extra).
 
 
-* The public key in the build is signed for attestation.
 
 # Fulfillment by Amazon
 
@@ -120,16 +111,62 @@ pick the already listed product and reuse all of the information already there.
 
 But if you're adding a new product, you have to consider a couple options:
 
-1. New Brand Owner:  If you own the brand of a product not currently on Amazon,
-you can apply for Amazon to approve your brand and then list the product.
-2. New product but not brand owner:  If you want to list a product you do *not* own
-the brand for, you need to get permission from the brand owner to sell it and then Amazon
-will allow you to list the product.
+1. **New Brand Owner**:  If you own the brand of a product not currently on Amazon,
+  you can apply for Amazon to approve your brand and then list the product.
 
-Because I'm the owner of the brand (I called it U2F Zero), I of course attempted the first option.
+2. **New product but not brand owner**:  If you want to list a product but you do *not* own
+  the brand for it, you need to get permission from the brand owner to sell it and then Amazon
+  will allow you to list the product.
+
+Because I was the owner of the brand (I called it U2F Zero), I attempted option (1).
+However, despite any of their documentation, Amazon requires that the brand be
+printed directly on the packaging to protect the brand.  Stickers or label do
+not count.  All I had and had planned to use was polybags and labels.
+
+![](/assets/images/u2f/polybag.jpg)
+
+I didn't want to take a backwards step and get everything repackaged with my
+"brand" printed on it.  I decided that the owner of the U2F Zero
+"business" would be my LLC, ConorCo.  
+
+I decided to write a letter to ConorCo LLC and ask for permission to sell their
+product, U2F Zero, on Amazon.  The main shareholder of ConorCo LLC, Conor
+Patrick, promptly signed off to give permission.  I then submitted this to
+amazon, applying for option (2).  Amazon promptly accepted the application, allowing
+let me list U2F Zero.
+
+After a polybag and labeler packaging party with help from my roommates,
+U2F Zero is [available on Amazon](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6).
+
+![](/assets/images/u2f/amazon.png)
+
+Fortunately I had "U2F Zero" printed on the PCB.  Amazon may not have accepted
+it otherwise.  The domain [u2fzero.com](https://u2fzero.com) points to a launch
+page required for the Amazon application.  
+
+My roommates make fun of me for how
+much I order things online -- particularly from Amazon.  One of them made this [static
+site](http://conorco.tech/) during this project.
+
+# Wrap up
+
+I'm by no means an entrepreneur but I think I'd like to keep trying to be one.
+This project has been a long term experiment and good for me to get some
+experience.  I am not concerned with financial success or growth.  The nice
+thing about this project is I can just let it sit and I don't need to maintain
+anything -- just what I need to move on to the next project.
+
+Feel free to [make your own U2F
+Zero](https://github.com/conorpp/u2f-zero/wiki/Building-a-U2F-Token) or [mass
+produce
+it](https://github.com/conorpp/u2f-zero/wiki/DIY-Production-Programming).  You
+could probably get away with producing them cheap than what I could.
 
 
 
+###### \* Finding a chip that has secure public key crypto (P256) implementations is non-trivial.  I got lucky when I found Atmel's chip which was easy to purchase and get documentation for.  Other manufacturers that offer potential secure chips are NXP, ST Electronics, and Infineon.  But none of them sell their secure chipsets on normal distributors and seem to require customers to go through NDAs, licensing, and large minimum order requirements.  I hope the market for public key hardware becomes more transparent.
+
+###### \*\* The public key in the build is signed for attestation.
 
 
 
