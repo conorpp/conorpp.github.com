@@ -18,11 +18,11 @@ you can copy everything as it's all open source.
 # The design
 
 It uses the [U2F protocol](https://fidoalliance.org/specifications/download/), which is a standard developed by the FIDO Alliance and Google.
-U2F uses challenge response for authentication and is based on the P256 NIST Elliptic Curve.
+U2F uses challenge response for authentication and is based on the P-256 NIST Elliptic Curve.
 FIDO additionally provides U2F standards for transports like USB, Bluetooth, and NFC which
 makes a project like this ideal.
 
-I decided that for a U2F token to be secure it would need to meet 3 requirements:
+I decided that a U2F token would need to meet 3 core requirements:
 
 1. A good source of randomness to generate keys.
 2. Strong computation for the crypto (using an 8 bit processor would be too time consuming).
@@ -31,7 +31,7 @@ I decided that for a U2F token to be secure it would need to meet 3 requirements
 
 I chose to use the following components to implement the design (in order of importance):
 
-* [ATECC508A](http://www.digikey.com/product-detail/en/atmel/ATECC508A-SSHDA-B/ATECC508A-SSHDA-B-ND/5213053) - Atmel chip that securely implements P256 signatures and key generation \*.
+* [ATECC508A](http://www.digikey.com/product-detail/en/atmel/ATECC508A-SSHDA-B/ATECC508A-SSHDA-B-ND/5213053) - Atmel chip that securely implements P-256 signatures and key generation \*.
 * [EFM8UB1](http://www.digikey.com/product-detail/en/silicon-labs/EFM8UB11F16G-C-QSOP24/336-3411-5-ND/5592439)   - Cheapest microcontroller with USB.
 * [RGB LED](http://www.digikey.com/product-detail/en/LTST-C19HE1WT/160-2162-1-ND/4866310)   - Better user experience.
 * Other discrete components - Button, bypass capacitors, ESD protection, current limiting resistor.
@@ -54,7 +54,7 @@ I got it fab'd and assembled at [PCBCart](http://www.pcbcart.com/).  But the rea
 the tokens.
 
 Programming was a challenge because it's dependent on my scripts to handle the initial configuration
-of the ATECC508A chip and creation of a unique attestation certification per U2F token.  In other words,
+of the ATECC508A chip and creation of a unique attestation cert for each U2F token.  In other words,
 one binary firmware blob did not cut it.  Each token needed to be programmed once to be "customized" and then programmed
 again with a signed build \*\*\*.  It took me about 1-2 minutes to program a U2F token while prototyping.
 
@@ -62,7 +62,9 @@ Manufacturers like PCBCart typically offer mass programming services but my proc
 have ended being untrustworthy and expensive.
 
 I decided to program everything on my own while promising to my future self that I would make a pipelined process to
-get everything done cheaply in a reasonable amount of time.
+get everything done affordably and in a reasonable amount of time.
+
+<br>
 
 Fast forward a couple months, I have a lot of U2F tokens from PCBCart:
 
@@ -76,8 +78,8 @@ connectors using protoboard and machine pins.
 How it would work:
 
 1. I plug in a U2F token to a USB cable for power and plug in a programmer.
-2. I press a button on my keyboard to start programming on that programmer.
-3. The script programs a setup firmware with a unique serial number so the token can
+2. I press a button on my keyboard to start programming from that programmer.
+3. The script flashes a setup firmware with a unique serial number so the token can
 be communicated with in parallel with other tokens.
 4. The configuration and signing occurs.
 5. A final program is built and programmed.
@@ -87,7 +89,7 @@ be communicated with in parallel with other tokens.
 
 This process takes about 10 seconds per token.  Because I had three setups, I could
 get up to three working at the same time.  It would have been quicker with 4 or 5, but
-eventually I wouldn't be able to plug them in fast enough to get more then 5 programming
+eventually I wouldn't be able to plug them in fast enough to get more than 5 programming
 at the same time.
 
 ![](/assets/images/u2f/programming_long.gif)
@@ -176,7 +178,7 @@ I don't know what to expect.  I'll make a post about this later on.
 
 # Wrap up
 
-I'm by no means an entrepreneur but I think I'd like to keep trying to be one.
+I'm by no means an entrepreneur but I'd like to keep trying to be one.
 This project has been a long term experiment and the
 experience has been great for me.  I am not actually concerned with financial success or growth.  The nice
 thing about this project is I can just let it sit and I don't need to maintain
@@ -191,7 +193,7 @@ you can figure out how to produce them cheaper than what I could.
 
 ###### \* Calling something secure isn't simple.  Here's a [better analysis](https://github.com/conorpp/u2f-zero/wiki/Security-Overview).
 
-###### \*\* Finding a chip that has secure public key crypto (P256) implementations is non-trivial.  I got lucky when I found Atmel's chip which was easy to purchase and get documentation for.  Other manufacturers that offer potential secure chips are NXP, ST Electronics, and Infineon.  But none of them sell their secure chipsets on normal distributors and seem to require customers to go through NDAs, licensing, and large minimum order requirements.  I hope the market for public key hardware becomes more transparent.
+###### \*\* Finding a chip that has secure public key crypto (P-256) implementations is non-trivial.  I got lucky when I found Atmel's chip which was easy to purchase and get documentation for.  Other manufacturers that offer potential secure chips are NXP, ST Electronics, and Infineon.  But none of them sell their secure chipsets on normal distributors and seem to require customers to go through NDAs, licensing, and large minimum order requirements.  I hope the market for public key hardware becomes more transparent.
 
 ###### \*\*\* The public key in the build is signed for device attestation.
 
