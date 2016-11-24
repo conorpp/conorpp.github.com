@@ -10,7 +10,7 @@ tagline: Security, Privacy
 
 Posts that I consider either out of date or just not helpful.
 
-{% assign posts =  site.posts | where: "archive", true %}
+{% assign posts = site.archive %}
 
 ||||
 |:--------|----|---|-|{% for post in posts %}

@@ -12,6 +12,11 @@ permalink: pretty
 # compress html but not really worth it
 #gems:
 #  - octopress-minify-html
+#
+collections:
+    archive:
+        permalink: /:title
+        output: true
 
 disqus:
     username: conorpp

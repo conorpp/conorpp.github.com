@@ -121,7 +121,7 @@ Here is the solution I employed.
 ![](/assets/images/braintree/braintreesetup.svg)
 
 I have one preexisting digital ocean instance for my blog (web app) and I added another one to run the Braintree system.
-I set up another [Let's Encrypt]({% post_url 2015-11-04-trying-out-lets-encrypt %}) cert on my Braintree instance so the web app can securely proxy to the payment service via TLS.
+I set up another Let's Encrypt cert on my Braintree instance so the web app can securely proxy to the payment service via TLS.
 For good measure, I set up the HTTP server on the braintree instance to be restricted with a password so only the webapp instance can access it directly.
 
 
