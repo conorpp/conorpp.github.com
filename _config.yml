@@ -23,6 +23,9 @@ tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
 url:		https://conorpp.com/
 
+permalink: /:title
+
+
 braintree: https://braintree.conorpp.com
 
 author:
