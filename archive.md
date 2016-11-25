@@ -2,6 +2,7 @@
 layout: page
 title: Conor Patrick
 tagline: Security, Privacy
+nocover: true
 ---
 
 {% include JB/setup %}
