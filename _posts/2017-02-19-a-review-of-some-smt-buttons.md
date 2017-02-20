@@ -20,7 +20,7 @@ pictures of what I ordered and to make some comments for other people looking fo
 
 # The buttons
 
-### Vanilla option
+# Vanilla option
 ![](/assets/images/buttons/regular.jpg)
 <center class="caption"><a href="/assets/images/buttons/regular_orig.jpg">high resolution</a></center>
 
@@ -31,7 +31,7 @@ Links:
 * [2](https://www.digikey.com/product-detail/en/c-k/PTS645SK43SMTR92-LFS/CKN9084CT-ND/1146821)
 * [3](https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/FSM2JSMLSTR/450-2143-1-ND/5343823)
 
-### Low profile, good area
+# Low profile, good area
 
 ![](/assets/images/buttons/white.jpg)
 <center class="caption"><a href="/assets/images/buttons/white_orig.jpg">high resolution</a></center>
@@ -41,7 +41,7 @@ more difficult.
 
 [Link](https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-Q2U03W/P12955SCT-ND/762945).
 
-### Small area, still good tactile feedback
+# Small area, still good tactile feedback
 
 ![](/assets/images/buttons/sq_small.jpg)
 <center class="caption"><a href="/assets/images/buttons/sq_small_orig.jpg">high resolution</a></center>
