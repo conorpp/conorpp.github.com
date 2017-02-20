@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Conor Patrick
-tagline: Security, Privacy
+tagline: Hardware projects, security
 nocover: true
 ---
 
 {% include JB/setup %}
 
-
-I'm currently [looking for work in the government](/work).
 
 * [Resume](/resume)
 * [Research](/research)
