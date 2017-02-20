@@ -66,6 +66,18 @@ Links:
 * [1](https://www.digikey.com/product-detail/en/e-switch/TL3315NF160Q/EG4621CT-ND/1870401)
 * [2](https://www.digikey.com/product-detail/en/c-k/KMT011-NGJ-LHS/CKN10288CT-ND/2297279)
 
+
+# Metal domes
+
+![](/assets/images/buttons/domes.jpg)
+<center class="caption"><a href="/assets/images/buttons/domes_orig.jpg">high resolution</a></center>
+
+These are quite different from all the rest.  Metal domes, as offered by [snaptron](http://www.snaptron.com/), come in a lot of
+different shapes and sizes.  One thing that I like is that they are all rated by the amount of force required to "press" the dome in.
+I got a nice sample to test out using these domes as small, 1 bit pressure sensors.  They can't be soldered, but there are a couple other
+methods to attach them to a PCB, all pick and place compatible.
+
+
 # What am I missing?
 
 Currently this is a small list.  Send me a message if you think I missed something.  I appreciate mail and I will update my post if I get anything.
