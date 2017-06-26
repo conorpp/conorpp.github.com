@@ -9,7 +9,7 @@ image: /assets/images/rpm/result2.jpg
 {% include JB/setup %}
 
 If you want to mass produce some physical product in a short amount of time,
-chances are you would need to get a mold made.  Most plastic parts get made via
+chances are you would need to get a mold made.  Most plastic parts get made via a
 plastic injection molding process, where molten plastic is injected into a mold cavity under
 high pressure, cooled quickly, and then ejected.  For mass production to work, the mold needs
 to be durable enough to last for thousands of injections.  Commonly they are made out of steel.
@@ -26,7 +26,7 @@ concept.  Here I show what I made and its results.
 
 # Reconfigurable Pin Tooling
 
-Reconfigurable pin tooling is an ideal where you have a discrete bed of pins that make up the mold surfaces.  Each pin can
+Reconfigurable pin tooling is an idea where you have a discrete bed of pins that make up the mold surfaces.  Each pin can
 be actuated to replicate any "moldable" part design.  The following figure from [1] shows the basic idea using 2 surfaces.
 A complete mold would need 6 surfaces.
 
@@ -66,7 +66,7 @@ and ordering parts for various rods, nuts, and bearings.  Also need to find a so
 
 I 3D printed parts for the vice and also used parts that I ordered from
 McMaster.  I used openscad for the design which I really like since it's fully
-parametric.  So I can design it any way I want at first, and when I pick out
+parametric.  So I can design the vice any way I want at first, and when I pick out
 parts from McMaster, I just need to change a few variables to ensure the design
 will fit the parts.  Going the other way around (fitting the parts to the
 design) isn't always so easy.
@@ -76,14 +76,17 @@ on nylon bearings.  So to tighten the vice completely, you need to turn six rods
 
 ![](/assets/images/rpm/impl_open.jpg)
 
-Here is the vice tightened on a bed of pins.  For the pins, I just used the smallest steel key stock available online.
-I found the smallest to be [1/16in x 1/16in on McMaster](https://www.mcmaster.com/#98535a120/=188c0h1).  The pins, while each are individually
-cheap, still end up being the most expensive part of the design.  This is because you need *a lot* of them to implement any moderately sized surface.
-To avoid high costs I designed for a surface that was only just over 1 square inch.  Since it's pretty small, the 1/16in key stock resolution
-really sticks out.  It still works, but for this to be practical, the ratio of surface size to pin ratio would have to be much bigger or parts
-will look chunky.
+Here is the vice tightened on a bed of pins.  
 
 ![](/assets/images/rpm/impl_closed.jpg)
+
+For the pins, I just used the smallest steel key stock available online.
+I found the smallest to be [1/16in x 1/16in on McMaster](https://www.mcmaster.com/#98535a120/=188c0h1).  The pins, while each individually are
+cheap, still end up being the most expensive part of the design.  This is because you need *a lot* of them to implement any moderately sized surface.
+To avoid high costs I designed for a surface that was only just over 1 square inch.  Since it's pretty small, the 1/16in key stock resolution
+really sticks out.  It still works, but for this to be practical, the ratio of surface size to pin cross-section would have to be much bigger or parts
+will look too chunky.
+
 
 I tested the mold using silicon molding compounds (not under pressure).  The part I molded against was a simple 6 sided die.
 
@@ -115,12 +118,12 @@ tool before placing the pins in the vice.  Putting roughly 300 pins in the mesh 
 I was able to get these meshes made by [OSH Stencils](https://www.oshstencils.com/#), which is a company that
 makes cost effective stencils for soldering electronics.  Turns out it is perfect for making pin matrix alignment tools.
 They use an industrial laser to cut 0.004" stainless steel sheet.  And the tolerances are really good, all around 0.001".
-I got my stencils for like $15-20.A
+I got my stencils for like $15-20.
 
 ## Conclusion
 
 Reconfigurable pin tooling is pretty cool but far from practical I think.  It is expensive to get enough pins to
-mold large surfaces, however, it is worth it if the process worked well.  As far as I can tell, it's no where
+mold large surfaces, however, it is worth while if the molding process worked well.  But as far as I can tell, it's no where
 close to working as well as conventional molds.  Problems with "chunkyness" and pressure remain.  If you have any ideas,
 let me know!
 
