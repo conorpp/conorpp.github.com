@@ -9,7 +9,7 @@ nocover: true
 
 
 * [Resume](/resume)
-* [Research](/research)
+* [Publications and talks](/research)
 
 To contact me, send me a [tweet](https://twitter.com/_conorpp) or an email at {{site.author.email}}
 
