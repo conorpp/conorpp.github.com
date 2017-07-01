@@ -84,33 +84,62 @@ article: true
     {% assign post = site.posts.first %}
 {% endif %}
 
-{% if post %}
-<footer class="{% if post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ post.image }})">
-	<div id="post-info" class="post-info-top">
-		<a href="{{ post.url }}">
-			<h1>{{ post.title }}</h1>
-			{% if post.quote %}
-				<h2>{{ post.quote }}</h2>
-			{% endif %}
-		</a>
-	</div>
-</footer>
+{% assign first = site.posts.first %}
+
+{% if prev_post %}
+    <footer class="{% if prev_post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ prev_post.image }})">
+        <div id="post-info" class="post-info-top">
+            <a href="{{ prev_post.url }}">
+                <h1 class="">Next post</h1>
+                <h2>{{ prev_post.title }}</h2>
+            </a>
+        </div>
+    </footer>
 {% endif %}
+
+
+{% if first != prev_post %}
+    {% if first.url != page.url %}
+        <footer class="{% if first.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ first.image }})">
+            <div id="post-info" class="post-info-top">
+                <a href="{{ first.url }}">
+                    <h1 class="">Latest post</h1>
+                    <h2>{{ first.title }}</h2>
+                </a>
+            </div>
+        </footer>
+    {% endif %}
+{% endif %}
+
+
+
+{% if next_post %}
+    <footer class="{% if next_post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ next_post.image }})">
+        <div id="post-info" class="post-info-top">
+            <a href="{{ next_post.url }}">
+                <h1 class="">Previous post</h1>
+                <h2>{{ next_post.title }}</h2>
+            </a>
+        </div>
+    </footer>
+{% endif %}
+
 
 {% if site.disqus %}
-<script src="/assets/js/smooth-scroll.js"></script>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-var disqus_shortname = '{{site.disqus.username}}';
+    <script src="/assets/js/smooth-scroll.js"></script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    var disqus_shortname = '{{site.disqus.username}}';
 
-(function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
+
 <span id="ismobile" class="ismobile"></span>
 <script>
 

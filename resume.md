@@ -12,57 +12,57 @@ Check out links below for press and videos.
 Resume
 ======
 
-###### (Last updated {{ site.data.resume.updated | date: '%B, %Y' }})
+I need to update my resume.  If you need this for a business inquiry or something, best contact me.
 
-**{{site.data.resume.name}}**
+<!-- ###### (Last updated {{ site.data.resume.updated | date: '%B, %Y' }})-->
 
-**{{site.data.resume.contact}}**    (pgp key: {{site.data.resume.fingerprint}})
+<!-- **{{site.data.resume.name}}**-->
 
-Current residence: {{site.data.resume.location}}
+<!--**{{site.data.resume.contact}}**    (pgp key: {{site.data.resume.fingerprint}})-->
 
-[Website]({{site.data.resume.website}}), [Twitter](https://twitter.com/{{site.data.resume.twitter}})
+<!--Current residence: {{site.data.resume.location}}-->
 
-
-{% for b in site.data.resume.subjects %}
-
-
-{{ b.name }}
-===========
+<!--[Website]({{site.data.resume.website}}), [Twitter](https://twitter.com/{{site.data.resume.twitter}})-->
 
 
-    {% for i in b.items %}
-        {% unless i.hide %}
+<!--{% for b in site.data.resume.subjects %}-->
 
-        {% if i.type == "plain" %}
 
-* {{i.content}}
+<!--{{ b.name }}-->
+<!--===========-->
 
-        {% elsif i.type == "label" %}
 
-* **{{i.name}}**: {{i.content}}
+<!--{% for i in b.items %}-->
+<!--{% unless i.hide %}-->
+<!--{% if i.type == "plain" %}-->
+
+<!--* {{i.content}}-->
+
+<!--{% elsif i.type == "label" %}-->
+
+<!--* **{{i.name}}**: {{i.content}}-->
         
-        {% elsif i.type == "link" %}
+<!--{% elsif i.type == "link" %}-->
 
-* **[{{ i.name }}]({{ i.content }})**
+<!--* **[{{ i.name }}]({{ i.content }})**-->
 
-        {% elsif i.type == "list" %}
+<!--{% elsif i.type == "list" %}-->
 
-* {{i.name}}
+<!--* {{i.name}}-->
 
-            {% for li in i.content %}
-  * {{li.content}}
-            {% endfor %}
+<!--{% for li in i.content %}-->
+<!--* {{li.content}}-->
+<!--{% endfor %}-->
 
-        {% else %}
+<!--{% else %}-->
     
-<h1 style="color:red;">invalid format type: {{i.type}}<h1>
+<!--<h1 style="color:red;">invalid format type: {{i.type}}<h1>-->
+<!--{% endif %}-->
+<!--{% endunless %}-->
 
-        {% endif %}
-        {% endunless %}
-
-    {% endfor %}
+<!--{% endfor %}-->
 
 
-{% endfor %}
+<!--{% endfor %}-->
 
-{% include JB/setup %}
+<!--{% include JB/setup %}-->
