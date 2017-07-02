@@ -21,6 +21,10 @@ To contact me, send me a [tweet](https://twitter.com/_conorpp) or an email at {{
 | <span class="nowrap">{{ post.date | date: "%b '%y" }}</span> | [{{post.tags[0]}}]({{BASE_PATH}}/tags.html#{{post.tags[0]}}) | [{{ post.title }}]({{ BASE_PATH }}{{ post.url }}) | {% endfor %}
 
 <br>
+
+{% include JB/signup %}
+
+<br>
 <div>
 <a href="/archive">Archive</a>
 </div>

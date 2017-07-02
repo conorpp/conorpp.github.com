@@ -31,17 +31,9 @@ article: true
     </div>
         {{ content }}
 
-	<p class="copyright">
-        &copy;{{ site.time | date: "%Y" }}, 
-        <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>.
-        <a href="{{ site.copyright.type_url }}" target="_blank">
-            {{ site.copyright.type_title }}
-        </a>.
-        <a href="https://conorpp.github.io"> Mirror</a>.
-        <a target="_blank" href="https://github.com/conorpp/conorpp.github.com">SOURCE</a>.
-    </p>
-
 </div>
+
+{% include JB/signup %}
 
 
 {% assign indexed = false %}
@@ -123,6 +115,20 @@ article: true
         </div>
     </footer>
 {% endif %}
+<br>
+<footer class="">
+<br>
+
+	<p class="copyright">
+        &copy;{{ site.time | date: "%Y" }}, 
+        <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>.
+        <a href="{{ site.copyright.type_url }}" target="_blank">
+            {{ site.copyright.type_title }}
+        </a>.
+        <a href="https://conorpp.github.io"> Mirror</a>.
+        <a target="_blank" href="https://github.com/conorpp/conorpp.github.com">SOURCE</a>.
+    </p>
+</footer>
 
 
 {% if site.disqus %}
@@ -139,6 +145,8 @@ article: true
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
+
+
 
 <span id="ismobile" class="ismobile"></span>
 <script>
