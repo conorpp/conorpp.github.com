@@ -28,8 +28,8 @@ tagline:	'blog'
 description:	'Security, Privacy, and some hardware projects.'
 url:		https://conorpp.com/
 
-lastthing: I randomly generated a 3D maze and printed it.
-lastlink: /randomly-generating-3d-mazes-to-3d-print
+lastthing: I started making a clock with levitating arms.
+lastlink: /designing-a-clock-with-levitating-arms-part-1
 
 
 permalink: /:title

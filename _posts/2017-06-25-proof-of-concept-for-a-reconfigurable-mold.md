@@ -69,7 +69,7 @@ McMaster.  I used openscad for the design which I really like since it's fully
 parametric.  So I can design the vice any way I want at first, and when I pick out
 parts from McMaster, I just need to change a few variables to ensure the design
 will fit the parts.  Going the other way around (fitting the parts to the
-design) isn't always so easy.
+design) isn't always so easy. (Edit: I've since changed to Fusion360.  Way better for most things.).
 
 Here is my 2D vice.  By turning the threaded rods with the thumb screws at the end, it pushes on the internal walls, which slide
 on nylon bearings.  So to tighten the vice completely, you need to turn six rods (not convenient, but works).
