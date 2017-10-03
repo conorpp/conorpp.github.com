@@ -7,11 +7,15 @@ nocover: true
 
 {% include JB/setup %}
 
+I love to meet others and keep in touch.  
 
-* [Resume](/resume)
+Feel free to [reach out](/contact), whether if you have questions, want some advice, or just want to chat.
+
+
+
+{% include JB/signup %}
+
 * [Publications and talks](/research)
-
-To contact me, send me a [tweet](https://twitter.com/_conorpp) or an email at {{site.author.email}}
 
 <br>
 
@@ -22,7 +26,6 @@ To contact me, send me a [tweet](https://twitter.com/_conorpp) or an email at {{
 
 <br>
 
-{% include JB/signup %}
 
 <br>
 <div>
