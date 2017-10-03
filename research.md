@@ -14,6 +14,8 @@ nocover: true
 
 ## Talks
 
+* [Shmoocon talk on U2F Zero](https://www.youtube.com/watch?v=TpiEgUzC9Ew)
+
 * *C. Patrick*, B. Yuce, N. Farhady Ghalaty, P. Schaumont, "**Lightweight Fault Attack Resistance in Software Using Intra-Instruction Redundancy,**" Selected Areas in Cryptography (SAC 2016), St. John's, Canada, August 2016. 
 
 * P. Schaumont and *C. Patrick*, "**The role of energy in the Lightweight Cryptographic Profile**", NIST Lightweight Cryptography Workshop, October 2016.
