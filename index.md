@@ -15,7 +15,6 @@ Feel free to [reach out](/contact), whether if you have questions, want some adv
 
 {% include JB/signup %}
 
-* [Publications and talks](/research)
 
 <br>
 
@@ -25,6 +24,8 @@ Feel free to [reach out](/contact), whether if you have questions, want some adv
 | <span class="nowrap">{{ post.date | date: "%b '%y" }}</span> | [{{post.tags[0]}}]({{BASE_PATH}}/tags.html#{{post.tags[0]}}) | [{{ post.title }}]({{ BASE_PATH }}{{ post.url }}) | {% endfor %}
 
 <br>
+
+* [Publications and talks](/research)
 
 
 <br>
