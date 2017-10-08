@@ -3,6 +3,7 @@ layout: post
 title: "U2F Zero year in review"
 description: ""
 category: 
+nocover: true
 tags: [Startup]
 image: /assets/images/default.jpg
 ---
@@ -13,13 +14,13 @@ market for over a year now.  This is to give an idea of what to expect in terms
 of cost and profit from a "DIY-to-market" kind of project like this.
 
 For those unfamiliar, [U2F Zero](https://github.com/conorpp/u2f-zero) is an
-open-source secure USB device used for two-factor authentication.  I made it
+open-source secure USB device used for two factor authentication.  I made it
 back in 2016 and did a [semi-large PCB-A run and sold them on
 Amazon](https://conorpp.com/designing-and-producing-2fa-tokens-to-sell-on-amazon).
 
 At the time, I didn't really know what to expect.  Were people actually going
 to buy these?  Was I going to get bad reviews?  Was someone going to find some
-security bug in my open source implementation?  Is the profit worth the effort?
+security bug in the implementation (open-source)?  Is the profit worth the effort?
 Now I can answer all of these questions.
 
 # Starting out
@@ -35,7 +36,6 @@ ground plane?
 Eventually, I got better at it.  The project even got an awesome [pull
 request](https://github.com/conorpp/u2f-zero/pull/37) from [Chris
 Pavlina](https://github.com/cpavlina), who is better at layout than I am.
-Thanks Chris! His layout is still being used today.
 
 # Business plan
 
@@ -46,9 +46,8 @@ hit the market.
 
 I basically guessed that the market would sustain 1000/units per year.  So I
 put in an order of 1100 units to a Chinese PCBA fab
-([PCBCart](https://www.pcbcart.com/)) totaling about $4,000.  The main parts of
-the cost is the PCB (~$0.22), the assembly (~$0.44) and the components
-(~$2.26).  All the costs scale with quantity.  Had I ordered 3000 units, I
+([PCBCart](https://www.pcbcart.com/)) totaling about $4,000.  The cost is made up of the PCB (~$0.22/unit), the assembly (~$0.44/unit) and the components
+(~$2.26/unit).  All the costs scale with quantity.  Had I ordered 3000 units, I
 would have saved about $0.35 for each U2F Zero.  But the last thing you want is
 2000 U2F Zeros that no one is buying sitting in a warehouse somewhere
 collecting Amazon storage fees.
@@ -56,7 +55,7 @@ collecting Amazon storage fees.
 I didn't want to deal with sales and distribution.  I was in the middle of grad
 school and didn't have the time or the interest.  So after manufacturing the
 tokens, I shipped them to Amazon to be fulfilled.  This
-does come with a cost, of about $1.02-$2.02 in fees per U2F Token.
+does come with a cost, of about $1.02-$2.02 in fees per U2F Token sold by Amazon.
 
 After manufacturing and distribution was handled, it was time to execute my
 elaborate market entry plan: write a blog post and post it to Hacker News and
@@ -70,8 +69,8 @@ I posted it... and it worked.
 
 ![](/assets/images/u2f-zero-2/2016_sales.png)
 
-For the first month, the time between the Amazon shipment and the post, there
-was almost no sales.  Then after the post, there was a spike of *207 sales*
+For the first month, the time between the Amazon shipment and the blog post, there
+were almost no sales.  Then after the post, there was a spike of *207 sales*
 over the following week.  Then it balanced out to about 6-7 units per day.  And
 4 months later, they sold out.
 
@@ -79,9 +78,9 @@ There was even an increase in sales around Christmas time.
 
 ![](/assets/images/u2f-zero-2/reviews.png)
 
-And people left reviews.  Mostly good reviews, too.  I wasn't sure if people
+And people left mostly good reviews.  I wasn't sure if people
 would leave good reviews since it's just a cheap token with no case.  But it's
-very clear from the listing that is what it is.  So most people will know what
+very clear from the listing what it is.  So most people will know what
 they are purchasing -- and as long as it does a good job fulfilling that image
 -- it has the potential for good reviews.  I think that was an important
 takeaway.
@@ -149,7 +148,7 @@ learn about a different field and meet new people.
 A few months after selling out, I decided to do another run.  This time I added
 some improvements to the PCB layout and fix issues in the firmware.  I also
 decided to order 3000 this time (saved that $0.35 per unit) and support markets
-in Canada, U.K., and Europe (not just the U.S.).  I think the U2F standard is
+in [Canada](https://www.amazon.ca/U2F-Zero/dp/B01L9DUPK6), [U.K.](https://www.amazon.co.uk/dp/B01L9DUPK6), and [Europe](https://u2fzero.ch/products/u2f-zero-1/).  I think the U2F standard is
 picking up in popularity so the U2F demand shouldn't go away.  I'm curious to
 see how U2F Zero sales differ between different countries.
 
@@ -158,14 +157,14 @@ see how U2F Zero sales differ between different countries.
 At the time of this writing, I've sent 1500 units to the [U.S.
 marketplace](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6), 300 to
 [Canada](https://www.amazon.ca/U2F-Zero/dp/B01L9DUPK6), 300 to the
-[U.K.](https://www.amazon.co.uk/dp/B01L9DUPK6), and 100 to a distributor in
-Switzerland that will handle shipments to other countries in Europe.  I've kept
+[U.K.](https://www.amazon.co.uk/dp/B01L9DUPK6), and 100 to a [distributor in
+Switzerland](https://u2fzero.ch/products/u2f-zero-1/) that will handle shipments to other countries in Europe.  I've kept
 the rest in storage so I can replenish a marketplace easily if inventory gets
 low.
 
-U2F Zero has been back on the U.S. market for about $-n- weeks now, after being
-out of stock for about -n- months.  Sales slowly picked back up and average
-about 5 units per day again.  Pretty stable so far.
+U2F Zero has been back on the U.S. market for about 4 months now, after being
+out of stock for about 6 months.  Sales slowly picked back up and average
+about 5 units per day currently.
 
 My goal is to keep the supply up with minimal effort and not have anymore
 gaping out-of-stock periods.  In the meantime, I can work on the next project.
