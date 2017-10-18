@@ -3,13 +3,12 @@ layout: post
 title: "Quick electric skateboard build"
 description: ""
 category: 
-nocover: true
 tags: [Prototyping]
-image: /assets/images/default.jpg
+image: /assets/images/skate/skateboard.jpg
 ---
 {% include JB/setup %}
 
-![](/assets/images/skate/skateboard.jpg)
+<!--![](/assets/images/skate/skateboard.jpg)-->
 
 A friend and I recently decided to get electric longboards.  Except most of
 them suck or are [pretty expensive](https://www.amazon.com/Boosted-Generation-Dual-Electric-Skateboard/dp/B071ZJGT2W).

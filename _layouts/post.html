@@ -85,8 +85,8 @@ article: true
     <footer class="{% if next_post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ next_post.image }})">
         <div id="post-info" class="post-info-top">
             <a href="{{ next_post.url }}">
-                <h1 class="">Previous post</h1>
-                <h2>{{ next_post.title }}</h2>
+                <h1>{{ next_post.title }}</h1>
+                <h2 class="">Previous post</h2>
             </a>
         </div>
     </footer>
@@ -99,8 +99,8 @@ article: true
         <footer class="{% if first.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ first.image }})">
             <div id="post-info" class="post-info-top">
                 <a href="{{ first.url }}">
-                    <h1 class="">Latest post</h1>
-                    <h2>{{ first.title }}</h2>
+                    <h1>{{ first.title }}</h1>
+                    <h2 class="">Latest post</h2>
                 </a>
             </div>
         </footer>
@@ -112,8 +112,8 @@ article: true
     <footer class="{% if prev_post.dark %}dark{% else %}clean{% endif %} next-up" style="background-image: url({{ prev_post.image }})">
         <div id="post-info" class="post-info-top">
             <a href="{{ prev_post.url }}">
-                <h1 class="">Next post</h1>
-                <h2>{{ prev_post.title }}</h2>
+                <h1>{{ prev_post.title }}</h1>
+                <h2 class="">Next post</h2>
             </a>
         </div>
     </footer>
