@@ -3,6 +3,7 @@ layout: post
 title: "My home workspace"
 description: ""
 category: 
+nocover: true
 tags: [Tools]
 image: /assets/images/default.jpg
 ---
