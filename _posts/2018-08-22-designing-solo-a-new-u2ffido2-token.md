@@ -39,6 +39,7 @@ interested, sign up below!
 
 # What is U2F or FIDO2?
 
+U2F is a standard for two factor authentication.  Many websites like Twitter, Google, Facebook, etc, support it.  After you enter password, you insert token, press button, log in.  It provides very strong protection against account theft and phishing, much more then SMS or time-based codes.
 
 FIDO2 is an upgrade to the U2F standard and is planned to have even more ubiquity.  FIDO2 is planned to be used as a password *replacement*. On some services, like Windows 10, you can already use it in place of a password.
 
