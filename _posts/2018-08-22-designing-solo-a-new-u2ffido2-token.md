@@ -50,6 +50,9 @@ The original U2F Zero was just a plain circuit board that only did U2F over USB.
 - Easy, web-based secure update process
 - Good documentation for everyday users
 
+FIDO2 is exciting since there will be a lot more adoption for it and it's planned to be a password replacement.  For example, you can use a FIDO2
+authenticator to log on to Windows, out of the box.
+
 ![](/assets/images/solo/colors.jpg "Colors!")
 
 And of course, everything will soon be open sourced like with U2F Zero.
