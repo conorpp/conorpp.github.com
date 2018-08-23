@@ -39,9 +39,14 @@ interested, sign up below!
 
 # What is U2F or FIDO2?
 
-U2F is a standard for two factor authentication.  Many websites like Twitter, Google, Facebook, etc, support it.  After you enter password, you insert token, press button, log in.  It provides very strong protection against account theft and phishing, much more then SMS or time-based codes.
+U2F is a standard for two factor authentication.  Many websites like Twitter,
+Google, Facebook, etc, support it.  After you enter password, you insert token,
+press button, log in.  It provides very strong protection against account theft
+and phishing, much more then SMS or time-based codes.
 
-FIDO2 is an upgrade to the U2F standard and is planned to have even more ubiquity.  FIDO2 is planned to be used as a password *replacement*. On some services, like Windows 10, you can already use it in place of a password.
+FIDO2 is an upgrade to the U2F standard and is planned to have even more
+ubiquity.  FIDO2 is planned to be used as a password *replacement*. On some
+services, like Windows 10, you can already use it in place of a password.
 
 # Solo
 
@@ -70,7 +75,7 @@ be easily contributed to by others.  Most coding and testing can be done solely
 on a PC, while being designed to be easily ported to other chips, like the
 NRF52840 by Nordic Semiconductor and EFM32J by Silicon Labs.
 
-PC-only testing is achieved by patching Yubico FIDO2 Python API to exchange
+PC-only testing is achieved by patching [Yubico FIDO2 Python API](https://github.com/Yubico/python-fido2) to exchange
 messages with a PC application instead of a USB HID device.
 
 After verifying a "first draft" of the FIDO2 implementation, I ported the design
