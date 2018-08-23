@@ -37,6 +37,11 @@ interested, sign up below!
 </form>
 </div>
 
+# What is U2F or FIDO2?
+
+
+FIDO2 is an upgrade to the U2F standard and is planned to have even more ubiquity.  FIDO2 is planned to be used as a password *replacement*. On some services, like Windows 10, you can already use it in place of a password.
+
 # Solo
 
 
@@ -50,8 +55,8 @@ The original U2F Zero was just a plain circuit board that only did U2F over USB.
 - Easy, web-based secure update process
 - Good documentation for everyday users
 
-FIDO2 is exciting since there will be a lot more adoption for it and it's planned to be a password replacement.  For example, you can use a FIDO2
-authenticator to log on to Windows, out of the box.
+<!--FIDO2 is exciting since there will be a lot more adoption for it and it's planned to be a password replacement.  For example, you can use a FIDO2-->
+<!--authenticator to log on to Windows, out of the box.-->
 
 ![](/assets/images/solo/colors.jpg "Colors!")
 
@@ -229,9 +234,6 @@ could reach our 10,000 units sold goal.
 From there, we would be in a great place to continue working on making a great
 2FA/1FA device for the masses.
 
-![](/assets/images/solo/twitter.jpg "If you like this, back our Kickstarter!")
-
-
 Interested?  Sign up to our mailing list, we will only email you when our
 Kickstarter campaign starts.
 
@@ -249,6 +251,11 @@ Kickstarter campaign starts.
 <div class="clear"><input type="submit" value="Join waitlist" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary"></div>
 </form>
 </div>
+
+![](/assets/images/solo/twitter.jpg "If you like this, back our Kickstarter!")
+
+
+
 
 <!--Suggestions / comments / questions ?  Reach out below, on Twitter, or by email!-->
 
