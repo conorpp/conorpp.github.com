@@ -23,7 +23,7 @@ Fusion 360 but you don't need to use those tools.  The main things you need are:
 
 # Design your circuit
 
-Here is the backside of my circuit.
+Here is the backside of [my circuit](/designing-solo-a-new-u2ffido2-token).
 
 ![](/assets/images/jig/backside.png)
 
