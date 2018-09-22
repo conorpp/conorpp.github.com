@@ -11,10 +11,12 @@ image: /assets/images/jig/usb-a-solo.jpg
 When using a microcontroller in a custom design, there's always a bit of a headache for me because I need to figure out a convenient way
 break stuff out for programming and development.  
 
-Usually you can't afford to get the "plug and play" comfort of a development board in your custom board.  And it's great
+Usually you can't afford to have the "plug and play" comfort of a development board on your custom board.  And it's great
 to be able to break out more stuff than just the programming ports.
 
-Here I explain an easy way to make a nice programming jig that can break out many signals for custom designs.  It is based on Eagle and
+Here I explain an easy way to make a nice programming jig that can break out many signals for custom designs.  
+
+It is based on Eagle and
 Fusion 360 but you don't need to use those tools.  The main things you need are:
 
 * access to an SLA 3D printer ([can order online for cheap](http://dirtypcbs.com/store/print3d)!)
@@ -60,7 +62,7 @@ is the smallest I could find.  Thanks Mill-Max!
 
 # Print the jig
 
-I printed the jig on my form 2 printer.  It came out well.
+I printed the jig on my Form 2 printer.  It came out well.
 
 ![](/assets/images/jig/bare.jpg)
 
@@ -93,7 +95,7 @@ I was able to design my jig to easily accommodate both my USB A and USB C design
 
 ![](/assets/images/jig/usb-c-solo.jpg)
 
-All in all, I'm pretty pleased with this method and will go it again if needed.  If you can recommend any
+All in all, I'm pretty pleased with this method and will do it again if needed.  If you can recommend any
 improvements, let me know!
 
 By the way, the design you see is my [secure, two-factor authentication token, Solo](/designing-solo-a-new-u2ffido2-token)!
