@@ -101,4 +101,3 @@ improvements, let me know!
 By the way, the design you see is my [secure, two-factor authentication token, Solo](/designing-solo-a-new-u2ffido2-token)!
 
 
-{% include JB/mytwitter %}
