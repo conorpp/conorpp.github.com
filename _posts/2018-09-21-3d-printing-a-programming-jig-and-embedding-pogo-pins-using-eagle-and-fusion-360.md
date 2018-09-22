@@ -46,7 +46,7 @@ It's a pretty basic design.  It just needs an outline to fit the circuit and a
 cutout so it's easy to get out.  Since this is going to be 3D printed, you can
 go wild with your design.
 
-Then, draw some circuits where all the test pads are and cut them out of the
+Then, draw some circles where all the test pads are and cut them out of the
 jig.  I just eye balled everything, didn't need to take any measurements.
 
 
