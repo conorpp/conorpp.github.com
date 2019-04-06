@@ -1,13 +1,4 @@
----
-layout: post
-title: "My home workspace"
-description: ""
-category: 
-nocover: true
-tags: [Tools]
-image: /assets/images/default.jpg
----
-{% include JB/setup %}
+
 
 Everyone's workspace is different.  Mine is a culmination of things that I've seen from other people's workspaces
 and tools that I've found useful.
@@ -15,7 +6,7 @@ and tools that I've found useful.
 
 #### Here is my main desk.
 
-![](/assets/images/garage/desk.jpg)
+![](https://i.imgur.com/txJmtvf.jpg)
 
 It's a bit messy but that's okay.  I use it as a workbench often, and you should never trust a clean workbench.
 
@@ -26,26 +17,26 @@ Some things that I think are important:
 
 I also use a 3D printer regularly for prototyping.
 
-![](/assets/images/garage/printer.jpg)
+![](https://i.imgur.com/y73cn3P.jpg)
 
 It's great to have something like this right by my desk and makes quick work of mechanical problems I run into.
 I used to have a homebrew delta printer that I used to use but I got tired of the maintenance and wanted something capable of
 dual extrusion for supports.  I got an Ultimaker and it's been great so far.
 
-![](/assets/images/garage/white.jpg)
+![](https://i.imgur.com/npqL0HA.jpg)
 
 Having a whiteboard helps me organize my thoughts from time to time and keep track of things I have finished.
 
 #### This is my garage.
 
-![](/assets/images/garage/giphy.gif)
+# REPLACE giphy
 
 
 I live in a townhome with two others and I'm fortunate they were okay with turning the garage into a mini-workshop.
 
 The heart of most of my work happens here, at the work bench.
 
-![](/assets/images/garage/bench.jpg)
+![](https://i.imgur.com/pfKsUmq.jpg)
 
 I highlighted a number of important parts.
 
@@ -63,7 +54,7 @@ sort of hutch to save space.  My DMM is only single channel and it would be _rea
 9. Lower shelving/storage space.
 
 
-![](/assets/images/garage/shelves.jpg)
+![](https://i.imgur.com/D7uMMkp.jpg)
 
 More shelves.  Can never have enough.  The [wire-based shelves](https://www.amazon.com/gp/product/B018YLFJX4) are pretty strong and easy to assemble and collapse.  [Akro-Mils storage bins](https://www.amazon.com/gp/product/B000189CSC)
 are great for dumping projects in.  They are strong, stackable, fully closed, and easy to open/close.
@@ -71,7 +62,7 @@ are great for dumping projects in.  They are strong, stackable, fully closed, an
 
 And have I mentioned shelves on wheels yet?
 
-![](/assets/images/garage/wheels.jpg)
+![](https://i.imgur.com/kIRaOxJ.jpg)
 
 Having some easily movable shelves is great for context switches between projects.  I got these for $10
 from a [Virginia Tech surplus auction](https://www.procurement.vt.edu/surplusproperty/vtauction.html).
@@ -79,7 +70,7 @@ from a [Virginia Tech surplus auction](https://www.procurement.vt.edu/surpluspro
 
 And lastly, I have a second home-made workbench.  (And let me tell you, it's much easier making the 2nd workbench...).
 
-![](/assets/images/garage/bench2.jpg)
+![](https://i.imgur.com/Ht5cKql.jpg)
 
 Here I put some larger tools and more shelving.  Drill press, chop saw, band saw, and an air compressor.  I was lucky to get the bandsaw and
 compressor from a yard-sale and auction.  I've used the air compressor the most and have used the other tools moderately.
@@ -92,5 +83,3 @@ not shown that I never used.  Maybe I'll make a "things I shouldn't have bought 
 is what I was thinking at the time" kind of post.
 
 <!--Have any questions/ideas?  Am I doing anything wrong?  Be sure to let me know!-->
-
-{% include JB/mytwitter %}

@@ -1,20 +1,13 @@
----
-layout: post
-title: "How to fix a corrupted file by brute force"
-description: ""
-tags: [CTF]
-image: /assets/images/bitflip/cover22.png
----
-{% include JB/setup %}
+
 
 ## The Challenge
 
 I recently competed in [CSAW](https://ctf.isis.poly.edu/) with a few friends.  For those that don't know,
-[CSAW](https://ctf.isis.poly.edu/) (Cyber Security Awareness Week) is an online `CTF` where a group at NYU Poly puts up challenges related to 
+[CSAW](https://ctf.isis.poly.edu/) (Cyber Security Awareness Week) is an online `CTF` where a group at NYU Poly puts up challenges related to
 computer security.
 
 One of our favorite challenges was called "sharpturn" and hinted about SATA controller failure.  
-It contained a link to a git repo. 
+It contained a link to a git repo.
 
 It contained no source files but it still had the git objects tree (typically located in .git/objects/).
 We downloaded the repo and quickly checked the integrity of the files.
@@ -100,8 +93,8 @@ we see they are `0x26` and `0x66`, respectively.  If you flip the 7th most signi
 `0x66`, you would get `0x26`.
 
 To solve this challenge, my friend [Jean-Philippe](https://github.com/jpouellet) decided it would be fun to write a program
-that would combinatorially flip bits on a file in the most efficient way he could come up with. 
-The program loaded the corrupt file into memory and incrementally flipped bits and recalculated the 
+that would combinatorially flip bits on a file in the most efficient way he could come up with.
+The program loaded the corrupt file into memory and incrementally flipped bits and recalculated the
 SHA1 hash each time to see if it matched.  
 
 If there's more than one bit flipped, this approach could take a very long time.  First it would
@@ -129,7 +122,7 @@ Part2: Input 31337:
 31337
 Part3: Watch this: https://www.youtube.com/watch?v=PBwAxmrE194
 ok
-Part4: C.R.E.A.M. Get da _____: 
+Part4: C.R.E.A.M. Get da _____:
 money
 Part5: Input the two prime factors of the number 272031727027.
 31357
@@ -143,6 +136,3 @@ We got the flag and got 400 points in the competition. Most of the challenges re
 
 I went ahead and made some modifications to the [program](https://github.com/conorpp/bitflipper) so we could share it.  I probably made the code a little uglier
 but more user friendly.  You can try it out [here](https://github.com/conorpp/bitflipper).
-
-
-{% include JB/mytwitter %}

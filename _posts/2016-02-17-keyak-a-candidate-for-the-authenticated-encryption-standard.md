@@ -2,20 +2,19 @@
 layout: post
 title: "Keyak: a candidate for the authenticated encryption standard"
 description: ""
-category: 
+category:
 tags: [Crypto]
 image: /assets/images/keyak/kayak.jpg
 ---
-{% include JB/setup %}
 
 # New authentication cipher
 
-Keyak is an authenticated crypto system that is based on the Keccak sponge primitive. 
-It is a candidate for the authenticated encryption standard in 
+Keyak is an authenticated crypto system that is based on the Keccak sponge primitive.
+It is a candidate for the authenticated encryption standard in
 [NIST's Caesar competition](https://competitions.cr.yp.to/caesar.html).
 For those not familiar, Keccak is the recent new standard for a hashing algorithm, SHA-3.
-The sponge primitive is a neat construction.  By itself, it is a secure hashing primitive, 
-but can easily be extended to provide encryption, pseudo random number generation, 
+The sponge primitive is a neat construction.  By itself, it is a secure hashing primitive,
+but can easily be extended to provide encryption, pseudo random number generation,
 and authentication primitives.
 
 In this post, I will explain how Keyak works by explaining how one can build upon the sponge primitive.
@@ -38,7 +37,7 @@ the lack for a standard, unnecessary complications may arise.  TLS, for example,
 [fair share of attacks](https://en.wikipedia.org/wiki/Transport_Layer_Security#Security), many of which can be attributed
 to the complicated nature and diverse cipher support of TLS.
 
-And when security relies on a complicated protocol, it becomes difficult to program.  Remember 
+And when security relies on a complicated protocol, it becomes difficult to program.  Remember
 [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed)?
 [Goto fail](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-1266)?
 [BERserk](http://www.intelsecurity.com/advanced-threat-research/berserk.html)?
@@ -48,11 +47,11 @@ And when security relies on a complicated protocol, it becomes difficult to prog
 
 To start, let's make our own cipher that is based on Keccak and develop it until it is like Keyak.
 
-The Keccak sponge construction is illustrated below.  All you need to understand is that it 
+The Keccak sponge construction is illustrated below.  All you need to understand is that it
 absorbs up to 1600 bits at a time and outputs a 1600 bit permutation.  Any additional input
-can be XOR'd into the output block of a permutation round `ƒ` and applied to another `ƒ`.  Rinse and repeat. 
+can be XOR'd into the output block of a permutation round `ƒ` and applied to another `ƒ`.  Rinse and repeat.
 
-![](/assets/images/keyak/duplex.png)
+![](https://i.imgur.com/7VOT9Gq.png)
 
 Above, the permutation `ƒ` is repeated 4 times in the "absorbing" stage for the input and 2 times in the "squeezing" stage
 for the output. I.e. a 6400 bit message M is input and a 4800 bit hash Z is output.
@@ -62,7 +61,7 @@ Keccak specifically parameterizes how many rounds it should go through in each `
 output should be pulled at the end for the final hash.  But for our purposes, it isn't necessary
 to think about parameters.  Let's implement our cipher.
 
-Instead of feeding input to `ƒ`, we can first input a *secret key* 
+Instead of feeding input to `ƒ`, we can first input a *secret key*
 (and [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce)).  I.e. we
 initialize the sponge state with our secret key.  This will ensure all of our following applications of `ƒ`
 are unique and full of entropy.
@@ -88,10 +87,10 @@ That way each new block is based on the initial secret key *and* the message bei
 message has been encrypted, we can run `f` one more time to get a block that we will simply
 use as our *authentication tag*.
 
-Since this authentication tag relies on the sponge state that is a byproduct of the secret key and the enciphered 
+Since this authentication tag relies on the sponge state that is a byproduct of the secret key and the enciphered
 message, only recipients with the exact secret key and unaltered ciphertext can recompute it.
 
-![](/assets/images/keyak/fullduplex.png)
+![](https://conorpp.com/assets/images/keyak/fullduplex.png)
 
 In the figure, K is our secret key and α0 is the nonce and padding.  Let's say that M is our clear text message.
 For each block of M, the sender will XOR it with a "hash-like" block Z to make a block of cipher text, α.  As long as there are blocks of
@@ -117,13 +116,13 @@ which can be sent as cleartext but will be included in `ƒ`'s input so that it i
 still authenticated.  It can be parameterized to set the block size, Keccak permutation used,
 and number of encryption processes to run in *parallel*.  Yup, Keyak supports parallelism as well.
 
-![](/assets/images/keyak/keyak_block_s.png)
+![](https://i.imgur.com/fF2w3eR.png)
 
 My impression is that Keyak is modeled after a motor boat.  It has the following layers:
 
 * **Motorist layer**: responsible for handling the parameters.
 The motorist starts an "engine" which can be fed input (either ciphertext or plaintext) to be wrapped, where
-wrapping can be encrypting or decrypting.  If decrypting, an authentication tag will also be input and 
+wrapping can be encrypting or decrypting.  If decrypting, an authentication tag will also be input and
 verified.  Only if the verification is successful, the engine will return the plaintext.  If encrypting,
 ciphertext with a corresponding authentication tag will be output.
 
@@ -148,7 +147,7 @@ instructions, just on different data.
 Let's consider Flynn's Taxonomy which contains 4 classifications for
 computer architectures.
 
-![](/assets/images/keyak/flynn.jpg)
+![](https://i.imgur.com/cQglxMk.jpg)
 
 * **SISD** (single instruction single data) where 1 instruction is computed at a time, each
 on different data.  Your regular CPU cores each do this.
@@ -173,7 +172,7 @@ Since SIMD is commonplace in graphics we will be implementating Keyak optimizati
 # Wrapping it up (pun intended)
 
 Keyak is a great study. Not only is it a good read for it's overarching Engine metaphor, but
-it's a completely different way to do encryption from an algorithmic standpoint.  It's totally different from the typical 
+it's a completely different way to do encryption from an algorithmic standpoint.  It's totally different from the typical
 [substitution-permutation networks](https://en.wikipedia.org/wiki/Substitution-permutation_network)
 that many current ciphers are based on, including AES.  It's kind of weird,
 really; but that's likely a good thing for a contender in the CAESAR competition.
@@ -187,5 +186,3 @@ and the paper below.
 * [Wetzels J., Bokslag W., "Sponges and Engines An Introduction to Keccak and Keyak", 2016](https://eprint.iacr.org/2016/028.pdf)
 
 * Thanks to [Bilgiday Yuce](http://rijndael.ece.vt.edu/bilgiday/index.html) for the Motorist figure.
-
-{% include JB/mytwitter %}

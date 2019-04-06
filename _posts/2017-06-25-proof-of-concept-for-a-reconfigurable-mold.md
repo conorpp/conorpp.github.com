@@ -1,12 +1,4 @@
----
-layout: post
-title: "Proof of concept for a reconfigurable mold"
-description: ""
-category: Prototyping
-tags: [Prototyping, Design]
-image: /assets/images/rpm/result2.jpg
----
-{% include JB/setup %}
+
 
 If you want to mass produce some physical product in a short amount of time,
 chances are you would need to get a mold made.  Most plastic parts get made via a
@@ -30,7 +22,7 @@ Reconfigurable pin tooling is an idea where you have a discrete bed of pins that
 be actuated to replicate any "moldable" part design.  The following figure from [1] shows the basic idea using 2 surfaces.
 A complete mold would need 6 surfaces.
 
-![](/assets/images/rpm/overview.png)
+![](https://i.imgur.com/Tw1ALLt.png)
 <center class="caption">From [1]</center>
 
 Reconfigurable pin tooling is not a new idea.  In fact, patents for reconfigurable pin tooling systems go back at least 1-2 centuries [2].
@@ -44,20 +36,20 @@ need to be some way to "lock" the pins in place.  After locking the pins in plac
 needed to replicate the part in a mold!
 
 As for the locking mechanism, I decided to make a 2-dimensional vice that would hold the pins in place from 4 sides.
-I [coded up the design](https://github.com/conorpp/reconfigurable-pin-matrix) 
+I [coded up the design](https://github.com/conorpp/reconfigurable-pin-matrix)
 in openscad and parameterized it such that I could get renderings of it in open and closed positions.
 
 Here is a rendering of the vice opened with a bed of pins floating in the middle.
 
-![](/assets/images/rpm/open.png)
+![](https://i.imgur.com/iuWAjNu.png)
 
 Now the pins have been "pressed" against a surface of an arbitrary part, effectively creating a mold of it.
 
-![](/assets/images/rpm/molded.png)
+![](https://i.imgur.com/TDF8gv4.png)
 
 By closing the vice, the pins are held in place.
 
-![](/assets/images/rpm/closed.png)
+![](https://i.imgur.com/zxkK6KJ.png)
 
 I figured this would be enough to start with.  The design could be implemented by making parts for the walls of the vice
 and ordering parts for various rods, nuts, and bearings.  Also need to find a source for making ideal pins.
@@ -74,11 +66,11 @@ design) isn't always so easy. (Edit: I've since changed to Fusion360.  Way bette
 Here is my 2D vice.  By turning the threaded rods with the thumb screws at the end, it pushes on the internal walls, which slide
 on nylon bearings.  So to tighten the vice completely, you need to turn six rods (not convenient, but works).
 
-![](/assets/images/rpm/impl_open.jpg)
+![](https://i.imgur.com/LhoOF8x.jpg)
 
 Here is the vice tightened on a bed of pins.  
 
-![](/assets/images/rpm/impl_closed.jpg)
+![](https://i.imgur.com/up70l3m.jpg)
 
 For the pins, I just used the smallest steel key stock available online.
 I found the smallest to be [1/16in x 1/16in on McMaster](https://www.mcmaster.com/#98535a120/=188c0h1).  The pins, while each individually are
@@ -90,9 +82,9 @@ will look too chunky.
 
 I tested the mold using silicon molding compounds (not under pressure).  The part I molded against was a simple 6 sided die.
 
-![](/assets/images/rpm/result1.jpg)
+![](https://i.imgur.com/nFMdcfC.jpg)
 
-![](/assets/images/rpm/result2.jpg)
+![](https://i.imgur.com/q18Ixx0.jpg)
 
 As you can see, my replicated 6-sided die is pretty chunky!  I didn't bother to test its fairness.
 While this molding technique is certainly reconfigurable, resolution takes a hit.  It would also
@@ -113,7 +105,7 @@ respect to one another.  If you simply place them in the vice and tighten, they 
 I solved the problem by creating a fine stainless steel mesh that I could put the pins inside first.  It serves as an alignment
 tool before placing the pins in the vice.  Putting roughly 300 pins in the mesh wasn't fun but it worked quite well.
 
-![](/assets/images/rpm/mesh.jpg)
+![](https://i.imgur.com/bh6ykke.jpg)
 
 I was able to get these meshes made by [OSH Stencils](https://www.oshstencils.com/#), which is a company that
 makes cost effective stencils for soldering electronics.  Turns out it is perfect for making pin matrix alignment tools.
@@ -133,6 +125,3 @@ let me know!
 [2] Munro C, Walczyk D. Reconfigurable Pin-Type Tooling: A Survey of Prior Art and Reduction to Practice. ASME. J. Manuf. Sci. Eng. 2007;129(3):551-565. doi:10.1115/1.2714577.
 
 [3] My openscad design files, [https://github.com/conorpp/reconfigurable-pin-matrix](https://github.com/conorpp/reconfigurable-pin-matrix)
-
-
-{% include JB/mytwitter %}

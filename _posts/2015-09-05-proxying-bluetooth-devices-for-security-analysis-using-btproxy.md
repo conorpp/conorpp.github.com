@@ -1,11 +1,3 @@
----
-layout: post
-title: "Proxying Bluetooth devices for security analysis using btproxy"
-description: ""
-tags: [Design, Tools]
-image: /assets/images/btproxy/cover.jpg
----
-{% include JB/setup %}
 
 # btproxy
 
@@ -39,7 +31,7 @@ sudo python setup.py install
 
 # Running it on the Pebble Watch
 
-To run it, you will need two Bluetooth devices to proxy (Bluetooth low energy doesn't work *yet*). 
+To run it, you will need two Bluetooth devices to proxy (Bluetooth low energy doesn't work *yet*).
 
 I choose to use my Phone (Nexus 6) and Pebble Steel watch.
 
@@ -74,7 +66,7 @@ are typically the ones to sit and advertise until a master device requests
 for a connection.  A master can connect to multiple devices while a slave
 can only have one connection.
 
-![](/assets/images/btproxy/master_slave.png "These are called piconets")
+![](https://i.imgur.com/EzcecqX.png "These are called piconets")
 *credit: sparkfun.com*
 
 Now let's follow the output of the proxy.
@@ -110,8 +102,8 @@ The proxy then opens Bluetooth sockets for each service that the watch device ho
 what the phone connects to.  The proxy connects to the services on the watch.  Once this is done,
 I connect the master device (my phone) to the proxy device (Pebble 9FAA_btproxy).
 
-![Connect on Phone and Pebble app](/assets/images/btproxy/nexus.png)
-![Connect on Phone and Pebble app](/assets/images/btproxy/pebble_connect.jpg)
+![Connect on Phone and Pebble app](https://i.imgur.com/lOG4phm.png)
+![Connect on Phone and Pebble app](https://i.imgur.com/TqmfCpS.jpg)
 
 **btproxy output:**
 
@@ -176,27 +168,16 @@ sudo btproxy 11:22:33:44:55:66 77:88:99:AA:BB:CC -s replace.py
 
 **Then send a notification:**
 
-![Active packet manipulation](/assets/images/btproxy/pebble.jpg "Active packet manipulation")
+![Active packet manipulation](https://i.imgur.com/9kk1yQC.jpg "Active packet manipulation")
 
 
 # Concluding Thoughts
 
-I've intended this tool to be used for analysis, and can be used for getting security insights for the increasing amount of 
+I've intended this tool to be used for analysis, and can be used for getting security insights for the increasing amount of
 "IoT" devices out there.  
 
 So far I've used it to pull apps, firmware updates, certificates/credentials, and change identifiers.
 
 It's not ideal for an actual attack, unless there was some clever way for forcing already paired devices to unpair and then
-hope they reconnect to the proxy.  [Forcing unpairing has been done using an](https://blog.lacklustre.net/posts/Blackbox_Reversing_an_Electric_Skateboard_Wireless_Protocol/) `Ubertooth` but it's not something that I have 
+hope they reconnect to the proxy.  [Forcing unpairing has been done using an](https://blog.lacklustre.net/posts/Blackbox_Reversing_an_Electric_Skateboard_Wireless_Protocol/) `Ubertooth` but it's not something that I have
 looked into yet.
-
-
-
-
-
-
-
-
-
-
-{% include JB/mytwitter %}

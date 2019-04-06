@@ -1,12 +1,4 @@
----
-layout: post
-title: "My experience going to Defcon and SAC"
-description: ""
-category: 
-tags: [Travel]
-image: /assets/images/defconsac/cover.jpg
----
-{% include JB/setup %}
+
 
 I just attended Defcon 24 in Las Vegas and went to SAC (Selected Areas in Cryptography) afterwards.
 
@@ -21,7 +13,7 @@ I got to LV a day early so I could attend the [unoffical Defcon Shoot](http://de
 bring guns to go shoot in the desert.  I didn't have anything to bring but most people are nice and let
 you shoot their weapons for the cost of ammo.  I got to put 100 rounds through an M60:
 
-![](/assets/images/defconsac/machine_gun_shoot.gif)
+![](https://i.imgur.com/8JbWE0x.mp4)
 
 ### The Villages
 
@@ -48,7 +40,7 @@ envelopes and tape at the Tamper Evident Village which was fun.
 One of my friends went to the Bio Hacking Village and got an NFC chip inserted
 into his hand:
 
-![](/assets/images/defconsac/hand.png)
+![](https://i.imgur.com/NlyRW8S.png)
 
 It's supposed to last for life (or until you remove it surgically).  We of
 course first programmed it with this [link](https://youtu.be/dQw4w9WgXcQ) to
@@ -60,7 +52,7 @@ I met the
 folks behind [AND!XOR](https://twitter.com/ANDnXOR) and learned about their creation
 of the [Bender Badge](https://hackaday.io/project/9064-andxor-defcon-24-badge):
 
-![Bender](/assets/images/defconsac/bender.jpg)
+![Bender](https://i.imgur.com/9k1z7IZ.jpg)
 
 
 I only went to like one or two of the talks.  I think at a conference like this, most of the fun and memorable
@@ -71,7 +63,7 @@ that would find and patch bugs in software.  They had teams from different unive
 The competition was narrated and animated to give it an eSport feel.  It was really cool, but ultimately it gets boring
 to watch computer programs run (really fast) despite all of the animations.
 
-![](/assets/images/defconsac/cyber.jpg)
+![](https://i.imgur.com/JkuzuS3.jpg)
 
 Then each night there are a lot of parties.  Each is hosted by companies or other groups that are popular at Defcon.
 Some of the parties are awesome; but a lot of them I think are bad because it's either really long lines or just a bunch of fellow nerds trying to dance.
@@ -111,7 +103,7 @@ SAC was held in St. Johns in Newfoundland, Canada.  Fortunately the weather was 
 
 I hiked Signal Hill, which was the first place to receive a transcontinental wireless signal.
 
-![Signal Hill](/assets/images/defconsac/hill.jpg)
+![Signal Hill](https://i.imgur.com/EwhmuZV.jpg)
 
 The conference also hosted a Puffin and Whale watching tour.  I never thought myself to be much of a whale watcher
 but this was actually really cool (even though we saw no whales).  Turns out there's this island of the coast that
@@ -127,13 +119,8 @@ At the brewery, I think me and the other grad students stuck out -- None of us w
 for not being old enough to drink (in good fun).  All of the local were very nice.  One local sat down with us and exchanged stories.  He even offered
   to take us fishing!
 
-![](/assets/images/defconsac/vidi.jpg)
+![](https://i.imgur.com/UVy1Zu3.jpg)
 
 There's this tradition in Newfoundland for newcomers to drink a shot of Newfoundland Screech Rum and then kiss a cod.
 Some of the bars will let you honor this tradition but I forgot to ask.  I did get a chance to drink the rum (which was good).  Next time I go
 down I will try to kiss the cod.
-
-
-
-
-{% include JB/mytwitter %}

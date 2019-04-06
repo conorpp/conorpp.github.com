@@ -16,7 +16,7 @@ This past summer, I decided to set up a honey pot server.  I hadn't done somethi
 that before and I was curious to see what would show up.
 
 I set up a fresh Digital Ocean instance and installed a vulnerability that could be
-remotely exploited.  I choose to use the [shellshock](https://en.wikipedia.org/wiki/Shellshock_(software_bug)) 
+remotely exploited.  I choose to use the [shellshock](https://en.wikipedia.org/wiki/Shellshock_(software_bug))
 bug and installed an [older version of bash](http://ftp.gnu.org/gnu/bash/).  Shellshock was a vulnerability in Bash that
 would execute code in a environment variable.  This can easily be exploited remotely because of how CGI web servers
 pass arguments through environment variables.
@@ -50,14 +50,14 @@ To summarize the Perl script, it's about 500 lines, connects to a server, `wilef
 include `tcpflood`, `eval`, and `shell`.  This looks like functionality for a botnet bot.  
 
 It also implements some stealth.  Upon running the program,
-it immediately [forks](ihttps://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L39) a `/usr/sbin/httpd` process, 
+it immediately [forks](ihttps://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L39) a `/usr/sbin/httpd` process,
 overwrites it with the Perl process using `exec`, and detaches from the parent process so it
 can run independently in the background.
 
 So you won't be able to see a new perl process running.  Instead, a new `/usr/sbin/httpd` process will be running.
 
 ```bash
-root@b0b6000146fa:~# perl ex 
+root@b0b6000146fa:~# perl ex
 root@b0b6000146fa:~# ps aux |grep perl
 root        31  0.0  0.0   8860   648 ?        S+   16:30   0:00 grep --color=auto perl
 root@b0b6000146fa:~# ps aux |grep httpd
@@ -100,36 +100,36 @@ PONG :DEFB9868
 Some of you may immediately recognize this as IRC.  This botnet seems kind of old school: no SSL
 and controlled over IRC.
 
-Well it looks like I have a username, password, and server address.  Why don't I try logging 
+Well it looks like I have a username, password, and server address.  Why don't I try logging
 into the botnet with a regular IRC client?
 
 I fired up another docker instance, [Weechat](https://weechat.org/), and a tor proxy.  After
 connecting to `irc://GNU:swedenrocks@wileful.com:443`, this is what I saw:
 
-![Connected to botnet](/assets/images/botnet/connected.png "Connected to a botnet")
+![Connected to botnet](https://i.imgur.com/undefined.png "Connected to a botnet")
 
 Wow, there's a total of 977 connected 'users' and 6 different channels.  As seen from tcpdump, my bot was instructed
 to join channel `#113` so I figured I would do the same:
 
-![Channel #113](/assets/images/botnet/113-2.png "Channel #113")
+![Channel #113](https://i.imgur.com/o6MzqGl.png "Channel #113")
 
 Either all 932 clients in the channel are pretty unoriginal when coming up with a nick or the bots are assigned a nick formatted like `GNU<ID>`.
-Everyone is really shy too, because no one says anything.  After idling in the channel for a few minutes, this is all to be 
+Everyone is really shy too, because no one says anything.  After idling in the channel for a few minutes, this is all to be
 seen:
 
-![Just leaving and joining](/assets/images/botnet/idle.png "Just leaving and joining")
+![Just leaving and joining](https://i.imgur.com/5cJDsy5.png "Just leaving and joining")
 
 Looks like bots are actively leaving and joining.  I suspect that the operaters were moving around the bots
 or were continually exploiting shellshock vulnerable machines like my honey pot.
 
 I wanted to see if I could send commands to the botnet since I had access to the channels, but after
-a couple hours of unfurling the perl script, I discovered that it [authenticates](https://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L127) commands based on the 
+a couple hours of unfurling the perl script, I discovered that it [authenticates](https://github.com/conorpp/fluffy-barnacle/blob/master/malware/ex#L127) commands based on the
 [servername and nickname in the IRC message](https://tools.ietf.org/html/rfc2812#section-2.3.1).  I
 could not spoof this since it was something only an operator on the IRC network could do.
 
 # Back to the infected honey pot
 
-I let my infected honey pot run for a few days and I checked out 
+I let my infected honey pot run for a few days and I checked out
 the IRC tranactions in the pcap logs.  On intervals it would do the following:
 
 * Download a script to send emails with attachments.
@@ -144,7 +144,7 @@ I didn't want my honey pot to be contributing to illegal activities, so I shut i
 
 It wasn't long before I couldn't log in to the IRC network on `wileful.com`.  
 
-![No more access](/assets/images/botnet/nope.png "No more access")
+![No more access](https://i.imgur.com/bhKCFjm.png "No more access")
 
 At first I thought I got
 locked out, but after scanning it from multiple different IP addresses I never used before,

@@ -1,12 +1,4 @@
----
-layout: post
-title: "Randomly generating 3D mazes to 3D print"
-description: ""
-category: 3D-Printing
-tags: [3D-Printing]
-image: /assets/images/maze/7x7.jpg
----
-{% include JB/setup %}
+
 
 I recently got a 3D printer for home prototyping.  One thing I wanted to make
 was a puzzle that took advantage of the strengths of 3D printing.  I didn't really find
@@ -42,11 +34,11 @@ The graph is passed to a set of functions that output openscad based on the grap
 Below are some building blocks that get used to build the 3D maze based on each vertex in the graph and how many edges/walls
 it has.
 
-![](/assets/images/maze/blocks.PNG)
+![](https://i.imgur.com/Bg8bRj3.png)
 
 Here is an example 5x5 maze.
 
-![](/assets/images/maze/5x5.PNG)
+![](https://i.imgur.com/ypbm24q.png)
 
 The start is marked in orange and the exit is marked in red.  The exit is chosen
 by finding the node that is furthest from the start while still being on an outside face.  Ideally, the exit
@@ -58,9 +50,9 @@ To 3D print this, you need to make the paths cut out of something else.  I added
 You can subtract the maze tunnels from a large cube, making a solid where you cannot see the paths inside.  Or you
 can subtract a scaled down version of the maze from itself so it hollows out the tunnels, pictured below.
 
-![](/assets/images/maze/tunnel.PNG)
+![](https://i.imgur.com/PajCYEe.png)
 
-I decided this looked the coolest. And because it is a mesh of tunnels, it would be 
+I decided this looked the coolest. And because it is a mesh of tunnels, it would be
 hard to fabricate by conventional means. No problem for 3D printing!  The largest
 challenge at this point is the time it takes to print.  The model itself will take on the order of hours
 to render on openscad.  Printing could take on the order of days to print, especially if you include support material.
@@ -68,7 +60,7 @@ Then it could take awhile to remove support materials.
 
 I first tried going small, printing a simple 3x3 maze.
 
-![](/assets/images/maze/3x3.jpg)
+![](https://i.imgur.com/QWP6aeG.jpg)
 
 With PVA support material, it took about six hours to print and a few days to fully dissolve away the PVA with a bowl of water.
 
@@ -77,8 +69,8 @@ dissolve much quicker.
 
 Here is a 7x7 version with PVA supports.  It is about 70mm cubed.
 
-![](/assets/images/maze/7x7pva.jpg)
-![](/assets/images/maze/7x7.jpg)
+![](https://i.imgur.com/rJgw5ot.jpg)
+![](https://i.imgur.com/24yxBcu.jpg)
 
 It took just over *3 days* to print.  It took another two days to dissolve the PVA.  The small cutouts turned out to be pretty effective
 at getting rid of the internal PVA supports.
@@ -92,6 +84,3 @@ I should have added a solution output to my program.
 
 As usual, my [program is on Github](https://github.com/conorpp/3d-maze-generator).  If you try it out, let me know if you
 have any success.
-
-
-{% include JB/mytwitter %}

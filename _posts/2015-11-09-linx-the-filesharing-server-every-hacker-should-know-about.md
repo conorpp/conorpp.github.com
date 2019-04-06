@@ -2,7 +2,7 @@
 layout: post
 title: "Linx: the filesharing server every hacker should know about"
 description: ""
-category: 
+category:
 tags: [Tools]
 image: /assets/images/linx/cover.png
 ---
@@ -11,12 +11,12 @@ image: /assets/images/linx/cover.png
 # Linx
 
 Many file sharing servers already exist; a lot of them come and go.  Services Google Drive and Drop Box
-  are the big ones.  Also there's have more lightweight options like pastebin or 
+  are the big ones.  Also there's have more lightweight options like pastebin or
   `python -m SimpleHTTPServer`.
 
-[Linx](https://github.com/andreimarcu/linx-server) is a recent, open source file sharing server 
-that I've recently started using.  It makes it easy for sharing files or quickly written scripts 
-that won't be tied to any public account. It's also nice if I'm hacking on a project and don't want 
+[Linx](https://github.com/andreimarcu/linx-server) is a recent, open source file sharing server
+that I've recently started using.  It makes it easy for sharing files or quickly written scripts
+that won't be tied to any public account. It's also nice if I'm hacking on a project and don't want
 to deal with setting up large web scale file storing accounts/API's (AWS, Firebase, etc).  
 
 So Linx really sticks out for the following reasons:
@@ -32,7 +32,7 @@ So Linx really sticks out for the following reasons:
 
 Right now I'm running [my own Linx server](https://0x123.xyz/) on one of my Digital Ocean instances.
 
-![](/assets/images/linx/term.png)
+![](https://i.imgur.com/wOc8xe3.png)
 
 It was pretty easy to set up since there are [builds for all majors platforms](https://github.com/andreimarcu/linx-server/releases) (except mobile).  It has all the configuration details I care about and nothing more.  For my setup, I have it sitting behind my Nginx server with fast-cgi and HTTPS.
 
@@ -43,7 +43,7 @@ wget https://github.com/andreimarcu/linx-server/releases/download/v1.1.4/linx-se
 ./linx-server-v1.1.4_linux-amd64
 ```
 
-You should pick out the [build for your system](https://github.com/andreimarcu/linx-server/releases) and 
+You should pick out the [build for your system](https://github.com/andreimarcu/linx-server/releases) and
 try it out.
 If you're setting up your own Linx server for real, make sure you cover a couple configurations:
 
@@ -62,7 +62,7 @@ Hotlinking is sometimes a serious
 problem that small services face.  As we can see from The Oatmeal,
 it can seriously increase server bills.
 
-![seriously increase server bills](/assets/images/linx/hot.jpg)
+![seriously increase server bills](https://i.imgur.com/undefined.jpg)
 
 Wouldn't have been a problem if the image was hosted with Linx!
 

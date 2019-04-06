@@ -1,13 +1,4 @@
----
-layout: post
-title: "U2F Zero year in review"
-description: ""
-category: 
-nocover: true
-tags: [Startup]
-image: /assets/images/default.jpg
----
-{% include JB/setup %}
+
 
 I wanted to share some details on the U2F Project now that it has been on the
 market for over a year now.  This is to give an idea of what to expect in terms
@@ -28,7 +19,7 @@ Now I can answer all of these questions.
 I started on U2F Zero because I wanted to work on something interesting and
 learn how to make a PCB.  Here was my first one.
 
-![first PCB](/assets/images/pcbs/r1-front-dirty.jpg.small.jpg)
+![first PCB](https://i.imgur.com/obRUcG6.jpg)
 
 It's poorly laid out.  The traces don't give a crap about EMF.  And what's a
 ground plane?
@@ -42,7 +33,7 @@ Pavlina](https://github.com/cpavlina), who is better at layout than I am.
 Eventually, I got the U2F Zero "minimum viable product," and it was ready to
 hit the market.
 
-![](/assets/images/u2f-zero-2/proshot.jpg)
+![](https://i.imgur.com/lAFWgmR.jpg)
 
 I basically guessed that the market would sustain 1000/units per year.  So I
 put in an order of 1100 units to a Chinese PCBA fab
@@ -67,7 +58,7 @@ I spent almost a whole weekend drafting my [U2F Zero
 post](https://conorpp.com/designing-and-producing-2fa-tokens-to-sell-on-amazon).
 I posted it... and it worked.
 
-![](/assets/images/u2f-zero-2/2016_sales.png)
+![](https://i.imgur.com/fLbtxAU.png)
 
 For the first month, the time between the Amazon shipment and the blog post, there
 were almost no sales.  Then after the post, there was a spike of *207 sales*
@@ -76,7 +67,7 @@ over the following week.  Then it balanced out to about 6-7 units per day.  And
 
 There was even an increase in sales around Christmas time.
 
-![](/assets/images/u2f-zero-2/reviews.png)
+![](https://i.imgur.com/Zc1ISL2.png)
 
 And people left mostly good reviews.  I wasn't sure if people
 would leave good reviews since it's just a cheap token with no case.  But it's
@@ -127,7 +118,7 @@ There were some cool unexpected things that happened as a result of U2F Zero.
 A lot of awesome people reached out or shared how they made their own U2F Zero(s) or
 purchased them on Amazon.
 
-![](/assets/images/u2f-zero-2/twitter.png)
+![](https://i.imgur.com/8jMKxvZ.jpg)
 
 One of which was [Landon
 Greer](https://twitter.com/land0ngreer), who helped organize an infosec conference
@@ -136,7 +127,7 @@ Later, the [Crypto & Privacy Village](https://cryptovillage.org/) at Defcon
 forked the U2F Zero design and included it in their unofficial 2016 defcon
 badge.
 
-![](/assets/images/u2f-zero-2/acpe.jpg)
+![](https://i.imgur.com/vHfyLTq.jpg)
 
 More recently, the Association for Computers Professionals in Education (ACPE)
 made a custom order for 400 units and invited me to come spend some time in
@@ -152,7 +143,7 @@ in [Canada](https://www.amazon.ca/U2F-Zero/dp/B01L9DUPK6), [U.K.](https://www.am
 picking up in popularity so the U2F demand shouldn't go away.  I'm curious to
 see how U2F Zero sales differ between different countries.
 
-![](/assets/images/u2f-zero-2/box.jpg)
+![](https://i.imgur.com/5NADUh6.jpg)
 
 At the time of this writing, I've sent 1500 units to the [U.S.
 marketplace](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6), 300 to
@@ -192,6 +183,4 @@ Thank you to everyone that supported U2F Zero and made this possible.  I've
 learned a lot since first making this crappy first prototype and will have more
 projects to launch later.
 
-![](/assets/images/u2f-zero-2/early_proto.jpg)
-
-{% include JB/mytwitter %}
+![](https://i.imgur.com/zrHltXU.jpg)

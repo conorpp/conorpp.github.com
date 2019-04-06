@@ -1,12 +1,4 @@
----
-layout: post
-title: "Designing Solo, a new U2F/FIDO2 Token"
-description: ""
-category: 
-tags: [Startup]
-image: /assets/images/solo/cover.jpg
----
-{% include JB/setup %}
+
 
 
 For the past couple years, [I’ve been selling U2F tokens on
@@ -64,7 +56,7 @@ The original U2F Zero was just a plain circuit board that only did U2F over USB.
 <!--FIDO2 is exciting since there will be a lot more adoption for it and it's planned to be a password replacement.  For example, you can use a FIDO2-->
 <!--authenticator to log on to Windows, out of the box.-->
 
-![](/assets/images/solo/colors.jpg "Colors!")
+![](https://i.imgur.com/8EZu4yJ.jpg "Colors!")
 
 And of course, everything will soon be open sourced like with U2F Zero.
 
@@ -82,8 +74,8 @@ After verifying a "first draft" of the FIDO2 implementation, I ported the design
 to an NRF52840 development board and to a Silicon Labs EFM32J development
 board.
 
-![](/assets/images/solo/nrf.jpg "NRF52840"){:height="45%" width="45%"}
-![](/assets/images/solo/efm32.jpg "EFM32J"){:height="45%" width="45%"}
+![](https://i.imgur.com/rZmwdXN.jpg "NRF52840"){:height="45%" width="45%"}
+![](https://i.imgur.com/LrppnHg.jpg "EFM32J"){:height="45%" width="45%"}
 
 NRF52840 Bluetooth, NFC, USB SoC		EFM32J + EFM8UB1
 
@@ -135,22 +127,22 @@ Zero.  For Solo, I basically did a token design in Kicad, Eagle, and Circuit
 maker to figure out what is best.  I stuck with Eagle in the end, because of
 the nice integration with Fusion360, which really helps the mechanical design.
 
-![](/assets/images/solo/layout.png "Eagle"){:height="50%" width="50%"}
+![](https://i.imgur.com/D9CX38I.png "Eagle"){:height="50%" width="50%"}
 
 Layout done in Eagle.
 
-![](/assets/images/solo/pcbrender.png "This is great"){:height="50%" width="50%"}
+![](https://i.imgur.com/BaFBmqu.png "This is great"){:height="50%" width="50%"}
 
 3D model in Fusion 360.
 
-![](/assets/images/solo/pcb_jig.png "Quick to design a jig"){:height="50%" width="50%"}
+![](https://i.imgur.com/dcAgCYS.png "Quick to design a jig"){:height="50%" width="50%"}
 
 Custom programming jig design.
 
 
-![](/assets/images/solo/jig.jpg){:height="30%" width="30%"}
-![](/assets/images/solo/pcbinjig.jpg){:height="30%" width="30%"}
-![](/assets/images/solo/ledon.jpg){:height="30%" width="30%"}
+![](https://i.imgur.com/T8Wk4Fj.jpg){:height="30%" width="30%"}
+![](https://i.imgur.com/sIIzNMV.jpg){:height="30%" width="30%"}
+![](https://i.imgur.com/bcHMADB.jpg){:height="30%" width="30%"}
 
 Working first revision of 3D printed jig and prototyped PCB.
 
@@ -170,16 +162,16 @@ The additively manufactured design allows people to produce their own.  It
 consists of a top and bottom piece that snap together over the circuit board.
 The bottom piece also removes the 2mm requirement for PCBs.
 
-![](/assets/images/solo/case2render.png){:height="45%" width="45%"}
-![](/assets/images/solo/case2.jpg "3D Printed"){:height="45%" width="45%"}
-![](/assets/images/solo/2piece.jpg){:height="50%" width="50%"}
+![](https://i.imgur.com/lW3oClw.png){:height="45%" width="45%"}
+![](https://i.imgur.com/58XIYq3.jpg "3D Printed"){:height="45%" width="45%"}
+![](https://i.imgur.com/YEypUKR.jpg){:height="50%" width="50%"}
 
 The molded design will be a semi-hard silicone “sock”.  It will be
 pocket-friendly, nice to hold, and allow embedded mechanical button to be used.
 Multiple colors can be offered.
 
-![](/assets/images/solo/case1render.png){:height="45%" width="45%"}
-![](/assets/images/solo/case1.jpg "Also 3D printed, but will be molded."){:height="45%" width="45%"}
+![](https://i.imgur.com/DWoMyLV.png){:height="45%" width="45%"}
+![](https://i.imgur.com/IoYxzfP.jpg "Also 3D printed, but will be molded."){:height="45%" width="45%"}
 
 The design is still being iterated on and current photos are from a 3D printer.
 
@@ -188,7 +180,7 @@ The design is still being iterated on and current photos are from a 3D printer.
 
 Two versions of the PCB will be produced to support USB-A and USB-C connectors.
 
-![](/assets/images/solo/usbc.png){:height="50%" width="50%"}
+![](https://i.imgur.com/TXf4fEJ.png){:height="50%" width="50%"}
 
 We will aim to re-use the same case for USB-A and USB-C.
 
@@ -222,7 +214,7 @@ are discovered, it will be very easy to update.
 Users will be able to get any new features added by me or the community.
 Developers will be able to reprogram the firmware using a hardware debugger.
 
-![](/assets/images/solo/update.png "Updating is a matter of holding down the button and visiting a website")
+![](https://i.imgur.com/v93wcJO.png "Updating is a matter of holding down the button and visiting a website")
 
 # Kickstarter
 
@@ -258,12 +250,4 @@ Kickstarter campaign starts.
 </form>
 </div>
 
-![](/assets/images/solo/twitter.jpg "If you like this, back our Kickstarter!")
-
-
-
-
-<!--Suggestions / comments / questions ?  Reach out below, on Twitter, or by email!-->
-
-
-{% include JB/mytwitter %}
+![](https://i.imgur.com/ZuKnAjc.jpg "If you like this, back our Kickstarter!")

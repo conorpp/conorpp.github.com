@@ -1,19 +1,11 @@
----
-layout: post
-title: "Designing and Producing 2FA tokens to Sell on Amazon"
-description: ""
-category:
-tags: [Startup]
-image: /assets/images/u2f/u2fzero.jpg
----
-{% include JB/setup %}
+
 
 I made a two factor authentication token and have made it [available on Amazon](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6/).
 In this post I'll talk about the design, how I produced it affordably, and some
 metrics about selling on Amazon.  If you're interested in doing something similar,
 you can copy everything as it's all open source.
 
-![](/assets/images/u2f/crab_bowl.jpg)
+![](https://i.imgur.com/KIdnVup.jpg)
 
 # The design
 
@@ -36,7 +28,7 @@ I chose to use the following components to implement the design (in order of imp
 * [RGB LED](http://www.digikey.com/product-detail/en/LTST-C19HE1WT/160-2162-1-ND/4866310)   - Better user experience.
 * Other discrete components - Button, bypass capacitors, ESD protection, current limiting resistor.
 
-![](/assets/images/u2f/u2f_diagram.png)
+![](https://i.imgur.com/LzbpA6s.png)
 
 The ATECC508A chip fulfills all security requirements because it has a hardware RNG, write only keys, and hardware
 acceleration for elliptic curve operations \*\*.
@@ -68,12 +60,12 @@ get everything done affordably and in a reasonable amount of time.
 
 Fast forward a couple months, I have a lot of U2F tokens from PCBCart:
 
-![](/assets/images/u2f/box.jpg)
+![](https://i.imgur.com/oBdVeEP.jpg)
 
 I automated and optimized my programming setup.  I acquired 3 programmers, 3 USB extension cables, and made 3
 connectors using protoboard and machine pins.
 
-![](/assets/images/u2f/mounted.jpg)
+![](https://i.imgur.com/IMxVr4I.jpg)
 
 How it would work:
 
@@ -85,14 +77,14 @@ be communicated with in parallel with other tokens.
 5. A final program is built and programmed.
 6. The token is told to blink green and blue so I can see that it is done.
 
-![](/assets/images/u2f/leds.jpg)
+![](https://i.imgur.com/D6AfK6F.jpg)
 
 This process takes about 10 seconds per token.  Because I had three setups, I could
 get up to three working at the same time.  It would have been quicker with 4 or 5, but
 eventually I wouldn't be able to plug them in fast enough to get more than 5 programming
 at the same time.
 
-![](/assets/images/u2f/programming_long.gif)
+![](https://i.imgur.com/Ug0geMh.mp4)
 
 It took me about 4 hours total to get through everything.  I watched two
 movies (props if you can figure out which ones).  Occasionally my
@@ -128,7 +120,7 @@ However, unmentioned in their documentation, Amazon requires that the brand be
 printed directly on the packaging to protect the brand.  Stickers or labels do
 not count.  All I had and had planned to use was polybags and labels.
 
-![](/assets/images/u2f/polybag.jpg)
+![](https://i.imgur.com/Hq3oji3.jpg)
 
 I didn't want to back up and get everything repackaged with my
 "brand" printed on it.  I decided that the owner of the U2F Zero
@@ -145,7 +137,7 @@ U2F Zero is [available on Amazon](https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6)
 
 
 <a href="https://www.amazon.com/U2F-Zero/dp/B01L9DUPK6" target="_blank" style="border-bottom:none;">
-  <img src="/assets/images/u2f/amazon.png">
+  <img src="https://i.imgur.com/Bvt3zxQ.png">
 </a>
 <!--![](/assets/images/u2f/amazon.png)-->
 
@@ -196,7 +188,3 @@ you can figure out how to produce them cheaper than what I could.
 ###### \*\* Finding a chip that has secure public key crypto (P-256) implementations is non-trivial.  I got lucky when I found Atmel's chip which was easy to purchase and get documentation for.  Other manufacturers that offer potential secure chips are NXP, ST Electronics, and Infineon.  But none of them sell their secure chipsets on normal distributors and seem to require customers to go through NDAs, licensing, and large minimum order requirements.  I hope the market for public key hardware becomes more transparent.
 
 ###### \*\*\* The public key in the build is signed for device attestation.
-
-
-
-{% include JB/mytwitter %}

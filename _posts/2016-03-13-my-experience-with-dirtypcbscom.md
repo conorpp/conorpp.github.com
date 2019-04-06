@@ -1,12 +1,4 @@
----
-layout: post
-title: "My experience with DirtyPCBS.com"
-description: ""
-category: 
-tags: [Hardware]
-image: /assets/images/pcbs/box-2.jpg
----
-{% include JB/setup %}
+
 
 
 # Dirty Cheap Dirty Boards
@@ -31,24 +23,20 @@ The next revision is a better layout.
 ## Revision 1 from Dirty PCB's
 
 
-![R1 Dirty PCB's front](/assets/images/pcbs/r1-front-dirty.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r1-front-dirty.jpg">high resolution</a></center>
+![R1 Dirty PCB's front](https://i.imgur.com/QOUmAXZ.jpg)
 
 
-![R1 Dirty PCB's back](/assets/images/pcbs/r1-back-dirty.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r1-back-dirty.jpg">high resolution</a></center>
+![R1 Dirty PCB's back](https://i.imgur.com/dcOvM3K.jpg)
 
 
 ## Revision 1 from Seeed Studio
 
 
 
-![R1 Dirty PCB's front](/assets/images/pcbs/r1-front-seeed.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r1-front-seeed.jpg">high resolution</a></center>
+![R1 Dirty PCB's front](https://i.imgur.com/khhAkpC.jpg)
 
 
-![R1 Dirty PCB's back](/assets/images/pcbs/r1-back-seeed.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r1-back-seeed.jpg">high resolution</a></center>
+![R1 Dirty PCB's back](https://i.imgur.com/fIgzusw.jpg)
 
 
 You can see that the layout is pretty poor.  None of the traces really make 45 degree angles
@@ -75,14 +63,12 @@ After revising my layout design, I made two more orders from Dirty PCB's.
 ## Revision 2 Dirty PCB's
 
 
-![R2 back](/assets/images/pcbs/r2-front.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r2-front.jpg">high resolution</a></center>
+![R2 back](https://i.imgur.com/jElo04R.jpg)
 
 
-![R2 back](/assets/images/pcbs/r2-back.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r2-back.jpg">high resolution</a></center>
+![R2 back](https://i.imgur.com/MlhraG4.jpg)
 
-I'm not sure what happened to the silkscreen on this one.  It seems any traces or ground plane overlapped 
+I'm not sure what happened to the silkscreen on this one.  It seems any traces or ground plane overlapped
 the silkscreen.  I suspect it was an issue at the board house since the next revision, (which is really the same layout, just a different color) did not suffer
 this problem.
 
@@ -90,11 +76,9 @@ this problem.
 ## Revision 3 Dirty PCB's
 
 
-![R3 back](/assets/images/pcbs/r3-font.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r3-font.jpg">high resolution</a></center>
+![R3 back](https://i.imgur.com/Sz2nuZF.jpg)
 
-![R3 back](/assets/images/pcbs/r3-back.jpg.small.jpg)
-<center class="caption"><a href="/assets/images/pcbs/r3-back.jpg">high resolution</a></center>
+![R3 back](https://i.imgur.com/X4SYlo0.jpg)
 
 # Where to get PCB's
 
@@ -112,6 +96,3 @@ Based on replies I've gotten, here are some other places to check out for maxing
     * 10 PCBs for $9.9, 4 to 5 days production, $18 stencil
 
 Check out [PCBshopper.com](http://pcbshopper.com/) to query the price of most fabs for a given board.
-
-
-{% include JB/mytwitter %}

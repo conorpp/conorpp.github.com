@@ -2,16 +2,16 @@
 layout: post
 title: "How to accelerate a program using hardware"
 description: ""
-category: 
+category:
 tags: [Design]
 image: /assets/images/codesign/fpga.jpg
 ---
-{% include JB/setup %}
+
 
 The Challenge
 ==============
 
-One of my recent final projects in school was to take a given software program and make it 
+One of my recent final projects in school was to take a given software program and make it
 as fast as possible while still being functionally correct.  It was graded
 based on speed and how it ranked against each solution in the class.
 
@@ -21,11 +21,11 @@ The Specification
 ==================
 
 For those not familiar with what an field programmable gate array (FPGA) is,
-it's a chip made up of various programmable memories, logic cells, look up tables, 
+it's a chip made up of various programmable memories, logic cells, look up tables,
 and interconnect that can be configured to be functionally equivalent to near any digital
 design that will fit on it.  
 
-I could make a MIPS processor connected to a custom accelerated HDMI controller.  Then I could reprogram it to be a simple counter circuit.  This is quite useful 
+I could make a MIPS processor connected to a custom accelerated HDMI controller.  Then I could reprogram it to be a simple counter circuit.  This is quite useful
 for digital design.
 
 For the challenge to be fair, it had to run on an [Altera Cyclone IV FPGA](https://www.altera.com/products/fpga/cyclone-series/cyclone-iv/overview.tablet.html).
@@ -73,7 +73,7 @@ This reference implements the [Bresenham circle drawing algorithm](http://web.en
 
 Since we can accelerate using hardware, here is diagram of the reference architecture.  
 
-![](/assets/images/codesign/reference.svg)
+![](https://i.imgur.com/bUvjvwO.png)
 
 A simple processor runs the C code and connects to program memory (for .bss, .text, stack, etc.)
 and a separate memory for drawing the circles.  It runs on a 50 MHz clock and is timed by a 50 MHz timer.
@@ -105,7 +105,7 @@ Since the coprocessor is in hardware, it can easily do the `cx+x`, `cy+y`, `cy -
 
 Now here is the new architecture:
 
-![](/assets/images/codesign/i1.svg)
+![](https://i.imgur.com/FjjaxxB.png)
 
 The coprocessor sits between the memory and the main processor transparently and acts just like a memory as far as the main processor can tell.  But the coprocessor is doing 8 writes to the pixel memory for each write
 from the main processor to achieve the acceleration.  If you're interested, here is [semi-correct verilog](https://github.com/conorpp/codesign-challenge-2015/blob/master/setpixel-coprocessor/verilog/plot_circle.v) I pulled from my git history.
@@ -146,7 +146,7 @@ After running the new design, I found there is about a **40x speedup** over the 
 Despite the 40x times speedup, it is still drawing 50 circles sequentially.  If it could draw all of them at the same time, then it could ideally expect a *50 * 40 = 2000x* speedup right?  But this
 can be difficult because it's writing to a *shared* memory.  It can't do 50 writes at the same time to one memory.
 
-As far as I know, 50 port memories cannot synthesize for the FPGA.  But we can write to 
+As far as I know, 50 port memories cannot synthesize for the FPGA.  But we can write to
 50 *different* memories at the same time!  It's space intensive, but we are designing purely for speed.  
 
 The idea here is we can make an individual memory for each circle to be plotted on.
@@ -156,7 +156,7 @@ That way, the main processor still thinks it's a regular memory with 50 circles 
 
 Here is the new architecture (and [coprocessor verilog](https://github.com/conorpp/codesign-challenge-2015/blob/master/circle-modules-in-parallel/verilog/plot_circle.v) for those that are interested):
 
-![](/assets/images/codesign/i2.svg)
+![](https://i.imgur.com/LxOa7o8.png)
 
 Note that this design also implements the rest of the circle drawing algorithm in hardware.  All it needs is the center point and radius to start drawing a circle.
 Here is the little new C code:
@@ -188,10 +188,10 @@ an assortment of shift's and or's to put the arguments into a word.
 #define SET_RADIUS(c,x,y,r) (*(volatile unsigned *) PIX_MEM = ((c<<26)|(r<<18)|(y<<9)|x))
 ```
 
-We can do this in hardware instead.  Let's add a dual port on the program memory to give the coprocessor direct access to it.  Also, since we're delaying for the hardware modules 
+We can do this in hardware instead.  Let's add a dual port on the program memory to give the coprocessor direct access to it.  Also, since we're delaying for the hardware modules
 to finish, let's increase their clock inputs to 100 MHz!
 
-![](/assets/images/codesign/i3.svg)
+![](https://i.imgur.com/XFz8Sxn.png)
 [Coprocessor verilog](https://github.com/conorpp/codesign-challenge-2015/blob/master/final-design/codesign_challenge/verilog/plot_circle.v)
 
 Now here is the minimal C code:
@@ -202,7 +202,7 @@ Now here is the minimal C code:
 
 // called once
 void plotallcircles_hw() {
-    PIX_WSTART = (unsigned)stack_address_of_global_circle_data_array; 
+    PIX_WSTART = (unsigned)stack_address_of_global_circle_data_array;
     while(PIX_BUSY);
 }
 ```

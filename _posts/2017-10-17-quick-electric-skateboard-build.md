@@ -1,14 +1,4 @@
----
-layout: post
-title: "Quick electric skateboard build"
-description: ""
-category: 
-tags: [Prototyping]
-image: /assets/images/skate/skateboard.jpg
----
-{% include JB/setup %}
 
-<!--![](/assets/images/skate/skateboard.jpg)-->
 
 A friend and I recently decided to get electric longboards.  Except most of
 them suck or are [pretty expensive](https://www.amazon.com/Boosted-Generation-Dual-Electric-Skateboard/dp/B071ZJGT2W).
@@ -65,9 +55,9 @@ well.
 
 It took some iterations to get right, but here they are.
 
-![](/assets/images/skate/bracket.jpg)
+![](https://i.imgur.com/n5XkqFO.jpg)
 
-![](/assets/images/skate/pully.jpg)
+![](https://i.imgur.com/0wgyNdf.jpg)
 
 The pulley pictured is in PLA but the final version was in nylon.  It fits to
 my wheel nicely and I also printed a small dowel to temporarily connect
@@ -78,11 +68,11 @@ was relatively square which made it *much* easier to mount the bracket too.
 
 Here's everything put together.
 
-![](/assets/images/skate/trucks.jpg)
+![](https://i.imgur.com/qTYtEZJ.jpg)
 
-![](/assets/images/skate/all.jpg)
+![](https://i.imgur.com/xXne3kI.jpg)
 
-![](/assets/images/skate/wheel.jpg)
+![](https://i.imgur.com/dG92cOU.jpg)
 
 After riding it for a while, I haven't noticed any problems with the nylon
 parts.  I use the same [timing
@@ -143,5 +133,3 @@ When I get around to this, I'll make another post.
 
 If you're interested in making a similar build, hit me up!  I'm happy to answer
 questions or share designs.
-
-{% include JB/mytwitter %}

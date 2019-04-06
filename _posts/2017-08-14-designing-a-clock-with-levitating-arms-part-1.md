@@ -1,12 +1,4 @@
----
-layout: post
-title: "Designing a clock with levitating arms (part 1)"
-description: ""
-category: 
-tags: [Prototyping, Design]
-image: /assets/images/maglev1/cover.jpg
----
-{% include JB/setup %}
+
 
 At some point I developed an interest in magnetic levitation.  And I
 decided to make a clock with levitating arms.  I thought it would
@@ -34,7 +26,7 @@ Technology."  I went ahead and ordered one.
 
 # The Reference Design Teardown
 
-![](/assets/images/maglev1/reference_working.jpeg)
+![](https://i.imgur.com/zTWfLag.jpg)
 
 I tried out EZ Float Technology and it works quite well.  I wasn't able to get
 it to levitate horizontally in one step, but rather had
@@ -51,7 +43,7 @@ way too big.
 
 Let's see how it works.
 
-![](/assets/images/maglev1/reference_no_lid.jpeg)
+![](https://i.imgur.com/CaWlmou.jpg)
 
 Taking the lid off, you see two components that every maglev design needs:
 electromagnets and sensors.  The electromagnets push or pull the levitating
@@ -74,7 +66,7 @@ would think you would need one more magnet (not 3 more).  But in this kind of
 configuration, there is no symmetrical configuration that can both balance X
 and Y axes using 2 magnets.  So there are 4.
 
-![](/assets/images/maglev1/series.jpg)
+![](https://i.imgur.com/PYjHcV5.jpg)
 
 Guess how many electromagnets there really are?  Turns out, you can argue there
 are only two.  **Each diagonal pair of coils are connected in series**.  So
@@ -104,18 +96,18 @@ where the center is.
 
 I breadboarded this monstrosity.
 
-![](/assets/images/maglev1/breadboard.jpg)
+![](https://i.imgur.com/f4vwhwa.jpg)
 
 I tested the circuit using a single Z-axis to start and it worked.
 
-![](/assets/images/maglev1/test1.jpg)
+![](https://i.imgur.com/J2ftBFV.jpg)
 
 **But it didn't work well at all when using a ring magnet and four electromagnets**.  I made
 a few mistakes, fixed them, and even laid out a board and screwed electromagnets onto the PCB
 to make a mechanically stable platform with plenty of pots that would hopefully allow me to converge
 on the magical control loop parameter solution.
 
-![](/assets/images/maglev1/pcb1.jpg)
+![](https://i.imgur.com/O5OVaxH.jpg)
 <center class="caption">PCB with added flyback diodes and incorrect screw terminal footprint.</center>
 
 
@@ -138,7 +130,7 @@ a component perpendicular to the sensor, thus causing a response.
 
 If that is hard to picture, it is okay, I made an MS Paint illustration.
 
-![](/assets/images/maglev1/illus.png)
+![](https://i.imgur.com/Vsuoyiy.png)
 
 Note how the electromagnet flux lines are nearly parallel with the sensor
 whereas the levitating magnet flux lines are more perpendicular to it.
@@ -163,7 +155,7 @@ Basically, if the magnet is off center by 1 mm, it will get pushed over to -1.2 
 and then 2.6mm, and then WHAM.  It slams into the side of the ring magnet.  This kills the ring magnet.
 
 
-![](/assets/images/maglev1/broken_ring.jpg)
+![](https://i.imgur.com/OzQhJGu.jpg)
 
 **The solution to overshoot** is to subtract away a component of the derivative of
 the position (i.e. the velocity).  So when the magnet gets from 1 mm to 0.2 mm,
@@ -190,7 +182,7 @@ It needed just a wee bit of damping to slow it down.  I added some steel sheet
 cutouts to the top of the levitating magnet.  This damps it by making it heavier.
 It also causes an attraction to the ring magnet and I think that contributes to damping.
 
-![](/assets/images/maglev1/works1.jpg)
+![](https://i.imgur.com/2AN7OQH.jpg)
 
 And finally, it works!
 
@@ -222,9 +214,3 @@ I would really like to model this and make some well founded estimates on what
 everything should be, based on my 90 degree orientation constraint and
 optimizing for a small magnet size.  But I'm not sure how to relate everything.
 **If anyone could provide some thoughts** on this, I would greatly appreciate it.
-
-{% include JB/mytwitter %}
-
-
-
-

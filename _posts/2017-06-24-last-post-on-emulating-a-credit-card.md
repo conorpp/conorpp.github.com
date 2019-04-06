@@ -1,12 +1,4 @@
----
-layout: post
-title: "Last post on emulating a credit card"
-description: ""
-category: Design
-tags: [Design, Fail]
-image: /assets/images/default.jpg
----
-{% include JB/setup %}
+
 
 This is an update to a previous post about designing a [credit card
 emulator](/designing-a-credit-card-emulator-card).  I got a custom made coil
@@ -29,9 +21,9 @@ read the full signal on an oscilloscope and experiment further.  I was feeling
 somewhat impatient with this project at this point though, so I went ahead and
 got a coil wound by a shop that could get much more uniform windings.
 
-![custom coil](/assets/images/card/customcoil.jpg)
+![custom coil](https://i.imgur.com/R69XNaZ.jpg)
 
-![custom coil](/assets/images/card/customcoil2.jpg)
+![custom coil](https://i.imgur.com/i0brZRJ.jpg)
 
 Pictured above, is my "uniform" coil and it kapton-taped to a mag-strip
 blank.  I tried it on my previous set-up with a mag-strip reader and
@@ -68,7 +60,3 @@ which come in ideal form factors and force ratings.  I got the buttons but
 didn't make enough progress to try them for this purpose.
 
 If anyone has a use for the coils or PCBs I made, let me know.  I'm not going to use them.
-
-
-
-{% include JB/mytwitter %}

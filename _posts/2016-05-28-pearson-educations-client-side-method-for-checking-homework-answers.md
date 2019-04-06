@@ -2,7 +2,7 @@
 layout: post
 title: "Pearson Educations client side method for checking homework answers"
 description: ""
-category: 
+category:
 tags: [Reversing]
 image: /assets/images/pearson/logo.svg
 nocover: true
@@ -11,15 +11,15 @@ nocover: true
 
 # Exploitable Method
 
-By exploitable, I don't mean in the traditional security sense.  I mean 
+By exploitable, I don't mean in the traditional security sense.  I mean
 exploitable by lazy undergraduate students.
 
-Pearson Education runs a large set of web applications that colleges use 
+Pearson Education runs a large set of web applications that colleges use
 to automate their tedious ABET required courses.  I was stuck in one
 my senior year and noticed that they check
 homework answers client side.
 
-Pearsons physics web application (Mastering Physics) used to be 
+Pearsons physics web application (Mastering Physics) used to be
 "exploited" via a small bit of JavaScript that would expose the homework answers loaded
 client side.  It has long been fixed.  As I'll show you in this post, homework answers are still checked client side.  They
 just *obfuscated* it further.
@@ -31,8 +31,8 @@ just *obfuscated* it further.
 # Obfuscated client side checking
 
 For the class I was in, the homework was run in a bloated Flash application.
- 
-![](/assets/images/pearson/flash-app.png)
+
+![](https://i.imgur.com/undefined.png)
 
 I considered looking at how the applet
 worked using a decompiler or debugger but quickly realized how big of a pain it would have been as
@@ -63,7 +63,7 @@ are the "answers".
 
 
 Let's look closer and try to figure out how it's used the by the Flash applet.  Here is a snippet
-from the large XML file: 
+from the large XML file:
 
 ```xml
 <text>The PW of the difference between the old and new systems is $</text>
@@ -101,7 +101,7 @@ It looks like the definition for `dpw` is a non-trivial equation that contains r
 But the equation looks suspiciously like the work needed to be done to *honestly* solve the
 problem about "PW system differences".
 
-At this point I made a pretty confident hypothesis of how the flash application works.  It reads this XML file to 
+At this point I made a pretty confident hypothesis of how the flash application works.  It reads this XML file to
 generate the markup for all the homework problems.  It then recursively follows this definition tree to figure out what the
 answers are.  It also is calculating the answers on the fly, meaning no free lunch for the lazy student.  After
 solving the homework problem the honest way, I manually solved the tree of definitions and found the correct answer, which confirmed my hypothesis.
@@ -117,7 +117,3 @@ but who knows how much work that would be, as it would be equivalent to rewritin
 
 Of course, this can be solved by server side checking.  But I feel it's not really necessary.  The Flash applet is hard enough
 for the average student to cheat.  And in the end, cheating students only cheat themselves.
-
-
-
-{% include JB/mytwitter %}

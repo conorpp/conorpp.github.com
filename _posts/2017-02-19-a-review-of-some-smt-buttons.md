@@ -1,12 +1,4 @@
----
-layout: post
-title: "A review of some SMT buttons"
-description: ""
-category: Review
-tags: [Reviews]
-image: /assets/images/buttons/all_orig.jpg
----
-{% include JB/setup %}
+
 
 # A review of surface mount buttons
 
@@ -21,7 +13,7 @@ pictures of what I ordered and to make some comments for other people looking fo
 # The buttons
 
 # Vanilla option
-![](/assets/images/buttons/regular.jpg)
+![](https://i.imgur.com/oXGfmSn.jpg)
 <center class="caption"><a href="/assets/images/buttons/regular_orig.jpg">high resolution</a></center>
 
 The most basic button I think most SMT projects get.  Relatively big, easy to push.  Stick out color.
@@ -33,7 +25,7 @@ Links:
 
 # Low profile, good area
 
-![](/assets/images/buttons/white.jpg)
+![](https://i.imgur.com/6kApVYO.jpg)
 <center class="caption"><a href="/assets/images/buttons/white_orig.jpg">high resolution</a></center>
 
 I like this type since it's pretty easy to push, a lower height, and a nicer color profile.  Soldering it by hand might be a little
@@ -43,7 +35,7 @@ more difficult.
 
 # Small area, still good tactile feedback
 
-![](/assets/images/buttons/sq_small.jpg)
+![](https://i.imgur.com/aoPFRg1.jpg)
 <center class="caption"><a href="/assets/images/buttons/sq_small_orig.jpg">high resolution</a></center>
 
 This is an even smaller button and still has good tactile feedback.  Since it has smaller surface area to press,
@@ -55,7 +47,7 @@ of the button in the image is not necessarily the real color of the button.
 
 # Really small, bad feedback
 
-![](/assets/images/buttons/small.jpg)
+![](https://i.imgur.com/Cai1qjn.jpg)
 <center class="caption"><a href="/assets/images/buttons/small_orig.jpg">high resolution</a></center>
 
 These are the smallest buttons I got.  They definitely don't provide good tactile feedback and are relatively difficult
@@ -69,7 +61,7 @@ Links:
 
 # Metal domes
 
-![](/assets/images/buttons/domes.jpg)
+![](https://i.imgur.com/ANJ1rKP.jpg)
 <center class="caption"><a href="/assets/images/buttons/domes_orig.jpg">high resolution</a></center>
 
 These are quite different from all the rest.  Metal domes, as offered by [snaptron](http://www.snaptron.com/), come in a lot of
@@ -81,6 +73,3 @@ methods to attach them to a PCB, all pick and place compatible.
 # What am I missing?
 
 Currently this is a small list.  Send me a message if you think I missed something.  I appreciate mail and I will update my post if I get anything.
-
-
-{% include JB/mytwitter %}
