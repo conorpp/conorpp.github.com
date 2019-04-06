@@ -1,11 +1,3 @@
----
-layout: post
-title: "Keyak: a candidate for the authenticated encryption standard"
-description: ""
-category:
-tags: [Crypto]
-image: /assets/images/keyak/kayak.jpg
----
 
 # New authentication cipher
 

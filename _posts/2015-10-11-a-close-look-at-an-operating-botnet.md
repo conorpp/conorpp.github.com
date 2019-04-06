@@ -153,6 +153,3 @@ it was still unresponsive.  I suspect that the botnet moved to another server or
 
 My setup for the honey pot and my results from this analysis can be found [here](https://github.com/conorpp/fluffy-barnacle).
 If you have any similar experience with this or know more, please send me a message. I'd like to learn more.
-
-
-{% include JB/mytwitter %}

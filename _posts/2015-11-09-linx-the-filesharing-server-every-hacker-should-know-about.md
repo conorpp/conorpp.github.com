@@ -101,8 +101,3 @@ You're free to [upload](https://0x123.xyz/) anything to my server under that is 
 
 Linx has everything I want from a file sharing server.
 If there's something that's missing, you should [contribute](https://github.com/andreimarcu/linx-server#development).
-
-
-
-
-{% include JB/mytwitter %}

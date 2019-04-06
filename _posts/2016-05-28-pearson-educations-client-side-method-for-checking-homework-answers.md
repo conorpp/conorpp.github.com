@@ -1,13 +1,4 @@
----
-layout: post
-title: "Pearson Educations client side method for checking homework answers"
-description: ""
-category:
-tags: [Reversing]
-image: /assets/images/pearson/logo.svg
-nocover: true
----
-{% include JB/setup %}
+
 
 # Exploitable Method
 
